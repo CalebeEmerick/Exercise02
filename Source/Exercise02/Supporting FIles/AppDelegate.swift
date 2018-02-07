@@ -15,6 +15,16 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
+		let frame = UIScreen.main.bounds
+		let window = UIWindow(frame: frame)
+		
+		self.window = window
+		
+		let rootController = HomeController(title: "Clientes")
+		
+		window.rootViewController = rootController
+		window.makeKeyAndVisible()
+		
 		return true
 	}
 }
