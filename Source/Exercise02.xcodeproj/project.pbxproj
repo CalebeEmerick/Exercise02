@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3434F227202BA36200701967 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F226202BA36200701967 /* RegistrationModel.swift */; };
+		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
+		3434F22B202BA56500701967 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22A202BA56500701967 /* User.swift */; };
+		3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22D202BA7D500701967 /* RegistrationController.swift */; };
+		3434F233202BA82D00701967 /* RegistrationControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F232202BA82D00701967 /* RegistrationControllerView.xib */; };
+		3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F234202BA88400701967 /* RegistrationControllerView.swift */; };
+		3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F236202BAA4700701967 /* RegistrationDataSource.swift */; };
+		3434F239202BAA5F00701967 /* RegistrationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F238202BAA5F00701967 /* RegistrationDelegate.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
@@ -25,6 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3434F226202BA36200701967 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		3434F22A202BA56500701967 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3434F22D202BA7D500701967 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		3434F232202BA82D00701967 /* RegistrationControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationControllerView.xib; sourceTree = "<group>"; };
+		3434F234202BA88400701967 /* RegistrationControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerView.swift; sourceTree = "<group>"; };
+		3434F236202BAA4700701967 /* RegistrationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDataSource.swift; sourceTree = "<group>"; };
+		3434F238202BAA5F00701967 /* RegistrationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDelegate.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +71,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3434F224202BA06800701967 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				3434F225202BA0F100701967 /* Model */,
+				3434F22C202BA75300701967 /* View */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		3434F225202BA0F100701967 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3434F226202BA36200701967 /* RegistrationModel.swift */,
+				3434F228202BA42700701967 /* Company.swift */,
+				3434F22A202BA56500701967 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3434F22C202BA75300701967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3434F230202BA7E700701967 /* TableView */,
+				3434F22F202BA7E300701967 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3434F22F202BA7E300701967 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3434F22D202BA7D500701967 /* RegistrationController.swift */,
+				3434F232202BA82D00701967 /* RegistrationControllerView.xib */,
+				3434F234202BA88400701967 /* RegistrationControllerView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3434F230202BA7E700701967 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				3434F231202BA81800701967 /* Cell */,
+				3434F236202BAA4700701967 /* RegistrationDataSource.swift */,
+				3434F238202BAA5F00701967 /* RegistrationDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3434F231202BA81800701967 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3434F23A202BAAFC00701967 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				34B98E9D202B566500AD5E40 /* Home */,
+				3434F224202BA06800701967 /* Registration */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3434F23B202BAB1200701967 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				34B98EB0202B8E4900AD5E40 /* Reusable */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 		3447AAAD202B3028009F9C1B = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +162,8 @@
 		3447AAB8202B3028009F9C1B /* Exercise02 */ = {
 			isa = PBXGroup;
 			children = (
-				34B98E9D202B566500AD5E40 /* Home */,
-				34B98EB0202B8E4900AD5E40 /* Reusable */,
+				3434F23A202BAAFC00701967 /* Features */,
+				3434F23B202BAB1200701967 /* Libraries */,
 				34B98EBA202B90C700AD5E40 /* Extensions */,
 				3447AACB202B3076009F9C1B /* Supporting FIles */,
 			);
@@ -220,6 +308,7 @@
 				34B98EA3202B845600AD5E40 /* UserCell.xib in Resources */,
 				3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */,
 				34B98EA8202B8C9200AD5E40 /* HomeControllerView.xib in Resources */,
+				3434F233202BA82D00701967 /* RegistrationControllerView.xib in Resources */,
 				3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,14 +322,21 @@
 			files = (
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,
+				3434F227202BA36200701967 /* RegistrationModel.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */,
+				3434F22B202BA56500701967 /* User.swift in Sources */,
+				3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */,
 				3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */,
+				3434F239202BAA5F00701967 /* RegistrationDelegate.swift in Sources */,
 				34B98EA5202B8B9400AD5E40 /* HomeController.swift in Sources */,
 				34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */,
+				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
+				3434F229202BA42700701967 /* Company.swift in Sources */,
+				3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */,
 				34B98EAF202B8D4F00AD5E40 /* HomeDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
