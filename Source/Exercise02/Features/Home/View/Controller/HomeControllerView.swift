@@ -16,7 +16,6 @@ final class HomeControllerView: UIView {
 	
 	private let dataSource = HomeDataSource()
 	private let delegate = HomeDelegate()
-	
 }
 
 // MARK: - Life Cycle -

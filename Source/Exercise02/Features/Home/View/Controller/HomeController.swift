@@ -12,7 +12,11 @@ import UIKit
 
 final class HomeController: UIViewController {
 	
+	private let homeView: HomeControllerView
+	
 	init(title: String) {
+		homeView = HomeControllerView.makeXib()
+		
 		super.init(nibName: nil, bundle: nil)
 		
 		self.title = title
@@ -27,14 +31,7 @@ final class HomeController: UIViewController {
 
 extension HomeController {
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		
-	}
-	
 	override func loadView() {
-		let homeView = HomeControllerView.makeXib()
 		view = homeView
 	}
 }
