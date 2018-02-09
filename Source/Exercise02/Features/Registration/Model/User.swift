@@ -15,4 +15,5 @@ struct User {
 	let lastName: String
 	let email: String
 	let phone: String
+	let company: Company
 }

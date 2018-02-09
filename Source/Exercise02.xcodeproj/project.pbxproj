@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3434F227202BA36200701967 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F226202BA36200701967 /* RegistrationModel.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
 		3434F22B202BA56500701967 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22A202BA56500701967 /* User.swift */; };
 		3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22D202BA7D500701967 /* RegistrationController.swift */; };
@@ -39,7 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3434F226202BA36200701967 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		3434F22A202BA56500701967 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3434F22D202BA7D500701967 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		3434F225202BA0F100701967 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3434F226202BA36200701967 /* RegistrationModel.swift */,
 				3434F228202BA42700701967 /* Company.swift */,
 				3434F22A202BA56500701967 /* User.swift */,
 			);
@@ -374,7 +371,6 @@
 			files = (
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,
-				3434F227202BA36200701967 /* RegistrationModel.swift in Sources */,
 				3434F244202CD21400701967 /* HomeViewModel.swift in Sources */,
 				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
