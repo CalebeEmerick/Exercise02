@@ -10,10 +10,10 @@ import UIKit
 
 final class HomeDelegate: NSObject {
 	
-	
+	var didSelectRow: ((ClientModel) -> Void)?
 }
 
-extension HomeDelegate : UITableViewDelegate {
+extension HomeDelegate: UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		
@@ -28,5 +28,15 @@ extension HomeDelegate : UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
 		
 		return 10
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		guard let cell = tableView.cellForRow(at: indexPath) as? UserCell,
+			let model = cell.model else {
+			return
+		}
+		
+		didSelectRow?(model)
 	}
 }

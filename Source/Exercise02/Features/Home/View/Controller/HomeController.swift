@@ -12,14 +12,17 @@ import UIKit
 
 final class HomeController: UIViewController {
 	
-	private let homeView: HomeControllerView
+	private let rootView: HomeControllerView
+	private let viewModel: HomeViewModel
 	
 	init(title: String) {
-		homeView = HomeControllerView.makeXib()
+		rootView = HomeControllerView.makeXib()
+		viewModel = HomeViewModel()
 		
 		super.init(nibName: nil, bundle: nil)
 		
 		self.title = title
+		rootView.controller = self
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -32,6 +35,21 @@ final class HomeController: UIViewController {
 extension HomeController {
 	
 	override func loadView() {
-		view = homeView
+		view = rootView
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		deselectRowIfNeeded()
+	}
+}
+
+// MARK: - Life Cycle -
+
+extension HomeController {
+	
+	private func deselectRowIfNeeded() {
+		rootView.deselectRowIfNeeded()
 	}
 }

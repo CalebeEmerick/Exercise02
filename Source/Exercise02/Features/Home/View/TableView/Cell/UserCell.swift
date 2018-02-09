@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - Initializers -
+
 final class UserCell: UITableViewCell {
 	
 	@IBOutlet private var containerView: UIView!
@@ -18,6 +20,17 @@ final class UserCell: UITableViewCell {
 	private let containerInitialsName = CALayer()
 	private let initialsName = UILabel()
 	
+	var model: ClientModel? {
+		didSet {
+			updateUI()
+		}
+	}
+}
+
+// MARK: - Life Cycle -
+
+extension UserCell {
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
@@ -25,6 +38,20 @@ final class UserCell: UITableViewCell {
 		roundContainerView()
 		roundContainerName()
 		configInitialsNameLabel()
+	}
+}
+
+// MARK: - Private Methods -
+
+extension UserCell {
+	
+	private func updateUI() {
+		guard let model = model else { return }
+		DispatchQueue.main.async {
+			self.companyName.text = model.companyName
+			self.companyOwnerName.text = model.companyOwnerName
+			self.initialsName.text = model.ownerInitialsName
+		}
 	}
 	
 	private func makeContainerNameLayer() {
