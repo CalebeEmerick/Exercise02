@@ -13,15 +13,15 @@ import UIKit
 final class ClientDetailController: UIViewController {
 
 	private let rootView: ClientDetailControllerView
-	
+
 	init(title: String) {
 		rootView = ClientDetailControllerView.makeXib()
-		
+
 		super.init(nibName: nil, bundle: nil)
-		
+
 		self.title = title
 	}
-	
+
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
@@ -30,7 +30,7 @@ final class ClientDetailController: UIViewController {
 // MARK: - Life Cycle -
 
 extension ClientDetailController {
-	
+
 	override func loadView() {
 		view = rootView
 	}
