@@ -37,6 +37,6 @@ extension HomeDelegate: UITableViewDelegate {
 			return
 		}
 		
-		didSelectRow?(model)
+		self.didSelectRow?(model)
 	}
 }

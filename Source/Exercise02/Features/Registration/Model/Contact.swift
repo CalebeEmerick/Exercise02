@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Contact.swift
 //  Exercise02
 //
 //  Created by Calebe Emerick on 07/02/2018.
@@ -8,11 +8,9 @@
 
 import Foundation
 
-struct User {
-	
+struct Contact {
+
 	let name: String
-	let middleName: String?
-	let lastName: String
 	let email: String
 	let phone: String
 	let company: Company
