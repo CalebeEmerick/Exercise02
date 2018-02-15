@@ -505,7 +505,6 @@
 				3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,
-				3468C822202F2E3400CCD913 /* CompanyInitialsMaker.swift in Sources */,
 				3434F244202CD21400701967 /* HomeViewModel.swift in Sources */,
 				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,

@@ -21,7 +21,7 @@ final class ClientDetailController: UIViewController {
 
 		self.title = title
 	}
-
+  
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
@@ -30,7 +30,7 @@ final class ClientDetailController: UIViewController {
 // MARK: - Life Cycle -
 
 extension ClientDetailController {
-
+  
 	override func loadView() {
 		view = rootView
 	}

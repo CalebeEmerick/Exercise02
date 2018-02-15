@@ -60,7 +60,7 @@ extension HomeControllerView {
 			self.tableView.reloadData()
 		}
 	}
-	
+  
 	func deselectRowIfNeeded() {
 		guard let selectedRow = tableView.indexPathForSelectedRow else {
 			return
@@ -76,8 +76,7 @@ extension HomeControllerView {
 	
 	private func setupDelegate() {
 		self.delegate.didSelectRow = { [weak self] _ in
-			self?.openClientDetailScreen()
-		}
+		tableView.deselectRow(at: selectedRow, animated: true)
 	}
 	
 	private func openRegistrationController() {

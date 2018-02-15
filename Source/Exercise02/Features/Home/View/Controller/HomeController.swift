@@ -46,7 +46,7 @@ extension HomeController {
 		setRetrieveContactsCallback()
 		viewModel.fetchClients()
 	}
-	
+  
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
@@ -74,7 +74,7 @@ extension HomeController {
 	private func showEmptyState() {
 		rootView.showEmptyState()
 	}
-	
+  
 	private func deselectRowIfNeeded() {
 		rootView.deselectRowIfNeeded()
 	}
