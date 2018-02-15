@@ -8,6 +8,7 @@
 
 @testable import Exercise02
 import XCTest
+import Nimble
 
 final class ClientModelTests: XCTestCase {
 	

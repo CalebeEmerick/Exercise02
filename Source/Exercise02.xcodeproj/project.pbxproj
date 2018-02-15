@@ -41,6 +41,10 @@
 		34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EB3202B8E9F00AD5E40 /* Reusable.swift */; };
 		34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EB4202B8E9F00AD5E40 /* CollectionViewReusable.swift */; };
 		34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EBB202B90F500AD5E40 /* ViewCreatable.swift */; };
+		34F6BEDF203604E30091ED8D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; };
+		34F6BEE0203604E30091ED8D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDE203604E30091ED8D /* Quick.framework */; };
+		34F6BEE1203604EC0091ED8D /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34F6BEE2203604EC0091ED8D /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 34F6BEDE203604E30091ED8D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,21 @@
 			remoteInfo = Exercise02;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34740EA42035EE6900FFA68C /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				34F6BEE1203604EC0091ED8D /* Nimble.framework in Copy Files */,
+				34F6BEE2203604EC0091ED8D /* Quick.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -92,6 +111,8 @@
 		34B98EB3202B8E9F00AD5E40 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		34B98EB4202B8E9F00AD5E40 /* CollectionViewReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewReusable.swift; sourceTree = "<group>"; };
 		34B98EBB202B90F500AD5E40 /* ViewCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCreatable.swift; sourceTree = "<group>"; };
+		34F6BEDD203604E30091ED8D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		34F6BEDE203604E30091ED8D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +127,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F6BEDF203604E30091ED8D /* Nimble.framework in Frameworks */,
+				34F6BEE0203604E30091ED8D /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +251,7 @@
 				3447AAB8202B3028009F9C1B /* Exercise02 */,
 				3468C814202F27A800CCD913 /* Exercise02Tests */,
 				3447AAB7202B3028009F9C1B /* Products */,
+				34740E9F2035EE4B00FFA68C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +294,15 @@
 				3468C817202F27A800CCD913 /* Info.plist */,
 			);
 			path = Exercise02Tests;
+			sourceTree = "<group>";
+		};
+		34740E9F2035EE4B00FFA68C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34F6BEDD203604E30091ED8D /* Nimble.framework */,
+				34F6BEDE203604E30091ED8D /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		34B98E9D202B566500AD5E40 /* Home */ = {
@@ -350,6 +383,7 @@
 				3447AAB2202B3028009F9C1B /* Sources */,
 				3447AAB3202B3028009F9C1B /* Frameworks */,
 				3447AAB4202B3028009F9C1B /* Resources */,
+				34740EA72035F02700FFA68C /* Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -365,8 +399,9 @@
 			buildConfigurationList = 3468C81C202F27A800CCD913 /* Build configuration list for PBXNativeTarget "Exercise02Tests" */;
 			buildPhases = (
 				3468C80F202F27A800CCD913 /* Sources */,
-				3468C810202F27A800CCD913 /* Frameworks */,
 				3468C811202F27A800CCD913 /* Resources */,
+				3468C810202F27A800CCD913 /* Frameworks */,
+				34740EA42035EE6900FFA68C /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -442,6 +477,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34740EA72035F02700FFA68C /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Carthage Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3447AAB2202B3028009F9C1B /* Sources */ = {
@@ -651,6 +705,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 578EBFNU9W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Exercise02Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.UseFlip.iOS.Exercise02Tests;
@@ -669,6 +727,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 578EBFNU9W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Exercise02Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.UseFlip.iOS.Exercise02Tests;
