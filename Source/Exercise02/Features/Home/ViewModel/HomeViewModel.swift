@@ -10,7 +10,36 @@ import Foundation
 
 final class HomeViewModel {
 	
-	private(set) var items: [ClientModel] = []
+	private let contactsFetcher: RetrieveContacts
 	
+	init(fetcher: RetrieveContacts) {
+		contactsFetcher = fetcher
+	}
 	
+	enum FetchState {
+		case success([ClientModel])
+		case empty
+	}
+	
+	var didFetchContacts: (([ClientModel]) -> Void)?
+	var didFetchEmptyContacts: (() -> Void)?
+	
+	func fetchClients() {
+		let contacts = contactsFetcher.fetchContacts()
+		let clients = map(contacts: contacts)
+		show(clients: clients)
+	}
+	
+	private func map(contacts: [Contact]) -> [ClientModel] {
+		return contacts.map { ClientModel(contact: $0) }
+	}
+	
+	private func show(clients: [ClientModel]) {
+		if clients.isEmpty {
+			didFetchEmptyContacts?()
+		}
+		else {
+			didFetchContacts?(clients)
+		}
+	}
 }

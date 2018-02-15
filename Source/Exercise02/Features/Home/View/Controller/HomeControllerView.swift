@@ -19,6 +19,7 @@ final class HomeControllerView: UIView {
 	
 	private let dataSource = HomeDataSource()
 	private let delegate = HomeDelegate()
+	private var emptyState: HomeEmptyState?
 	
 	var homeViewModel: HomeViewModel?
 	weak var controller: HomeController?
@@ -40,10 +41,28 @@ extension HomeControllerView {
 
 extension HomeControllerView {
 	
-	func deselectRowIfNeeded() {
-		guard let selectedRow = tableView.indexPathForSelectedRow else {
-			return
+	func showEmptyState() {
+		let view = HomeEmptyState.makeXib()
+		emptyState = view
+		DispatchQueue.main.async {
+			self.addSubview(view)
+			view.translatesAutoresizingMaskIntoConstraints = false
+			view.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+				.isActive = true
+			view.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+				.isActive = true
 		}
+	}
+	
+	func setDataSource(with contacts: [ClientModel]) {
+		dataSource.items = contacts
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
+		}
+	}
+  
+	func deselectRowIfNeeded() {
+		guard let selectedRow = tableView.indexPathForSelectedRow else { return }
 		tableView.deselectRow(at: selectedRow, animated: true)
 	}
 	
@@ -54,7 +73,7 @@ extension HomeControllerView {
 	}
 	
 	private func setupDelegate() {
-		delegate.didSelectRow = { [weak self] model in
+		delegate.didSelectRow = { [weak self] _ in
 			self?.openClientDetailScreen()
 		}
 	}

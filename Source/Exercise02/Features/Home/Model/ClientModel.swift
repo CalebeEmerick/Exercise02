@@ -14,9 +14,11 @@ final class ClientModel {
 	let companyName: String
 	let ownerInitialsName: String
 	
-	init(companyOwnerName: String, companyName: String) {
-		self.companyOwnerName = companyOwnerName
-		self.companyName = companyName
-		ownerInitialsName = "CE"
+	init(contact: Contact) {
+		companyOwnerName = contact.name
+		companyName = contact.company.name
+		
+		let initialsMaker = CompanyInitialsMaker()
+		ownerInitialsName = initialsMaker.makeFor(company: companyName)
 	}
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 struct Company {
-	
+
 	let name: String
 	let cnpj: String
-	let activeSince: Int
+	let activeSince: Date
 	let isMEI: Bool
 }

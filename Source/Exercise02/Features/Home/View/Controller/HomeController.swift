@@ -12,12 +12,14 @@ import UIKit
 
 final class HomeController: UIViewController {
 	
+	private let fetcher: RetrieveContacts
 	private let rootView: HomeControllerView
 	private let viewModel: HomeViewModel
 	
 	init(title: String) {
+		fetcher = InMemoryContacts()
 		rootView = HomeControllerView.makeXib()
-		viewModel = HomeViewModel()
+		viewModel = HomeViewModel(fetcher: fetcher)
 		
 		super.init(nibName: nil, bundle: nil)
 		
@@ -38,6 +40,13 @@ extension HomeController {
 		view = rootView
 	}
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		setRetrieveContactsCallback()
+		viewModel.fetchClients()
+	}
+  
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
@@ -45,10 +54,27 @@ extension HomeController {
 	}
 }
 
-// MARK: - Life Cycle -
+// MARK: - Methods -
 
 extension HomeController {
 	
+	private func setRetrieveContactsCallback() {
+		viewModel.didFetchContacts = { [weak self] contacts in
+			self?.showList(with: contacts)
+		}
+		viewModel.didFetchEmptyContacts = { [weak self] in
+			self?.showEmptyState()
+		}
+	}
+	
+	private func showList(with contacts: [ClientModel]) {
+		rootView.setDataSource(with: contacts)
+	}
+	
+	private func showEmptyState() {
+		rootView.showEmptyState()
+	}
+  
 	private func deselectRowIfNeeded() {
 		rootView.deselectRowIfNeeded()
 	}
