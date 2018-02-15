@@ -30,7 +30,7 @@ final class ClientModelTests: XCTestCase {
 		
 		let model = ClientModel(contact: contact)
 		
-		XCTAssertEqual(model.companyName, contact.company.name)
-		XCTAssertEqual(model.companyOwnerName, contact.name)
+		expect(model.companyName) == contact.company.name
+		expect(model.companyOwnerName) == contact.name
 	}
 }

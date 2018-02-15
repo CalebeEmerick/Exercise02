@@ -8,6 +8,7 @@
 
 @testable import Exercise02
 import XCTest
+import Nimble
 
 final class CompanyInitialsMakerTests: XCTestCase {
 	
@@ -29,27 +30,27 @@ final class CompanyInitialsMakerTests: XCTestCase {
 		
 		let initials = initialsMaker.makeFor(company: "3 546. 787.")
 		
-		XCTAssertEqual(initials, initialsMaker.notPossibleMakeInitials)
+		expect(initials) == initialsMaker.notPossibleMakeInitials
 	}
 	
 	func test_shouldNotAccept_EmptyName() {
 		
 		let initials = initialsMaker.makeFor(company: "")
 		
-		XCTAssertEqual(initials, initialsMaker.notPossibleMakeInitials)
+		expect(initials) == initialsMaker.notPossibleMakeInitials
 	}
 	
 	func test_shouldReturnTwoFirstCharactersWhen_CompanyNameHasOnlyOneName() {
 		
 		let initials = initialsMaker.makeFor(company: "Amazon")
 		
-		XCTAssertEqual(initials, "AM")
+		expect(initials) == "AM"
 	}
 	
 	func test_shouldReturnThreeFirstCharactersWhen_CompanyNameHasThreeNames() {
 		
 		let initials = initialsMaker.makeFor(company: "Apple Google Amazon")
 		
-		XCTAssertEqual(initials, "AGA")
+		expect(initials) == "AGA"
 	}
 }
