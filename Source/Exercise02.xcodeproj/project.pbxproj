@@ -27,7 +27,6 @@
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
 		3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3468C81F202F283700CCD913 /* ClientModelTests.swift */; };
-		3468C822202F2E3400CCD913 /* CompanyInitialsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3468C821202F2E3400CCD913 /* CompanyInitialsMaker.swift */; };
 		34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */; };
 		34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EA0202B845600AD5E40 /* UserCell.swift */; };
 		34B98EA3202B845600AD5E40 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B98EA1202B845600AD5E40 /* UserCell.xib */; };
@@ -45,6 +44,7 @@
 		34F6BEE0203604E30091ED8D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDE203604E30091ED8D /* Quick.framework */; };
 		34F6BEE1203604EC0091ED8D /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34F6BEE2203604EC0091ED8D /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 34F6BEDE203604E30091ED8D /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		34F6BEE420360BA50091ED8D /* CompanyInitialsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6BEE320360BA50091ED8D /* CompanyInitialsMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +97,6 @@
 		3468C813202F27A800CCD913 /* Exercise02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3468C817202F27A800CCD913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3468C81F202F283700CCD913 /* ClientModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModelTests.swift; sourceTree = "<group>"; };
-		3468C821202F2E3400CCD913 /* CompanyInitialsMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMaker.swift; sourceTree = "<group>"; };
 		34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMakerTests.swift; sourceTree = "<group>"; };
 		34B98EA0202B845600AD5E40 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		34B98EA1202B845600AD5E40 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		34B98EBB202B90F500AD5E40 /* ViewCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCreatable.swift; sourceTree = "<group>"; };
 		34F6BEDD203604E30091ED8D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		34F6BEDE203604E30091ED8D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		34F6BEE320360BA50091ED8D /* CompanyInitialsMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +222,7 @@
 				3434F250202E19E300701967 /* RetrieveContacts.swift */,
 				3434F252202F230300701967 /* InMemoryContacts.swift */,
 				3434F240202C7CFB00701967 /* ClientModel.swift */,
-				3468C821202F2E3400CCD913 /* CompanyInitialsMaker.swift */,
+				34F6BEE320360BA50091ED8D /* CompanyInitialsMaker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -502,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F6BEE420360BA50091ED8D /* CompanyInitialsMaker.swift in Sources */,
 				3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,

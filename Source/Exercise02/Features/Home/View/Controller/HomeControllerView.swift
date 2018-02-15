@@ -55,28 +55,27 @@ extension HomeControllerView {
 	}
 	
 	func setDataSource(with contacts: [ClientModel]) {
-		self.dataSource.items = contacts
+		dataSource.items = contacts
 		DispatchQueue.main.async {
 			self.tableView.reloadData()
 		}
 	}
   
 	func deselectRowIfNeeded() {
-		guard let selectedRow = tableView.indexPathForSelectedRow else {
-			return
-		}
-		self.tableView.deselectRow(at: selectedRow, animated: true)
+		guard let selectedRow = tableView.indexPathForSelectedRow else { return }
+		tableView.deselectRow(at: selectedRow, animated: true)
 	}
 	
 	private func setupTableView() {
-		self.tableView.dataSource = dataSource
-		self.tableView.delegate = delegate
-		self.tableView.register(cellNib: UserCell.self)
+		tableView.dataSource = dataSource
+		tableView.delegate = delegate
+		tableView.register(cellNib: UserCell.self)
 	}
 	
 	private func setupDelegate() {
-		self.delegate.didSelectRow = { [weak self] _ in
-		tableView.deselectRow(at: selectedRow, animated: true)
+		delegate.didSelectRow = { [weak self] _ in
+			self?.openClientDetailScreen()
+		}
 	}
 	
 	private func openRegistrationController() {
