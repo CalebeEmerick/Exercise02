@@ -20,7 +20,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		self.window = window
 		
-		let rootController = HomeController(title: "Clientes")
+		let contactsFetcher = ContactsFetcher()
+		let rootController = HomeController(fetcher: contactsFetcher)
 		let navigationController = UINavigationController(rootViewController: rootController)
 		
 		window.rootViewController = navigationController
