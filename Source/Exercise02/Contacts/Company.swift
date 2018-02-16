@@ -21,7 +21,7 @@ struct Company {
 		self.activeSince = activeSince
 		self.isMei = isMei
 	}
-	
+
 	private let kName = "name"
 	private let kCnpj = "cnpj"
 	private let kActiveSince = "active_since"
@@ -29,22 +29,22 @@ struct Company {
 }
 
 extension Company {
-	
+
 	init?(json: JSON) {
 		guard let name = json[kName] as? String,
 			let cnpj = json[kCnpj] as? String,
 			let activeSince = json[kActiveSince] as? Date,
 			let isMei = json[kIsMei] as? Bool
-			else {
-				return nil
+		else {
+			return nil
 		}
-		
+
 		self.name = name
 		self.cnpj = cnpj
 		self.activeSince = activeSince
 		self.isMei = isMei
 	}
-	
+
 	var json: JSON {
 		return [
 			kName: name,

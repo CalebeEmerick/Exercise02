@@ -11,17 +11,21 @@ import Foundation
 final class ContactsFetcher : RetrieveContacts {
 	
 	private let userDefaults: UserDefaults
+	private let kContactKey: String
 	
-	init(userDefaults: UserDefaults = UserDefaults.standard) {
+	init(userDefaults: UserDefaults = UserDefaults.standard, key: String = kContactList) {
 		self.userDefaults = userDefaults
+		kContactKey = key
 	}
 	
 	func fetchContacts() -> [Contact] {
-		guard let json = userDefaults.object(forKey: kContactList) as? JSON else {
+		guard let json = userDefaults.object(forKey: kContactKey) as? JSON else {
 			return []
 		}
 		
-		let contactList = ContactList(json: json)
+		guard let contactList = ContactList(json: json) else {
+			return []
+		}
 		
 		return contactList.contacts
 	}

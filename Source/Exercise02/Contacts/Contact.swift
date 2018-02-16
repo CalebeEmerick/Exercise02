@@ -21,7 +21,7 @@ struct Contact {
 		self.phone = phone
 		self.company = company
 	}
-	
+
 	private let kName = "name"
 	private let kEmail = "email"
 	private let kPhone = "phone"
@@ -29,23 +29,23 @@ struct Contact {
 }
 
 extension Contact {
-	
+
 	init?(json: JSON) {
 		guard let name = json[kName] as? String,
 			let email = json[kEmail] as? String,
 			let phone = json[kPhone] as? String,
 			let companyJSON = json[kCompany] as? JSON,
 			let company = Company(json: companyJSON)
-			else {
-				return nil
+		else {
+			return nil
 		}
-		
+
 		self.name = name
 		self.email = email
 		self.phone = phone
 		self.company = company
 	}
-	
+
 	var json: JSON {
 		return [
 			kName: name,

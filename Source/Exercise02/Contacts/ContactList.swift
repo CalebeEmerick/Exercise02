@@ -10,7 +10,7 @@ import Foundation
 
 final class ContactList {
 	
-	private let kContacts = "contacts"
+	static let kContacts = "contacts"
 	
 	let contacts: [Contact]
 	
@@ -18,10 +18,9 @@ final class ContactList {
 		self.contacts = contacts
 	}
 	
-	init(json: JSON) {
-		guard let jsonList = json[kContacts] as? [JSON] else {
-			self.contacts = []
-			return
+	init?(json: JSON) {
+		guard let jsonList = json[ContactList.kContacts] as? [JSON] else {
+			return nil
 		}
 		
 		let contacts = jsonList.flatMap { Contact(json: $0) }
@@ -31,7 +30,7 @@ final class ContactList {
 	
 	var json: JSON {
 		return [
-			kContacts: jsonContactList
+			ContactList.kContacts: jsonContactList
 		]
 	}
 	
