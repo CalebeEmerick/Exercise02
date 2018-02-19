@@ -25,9 +25,28 @@
 		3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24E202DD94000701967 /* HomeEmptyState.swift */; };
 		3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F250202E19E300701967 /* RetrieveContacts.swift */; };
 		3434F253202F230300701967 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F252202F230300701967 /* InMemoryContacts.swift */; };
+		34357F83203B597700561066 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F82203B597700561066 /* Observer.swift */; };
+		34357F86203B774100561066 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F85203B774100561066 /* DateConverter.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
+		344A28AD203B0D6200EF96F1 /* RegistrationFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28AB203B0D6200EF96F1 /* RegistrationFieldCell.swift */; };
+		344A28AE203B0D6200EF96F1 /* RegistrationFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344A28AC203B0D6200EF96F1 /* RegistrationFieldCell.xib */; };
+		344A28B1203B0DFD00EF96F1 /* RegistrationPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28AF203B0DFD00EF96F1 /* RegistrationPickerCell.swift */; };
+		344A28B2203B0DFD00EF96F1 /* RegistrationPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344A28B0203B0DFD00EF96F1 /* RegistrationPickerCell.xib */; };
+		344A28B5203B0EEE00EF96F1 /* RegistrationSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28B3203B0EEE00EF96F1 /* RegistrationSwitchCell.swift */; };
+		344A28B6203B0EEE00EF96F1 /* RegistrationSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344A28B4203B0EEE00EF96F1 /* RegistrationSwitchCell.xib */; };
+		344A28BD203B1BC100EF96F1 /* RegistrationCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28BC203B1BC100EF96F1 /* RegistrationCellType.swift */; };
+		344A28BF203B1BFD00EF96F1 /* RegistrationCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28BE203B1BFD00EF96F1 /* RegistrationCellProtocol.swift */; };
+		344A28C1203B1C7E00EF96F1 /* RegistrationFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28C0203B1C7E00EF96F1 /* RegistrationFieldModel.swift */; };
+		344A28C3203B1F3500EF96F1 /* RegistrationFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28C2203B1F3500EF96F1 /* RegistrationFieldType.swift */; };
+		344A28C6203B1FB900EF96F1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28C5203B1FB900EF96F1 /* Color.swift */; };
+		344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28C7203B213400EF96F1 /* KeyboardAccessoryView.swift */; };
+		344A28CB203B267800EF96F1 /* RegistrationPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28CA203B267800EF96F1 /* RegistrationPickerModel.swift */; };
+		344A28CE203B273500EF96F1 /* KeyboardDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344A28CD203B273500EF96F1 /* KeyboardDatePicker.xib */; };
+		344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28CF203B275F00EF96F1 /* KeyboardDatePicker.swift */; };
+		344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28D2203B3D2A00EF96F1 /* RegistrationSwitchModel.swift */; };
+		344A28D5203B3F8300EF96F1 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */; };
 		3450DB5D203716B0001F0FF5 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450DB5C203716B0001F0FF5 /* JSON.swift */; };
 		3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450DB5E203717A3001F0FF5 /* ContactList.swift */; };
 		3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3468C81F202F283700CCD913 /* ClientModelTests.swift */; };
@@ -99,11 +118,30 @@
 		3434F24E202DD94000701967 /* HomeEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyState.swift; sourceTree = "<group>"; };
 		3434F250202E19E300701967 /* RetrieveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveContacts.swift; sourceTree = "<group>"; };
 		3434F252202F230300701967 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
+		34357F82203B597700561066 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		34357F85203B774100561066 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3447AAC3202B3028009F9C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3447AACC202B30DF009F9C1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Exercise02/Info.plist; sourceTree = SOURCE_ROOT; };
+		344A28AB203B0D6200EF96F1 /* RegistrationFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFieldCell.swift; sourceTree = "<group>"; };
+		344A28AC203B0D6200EF96F1 /* RegistrationFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationFieldCell.xib; sourceTree = "<group>"; };
+		344A28AF203B0DFD00EF96F1 /* RegistrationPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPickerCell.swift; sourceTree = "<group>"; };
+		344A28B0203B0DFD00EF96F1 /* RegistrationPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationPickerCell.xib; sourceTree = "<group>"; };
+		344A28B3203B0EEE00EF96F1 /* RegistrationSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSwitchCell.swift; sourceTree = "<group>"; };
+		344A28B4203B0EEE00EF96F1 /* RegistrationSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationSwitchCell.xib; sourceTree = "<group>"; };
+		344A28BC203B1BC100EF96F1 /* RegistrationCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellType.swift; sourceTree = "<group>"; };
+		344A28BE203B1BFD00EF96F1 /* RegistrationCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellProtocol.swift; sourceTree = "<group>"; };
+		344A28C0203B1C7E00EF96F1 /* RegistrationFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFieldModel.swift; sourceTree = "<group>"; };
+		344A28C2203B1F3500EF96F1 /* RegistrationFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFieldType.swift; sourceTree = "<group>"; };
+		344A28C5203B1FB900EF96F1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		344A28C7203B213400EF96F1 /* KeyboardAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAccessoryView.swift; sourceTree = "<group>"; };
+		344A28CA203B267800EF96F1 /* RegistrationPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPickerModel.swift; sourceTree = "<group>"; };
+		344A28CD203B273500EF96F1 /* KeyboardDatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardDatePicker.xib; sourceTree = "<group>"; };
+		344A28CF203B275F00EF96F1 /* KeyboardDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDatePicker.swift; sourceTree = "<group>"; };
+		344A28D2203B3D2A00EF96F1 /* RegistrationSwitchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSwitchModel.swift; sourceTree = "<group>"; };
+		344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3450DB5C203716B0001F0FF5 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3450DB5E203717A3001F0FF5 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
 		3468C813202F27A800CCD913 /* Exercise02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +201,8 @@
 		3434F225202BA0F100701967 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				344A28D6203B40C100EF96F1 /* Cell */,
+				344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +210,8 @@
 		3434F22C202BA75300701967 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				344A28CC203B271000EF96F1 /* KeyboardView */,
+				344A28C9203B25E200EF96F1 /* AccessoryView */,
 				3434F230202BA7E700701967 /* TableView */,
 				3434F22F202BA7E300701967 /* Controller */,
 			);
@@ -189,18 +231,11 @@
 		3434F230202BA7E700701967 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				3434F231202BA81800701967 /* Cell */,
+				344A28AA203B0D0800EF96F1 /* Cell */,
 				3434F236202BAA4700701967 /* RegistrationDataSource.swift */,
 				3434F238202BAA5F00701967 /* RegistrationDelegate.swift */,
 			);
 			path = TableView;
-			sourceTree = "<group>";
-		};
-		3434F231202BA81800701967 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		3434F23A202BAAFC00701967 /* Features */ = {
@@ -216,6 +251,8 @@
 		3434F23B202BAB1200701967 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				34357F84203B76E000561066 /* Date */,
+				344A28C4203B1FB200EF96F1 /* Color */,
 				34B98EB0202B8E4900AD5E40 /* Reusable */,
 			);
 			path = Libraries;
@@ -257,6 +294,22 @@
 			path = ClientDetail;
 			sourceTree = "<group>";
 		};
+		34357F81203B595F00561066 /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				34357F82203B597700561066 /* Observer.swift */,
+			);
+			path = Observers;
+			sourceTree = "<group>";
+		};
+		34357F84203B76E000561066 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				34357F85203B774100561066 /* DateConverter.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		3447AAAD202B3028009F9C1B = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				3434F23A202BAAFC00701967 /* Features */,
+				34357F81203B595F00561066 /* Observers */,
 				34BD12B22037157600C26A50 /* Contacts */,
 				3450DB5B203716A0001F0FF5 /* JSON */,
 				3434F23B202BAB1200701967 /* Libraries */,
@@ -298,6 +352,57 @@
 				3447AAC0202B3028009F9C1B /* Assets.xcassets */,
 			);
 			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		344A28AA203B0D0800EF96F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				344A28AC203B0D6200EF96F1 /* RegistrationFieldCell.xib */,
+				344A28AB203B0D6200EF96F1 /* RegistrationFieldCell.swift */,
+				344A28B0203B0DFD00EF96F1 /* RegistrationPickerCell.xib */,
+				344A28AF203B0DFD00EF96F1 /* RegistrationPickerCell.swift */,
+				344A28B4203B0EEE00EF96F1 /* RegistrationSwitchCell.xib */,
+				344A28B3203B0EEE00EF96F1 /* RegistrationSwitchCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		344A28C4203B1FB200EF96F1 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				344A28C5203B1FB900EF96F1 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		344A28C9203B25E200EF96F1 /* AccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				344A28C7203B213400EF96F1 /* KeyboardAccessoryView.swift */,
+			);
+			path = AccessoryView;
+			sourceTree = "<group>";
+		};
+		344A28CC203B271000EF96F1 /* KeyboardView */ = {
+			isa = PBXGroup;
+			children = (
+				344A28CD203B273500EF96F1 /* KeyboardDatePicker.xib */,
+				344A28CF203B275F00EF96F1 /* KeyboardDatePicker.swift */,
+			);
+			path = KeyboardView;
+			sourceTree = "<group>";
+		};
+		344A28D6203B40C100EF96F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				344A28BC203B1BC100EF96F1 /* RegistrationCellType.swift */,
+				344A28BE203B1BFD00EF96F1 /* RegistrationCellProtocol.swift */,
+				344A28C2203B1F3500EF96F1 /* RegistrationFieldType.swift */,
+				344A28C0203B1C7E00EF96F1 /* RegistrationFieldModel.swift */,
+				344A28CA203B267800EF96F1 /* RegistrationPickerModel.swift */,
+				344A28D2203B3D2A00EF96F1 /* RegistrationSwitchModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3450DB5B203716A0001F0FF5 /* JSON */ = {
@@ -508,11 +613,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B98EA3202B845600AD5E40 /* UserCell.xib in Resources */,
+				344A28B2203B0DFD00EF96F1 /* RegistrationPickerCell.xib in Resources */,
+				344A28AE203B0D6200EF96F1 /* RegistrationFieldCell.xib in Resources */,
 				3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */,
 				3434F23E202C7B9900701967 /* HomeEmptyState.xib in Resources */,
 				3434F249202DCFAC00701967 /* ClientDetailControllerView.xib in Resources */,
 				34B98EA8202B8C9200AD5E40 /* HomeControllerView.xib in Resources */,
+				344A28CE203B273500EF96F1 /* KeyboardDatePicker.xib in Resources */,
 				3434F233202BA82D00701967 /* RegistrationControllerView.xib in Resources */,
+				344A28B6203B0EEE00EF96F1 /* RegistrationSwitchCell.xib in Resources */,
 				3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,11 +661,19 @@
 			files = (
 				34F6BEE420360BA50091ED8D /* CompanyInitialsMaker.swift in Sources */,
 				3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */,
+				34357F83203B597700561066 /* Observer.swift in Sources */,
+				344A28CB203B267800EF96F1 /* RegistrationPickerModel.swift in Sources */,
+				34357F86203B774100561066 /* DateConverter.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
+				344A28C3203B1F3500EF96F1 /* RegistrationFieldType.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,
+				344A28B5203B0EEE00EF96F1 /* RegistrationSwitchCell.swift in Sources */,
 				3434F244202CD21400701967 /* HomeViewModel.swift in Sources */,
+				344A28BD203B1BC100EF96F1 /* RegistrationCellType.swift in Sources */,
+				344A28C1203B1C7E00EF96F1 /* RegistrationFieldModel.swift in Sources */,
 				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
+				344A28C6203B1FB900EF96F1 /* Color.swift in Sources */,
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */,
 				34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */,
@@ -564,21 +681,28 @@
 				3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */,
 				3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */,
 				3434F239202BAA5F00701967 /* RegistrationDelegate.swift in Sources */,
+				344A28BF203B1BFD00EF96F1 /* RegistrationCellProtocol.swift in Sources */,
 				34B98EA5202B8B9400AD5E40 /* HomeController.swift in Sources */,
 				3450DB5D203716B0001F0FF5 /* JSON.swift in Sources */,
+				344A28B1203B0DFD00EF96F1 /* RegistrationPickerCell.swift in Sources */,
 				34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */,
+				344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */,
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
+				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
 				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
+				344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */,
 				3434F229202BA42700701967 /* Company.swift in Sources */,
 				3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */,
 				3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */,
 				34B98EAF202B8D4F00AD5E40 /* HomeDelegate.swift in Sources */,
 				34BD12B4203715C500C26A50 /* ContactsSaveKey.swift in Sources */,
+				344A28AD203B0D6200EF96F1 /* RegistrationFieldCell.swift in Sources */,
+				344A28D5203B3F8300EF96F1 /* RegistrationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

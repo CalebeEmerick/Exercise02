@@ -16,22 +16,43 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dln-pc-soI">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dln-pc-soI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44K-EV-j60">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FdG-Y4-x4q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Cadastrar" backgroundImage="background-blue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="registerAction" destination="iN0-l3-epB" eventType="touchUpInside" id="dXD-os-dQZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="dln-pc-soI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ELx-r0-3np"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dln-pc-soI" secondAttribute="trailing" id="O2x-pn-6QS"/>
+                <constraint firstItem="44K-EV-j60" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RvM-Px-KdR"/>
+                <constraint firstItem="44K-EV-j60" firstAttribute="top" secondItem="dln-pc-soI" secondAttribute="bottom" id="Vwv-JM-veK"/>
                 <constraint firstItem="dln-pc-soI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X3f-yo-ffX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dln-pc-soI" secondAttribute="bottom" id="rlf-6f-YlA"/>
+                <constraint firstItem="44K-EV-j60" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fB4-Bv-9RK"/>
+                <constraint firstItem="44K-EV-j60" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="fNO-eT-b7E"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="registerButton" destination="44K-EV-j60" id="5mc-9n-xkH"/>
                 <outlet property="tableView" destination="dln-pc-soI" id="imN-9n-meG"/>
             </connections>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="background-blue" width="5" height="5"/>
+    </resources>
 </document>
