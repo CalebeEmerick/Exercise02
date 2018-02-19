@@ -17,7 +17,7 @@ final class ClientModelTests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 		
-		contact = Contact(name: "João da Silva", email: "joaosilva@gmail.com", phone: "21973459921", company: Company(name: "Coca-Cola", cnpj: "22951114000150", activeSince: Date(), isMEI: true))
+		contact = Contact(name: "João da Silva", email: "joaosilva@gmail.com", phone: "21973459921", company: Company(name: "Coca-Cola", cnpj: "22951114000150", activeSince: Date(), isMei: true))
 	}
 	
 	override func tearDown() {

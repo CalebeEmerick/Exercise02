@@ -16,14 +16,14 @@ final class HomeController: UIViewController {
 	private let rootView: HomeControllerView
 	private let viewModel: HomeViewModel
 	
-	init(title: String) {
-		fetcher = InMemoryContacts()
+	init(fetcher: RetrieveContacts) {
+		self.fetcher = fetcher
 		rootView = HomeControllerView.makeXib()
 		viewModel = HomeViewModel(fetcher: fetcher)
 		
 		super.init(nibName: nil, bundle: nil)
 		
-		self.title = title
+		title = "Clientes"
 		rootView.controller = self
 	}
 	
