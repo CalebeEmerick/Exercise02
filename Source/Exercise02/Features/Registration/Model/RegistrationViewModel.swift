@@ -20,7 +20,7 @@ final class RegistrationViewModel {
 	
 	var didChangeFocusTo: ((IndexPath) -> Void)?
 	
-	var didDismissKeyboard: ((IndexPath) -> Void)?
+	var didOpenPickerKeyboard: ((IndexPath) -> Void)?
 	
 	func getFieldItems() -> [RegistrationCellProtocol] {
 		return [
@@ -45,15 +45,15 @@ final class RegistrationViewModel {
 	}
 	
 	private func changeTextFieldFocus(for model: RegistrationFieldModel) {
-		let index = getCurrentModelIndex(model: model)
-		
 		switch model.fieldType {
 		case .name, .email, .phone, .companyName:
+			let index = getCurrentModelIndex(model: model)
 			let indexPath = makeIndexPath(for: index + 1)
 			didChangeFocusTo?(indexPath)
 		case .cnpj:
+			let index = getPickerIndex()
 			let indexPath = makeIndexPath(for: index)
-			didDismissKeyboard?(indexPath)
+			didOpenPickerKeyboard?(indexPath)
 		}
 	}
 	
@@ -79,5 +79,16 @@ final class RegistrationViewModel {
 	
 	private func makeIndexPath(for index: Int) -> IndexPath {
 		return IndexPath(row: index, section: 0)
+	}
+	
+	private func getPickerIndex() -> Int {
+		let items = getFieldItems()
+		var itemIndex = 0
+		for (index, item) in items.enumerated() where item.type == .picker {
+			
+			itemIndex = index
+			break
+		}
+		return itemIndex
 	}
 }

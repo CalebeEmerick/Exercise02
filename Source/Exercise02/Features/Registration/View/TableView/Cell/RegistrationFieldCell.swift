@@ -50,12 +50,6 @@ extension RegistrationFieldCell {
 		}
 	}
 	
-	func dismissKeyboard() {
-		DispatchQueue.main.async {
-			self.textField.endEditing(true)
-		}
-	}
-	
 	private func updateUI() {
 		guard let model = model as? RegistrationFieldModel else { return }
 		setKeyboardBarAction(model: model)

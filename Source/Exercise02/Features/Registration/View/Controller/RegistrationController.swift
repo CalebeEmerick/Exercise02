@@ -42,7 +42,7 @@ extension RegistrationController {
 		
 		getFieldItems()
 		setChangeFocusCallback()
-		setDismissKeyboardFocus()
+		setCallbackForOpenPicker()
 	}
 }
 
@@ -61,9 +61,9 @@ extension RegistrationController {
 		}
 	}
 	
-	private func setDismissKeyboardFocus() {
-		viewModel.didDismissKeyboard = { [weak self] indexPath in
-			self?.rootView.dismissKeyboard(for: indexPath)
+	private func setCallbackForOpenPicker() {
+		viewModel.didOpenPickerKeyboard = { [weak self] indexPath in
+			self?.rootView.openPickerKeyboard(for: indexPath)
 		}
 	}
 }

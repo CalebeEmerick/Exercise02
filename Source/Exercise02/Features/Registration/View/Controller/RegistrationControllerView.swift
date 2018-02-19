@@ -51,9 +51,9 @@ extension RegistrationControllerView {
 		}
 	}
 	
-	func dismissKeyboard(for indexPath: IndexPath) {
-		if let cell = tableView.cellForRow(at: indexPath) as? RegistrationFieldCell {
-			cell.dismissKeyboard()
+	func openPickerKeyboard(for indexPath: IndexPath) {
+		if let cell = tableView.cellForRow(at: indexPath) as? RegistrationPickerCell {
+			cell.openPickerKeyboard()
 		}
 	}
 	

@@ -39,6 +39,12 @@ extension RegistrationPickerCell {
 
 extension RegistrationPickerCell {
 	
+	func openPickerKeyboard() {
+		DispatchQueue.main.async {
+			self.textField.becomeFirstResponder()
+		}
+	}
+	
 	private func updateUI() {
 		guard let model = model as? RegistrationPickerModel else { return }
 		setKeyboardBarAction(model: model)
