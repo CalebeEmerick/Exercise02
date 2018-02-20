@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423AE203C688F00FD6C09 /* NameValidator.swift */; };
 		340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B3203C758100FD6C09 /* NameValidatorTests.swift */; };
+		340423B6203C906900FD6C09 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B5203C906900FD6C09 /* EmailValidator.swift */; };
+		340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */; };
 		3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1C203740C400D15B0A /* ContactListModelTests.swift */; };
 		3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
@@ -104,6 +106,8 @@
 /* Begin PBXFileReference section */
 		340423AE203C688F00FD6C09 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
 		340423B3203C758100FD6C09 /* NameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidatorTests.swift; sourceTree = "<group>"; };
+		340423B5203C906900FD6C09 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
 		3412AE1C203740C400D15B0A /* ContactListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListModelTests.swift; sourceTree = "<group>"; };
 		3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFetcherTests.swift; sourceTree = "<group>"; };
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				340423AE203C688F00FD6C09 /* NameValidator.swift */,
+				340423B5203C906900FD6C09 /* EmailValidator.swift */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				340423B3203C758100FD6C09 /* NameValidatorTests.swift */,
+				340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -720,6 +726,7 @@
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
 				344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */,
 				3434F229202BA42700701967 /* Company.swift in Sources */,
+				340423B6203C906900FD6C09 /* EmailValidator.swift in Sources */,
 				3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */,
 				3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */,
 				34B98EAF202B8D4F00AD5E40 /* HomeDelegate.swift in Sources */,
@@ -738,6 +745,7 @@
 				3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */,
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
+				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
 			);
