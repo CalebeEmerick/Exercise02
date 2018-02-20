@@ -288,6 +288,7 @@
 		3434F224202BA06800701967 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				340423AD203C686E00FD6C09 /* Validator */,
 				3434F225202BA0F100701967 /* Model */,
 				3434F22C202BA75300701967 /* View */,
 			);

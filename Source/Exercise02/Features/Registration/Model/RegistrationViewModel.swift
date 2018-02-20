@@ -100,6 +100,11 @@ extension RegistrationViewModel: RegistrationCellKeyboardButtonCapture {
 		}
 		return itemIndex
 	}
+	
+	@objc private func didTapKeyboardButton(notification: Notification) {
+		guard let model = notification.object as? RegistrationFieldModel else { return }
+		changeFieldFocus(for: model)
+	}
 }
 
 // MARK: - RegistrationState -
