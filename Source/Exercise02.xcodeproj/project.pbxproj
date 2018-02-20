@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423AE203C688F00FD6C09 /* NameValidator.swift */; };
+		340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B3203C758100FD6C09 /* NameValidatorTests.swift */; };
 		3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1C203740C400D15B0A /* ContactListModelTests.swift */; };
 		3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
@@ -100,6 +102,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		340423AE203C688F00FD6C09 /* NameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidator.swift; sourceTree = "<group>"; };
+		340423B3203C758100FD6C09 /* NameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidatorTests.swift; sourceTree = "<group>"; };
 		3412AE1C203740C400D15B0A /* ContactListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListModelTests.swift; sourceTree = "<group>"; };
 		3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFetcherTests.swift; sourceTree = "<group>"; };
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -189,9 +193,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		340423AD203C686E00FD6C09 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				340423AE203C688F00FD6C09 /* NameValidator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		340423B0203C755800FD6C09 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				340423B3203C758100FD6C09 /* NameValidatorTests.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		3434F224202BA06800701967 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				340423AD203C686E00FD6C09 /* Validator */,
 				3434F225202BA0F100701967 /* Model */,
 				3434F22C202BA75300701967 /* View */,
 			);
@@ -333,8 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				3434F23A202BAAFC00701967 /* Features */,
-				34357F81203B595F00561066 /* Observers */,
 				34BD12B22037157600C26A50 /* Contacts */,
+				34357F81203B595F00561066 /* Observers */,
 				3450DB5B203716A0001F0FF5 /* JSON */,
 				3434F23B202BAB1200701967 /* Libraries */,
 				34B98EBA202B90C700AD5E40 /* Extensions */,
@@ -416,6 +437,7 @@
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				340423B0203C755800FD6C09 /* Validators */,
 				34CFE2BA20372F6700A22122 /* Contacts */,
 				3468C81F202F283700CCD913 /* ClientModelTests.swift */,
 				34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */,
@@ -692,6 +714,7 @@
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
+				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
 				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
@@ -711,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
+				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
 				3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */,
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,

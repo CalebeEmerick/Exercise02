@@ -39,11 +39,6 @@ final class RegistrationViewModel {
 		notification.addObserver(self, selector: #selector(didTapKeyboardButton), name: Observer.Registration.kPressedKeyboardButton, object: nil)
 	}
 	
-	@objc private func didTapKeyboardButton(notification: Notification) {
-		guard let model = notification.object as? RegistrationFieldModel else { return }
-		changeTextFieldFocus(for: model)
-	}
-	
 	private func changeTextFieldFocus(for model: RegistrationFieldModel) {
 		switch model.fieldType {
 		case .name, .email, .phone, .companyName:
@@ -90,5 +85,10 @@ final class RegistrationViewModel {
 			break
 		}
 		return itemIndex
+	}
+	
+	@objc private func didTapKeyboardButton(notification: Notification) {
+		guard let model = notification.object as? RegistrationFieldModel else { return }
+		changeTextFieldFocus(for: model)
 	}
 }
