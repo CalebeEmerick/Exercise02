@@ -12,10 +12,16 @@ import UIKit
 
 final class RegistrationControllerView: UIView {
 	
+	@IBOutlet private var registerButton: UIButton!
 	@IBOutlet private var tableView: UITableView!
+	
+	@IBAction private func registerAction() {
+		
+	}
 	
 	private let dataSource = RegistrationDataSource()
 	private let delegate = RegistrationDelegate()
+	private var items: [RegistrationCellProtocol] = []
 }
 
 // MARK: - Life Cycle -
@@ -33,9 +39,59 @@ extension RegistrationControllerView {
 
 extension RegistrationControllerView {
 	
+	func updateFields(with items: [RegistrationCellProtocol]) {
+		self.items = items
+		dataSource.items = items
+		delegate.items = items
+	}
+	
+	func changeKeyboardFocus(for indexPath: IndexPath) {
+		if let cell = tableView.cellForRow(at: indexPath) as? RegistrationFieldCell {
+			cell.setTextFieldFocus()
+		}
+	}
+	
+	func openPickerKeyboard(for indexPath: IndexPath) {
+		if let cell = tableView.cellForRow(at: indexPath) as? RegistrationPickerCell {
+			cell.openPickerKeyboard()
+		}
+	}
+	
 	private func setupTableView() {
-		tableView.dataSource = dataSource
+		setTopSpace()
+		setBottomSpace()
+		registerCells()
+		setDelegate()
+		setDataSource()
+	}
+	
+	private func registerCells() {
+		tableView.register(cellNib: RegistrationFieldCell.self)
+		tableView.register(cellNib: RegistrationPickerCell.self)
+		tableView.register(cellNib: RegistrationSwitchCell.self)
+	}
+	
+	private func setDelegate() {
 		tableView.delegate = delegate
-		
+	}
+	
+	private func setDataSource() {
+		tableView.dataSource = dataSource
+	}
+	
+	private func setTopSpace() {
+		let view = makeSpaceView()
+		tableView.tableHeaderView = view
+	}
+	
+	private func setBottomSpace() {
+		let view = makeSpaceView()
+		tableView.tableFooterView = view
+	}
+	
+	private func makeSpaceView() -> UIView {
+		let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20)
+		let view = UIView(frame: frame)
+		return view
 	}
 }

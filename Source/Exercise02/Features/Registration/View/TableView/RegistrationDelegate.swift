@@ -10,10 +10,15 @@ import UIKit
 
 final class RegistrationDelegate: NSObject {
 	
-	
+	var items: [RegistrationCellProtocol] = []
 }
 
-extension RegistrationDelegate : UITableViewDelegate {
+extension RegistrationDelegate: UITableViewDelegate {
 	
-	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		
+		let item = items[indexPath.row]
+		
+		return item.height
+	}
 }
