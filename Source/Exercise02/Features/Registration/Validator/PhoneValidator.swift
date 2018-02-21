@@ -17,7 +17,7 @@ final class PhoneValidator: RegexBaseValidator {
 	}
 	
 	override init() {
-		pattern = "^(\\+?[0-9]{2,3})?\\s?([0-9]{2})?\\s?([0-9]{9})$"
+		pattern = "^(([0-9]{2})|(\\([0-9]{2}\\)))[[:space:]]?([0-9]{9})$"
 	}
 	
 	func validate(phone: String) -> Bool {
