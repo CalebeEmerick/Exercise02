@@ -11,6 +11,8 @@
 		340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B3203C758100FD6C09 /* NameValidatorTests.swift */; };
 		340423B6203C906900FD6C09 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B5203C906900FD6C09 /* EmailValidator.swift */; };
 		340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */; };
+		340423BC203CAD0000FD6C09 /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423BB203CAD0000FD6C09 /* PhoneValidator.swift */; };
+		340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */; };
 		3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1C203740C400D15B0A /* ContactListModelTests.swift */; };
 		3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
@@ -55,6 +57,8 @@
 		3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450DB5E203717A3001F0FF5 /* ContactList.swift */; };
 		3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3468C81F202F283700CCD913 /* ClientModelTests.swift */; };
 		34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */; };
+		34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */; };
+		34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */; };
 		34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EA0202B845600AD5E40 /* UserCell.swift */; };
 		34B98EA3202B845600AD5E40 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34B98EA1202B845600AD5E40 /* UserCell.xib */; };
 		34B98EA5202B8B9400AD5E40 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EA4202B8B9400AD5E40 /* HomeController.swift */; };
@@ -108,6 +112,8 @@
 		340423B3203C758100FD6C09 /* NameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameValidatorTests.swift; sourceTree = "<group>"; };
 		340423B5203C906900FD6C09 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
+		340423BB203CAD0000FD6C09 /* PhoneValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexBaseValidator.swift; sourceTree = "<group>"; };
 		3412AE1C203740C400D15B0A /* ContactListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListModelTests.swift; sourceTree = "<group>"; };
 		3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFetcherTests.swift; sourceTree = "<group>"; };
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 		3468C817202F27A800CCD913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3468C81F202F283700CCD913 /* ClientModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModelTests.swift; sourceTree = "<group>"; };
 		34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMakerTests.swift; sourceTree = "<group>"; };
+		34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidatorTests.swift; sourceTree = "<group>"; };
+		34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexBaseValidatorTests.swift; sourceTree = "<group>"; };
 		34B98EA0202B845600AD5E40 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		34B98EA1202B845600AD5E40 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		34B98EA4202B8B9400AD5E40 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -200,8 +208,10 @@
 		340423AD203C686E00FD6C09 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
+				340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */,
 				340423AE203C688F00FD6C09 /* NameValidator.swift */,
 				340423B5203C906900FD6C09 /* EmailValidator.swift */,
+				340423BB203CAD0000FD6C09 /* PhoneValidator.swift */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -209,8 +219,10 @@
 		340423B0203C755800FD6C09 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
+				34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */,
 				340423B3203C758100FD6C09 /* NameValidatorTests.swift */,
 				340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */,
+				34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -694,6 +706,7 @@
 				34357F86203B774100561066 /* DateConverter.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
 				344A28C3203B1F3500EF96F1 /* RegistrationFieldType.swift in Sources */,
+				340423BC203CAD0000FD6C09 /* PhoneValidator.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,
 				344A28B5203B0EEE00EF96F1 /* RegistrationSwitchCell.swift in Sources */,
 				3434F244202CD21400701967 /* HomeViewModel.swift in Sources */,
@@ -701,6 +714,7 @@
 				344A28C1203B1C7E00EF96F1 /* RegistrationFieldModel.swift in Sources */,
 				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
+				340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */,
 				344A28C6203B1FB900EF96F1 /* Color.swift in Sources */,
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */,
@@ -742,12 +756,14 @@
 			files = (
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
+				34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */,
 				3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */,
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
+				34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
