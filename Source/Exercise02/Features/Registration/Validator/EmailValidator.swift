@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class EmailValidator {
+final class EmailValidator: RegexBaseValidator {
 	
 	private let pattern: String
 	
@@ -16,7 +16,7 @@ final class EmailValidator {
 		self.pattern = pattern
 	}
 	
-	init() {
+	override init() {
 		pattern = "[A-Z0-9a-z._%!#$+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 	}
 	
@@ -26,13 +26,6 @@ final class EmailValidator {
 			return false
 		}
 		
-		return isEmailValid(email: email)
-	}
-	
-	private func isEmailValid(email: String) -> Bool {
-		let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive])
-		let range = NSRange(location: 0, length: email.count)
-		let numberOfMatches = regex?.numberOfMatches(in: email, options: [], range: range) ?? 0
-		return numberOfMatches > 0
+		return validate(email, with: pattern)
 	}
 }
