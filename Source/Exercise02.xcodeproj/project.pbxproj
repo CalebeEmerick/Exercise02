@@ -73,6 +73,8 @@
 		34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EBB202B90F500AD5E40 /* ViewCreatable.swift */; };
 		34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD12B0203712DE00C26A50 /* ContactsFetcher.swift */; };
 		34BD12B4203715C500C26A50 /* ContactsSaveKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD12B3203715C500C26A50 /* ContactsSaveKey.swift */; };
+		34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B71203DBB0800CAD22A /* CompanyNameValidator.swift */; };
+		34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B73203DD97F00CAD22A /* CompanyNameValidatorTests.swift */; };
 		34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */; };
 		34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFE2BB20372F9900A22122 /* ContactModelTests.swift */; };
 		34F6BEDF203604E30091ED8D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; };
@@ -178,6 +180,8 @@
 		34B98EBB202B90F500AD5E40 /* ViewCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCreatable.swift; sourceTree = "<group>"; };
 		34BD12B0203712DE00C26A50 /* ContactsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFetcher.swift; sourceTree = "<group>"; };
 		34BD12B3203715C500C26A50 /* ContactsSaveKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSaveKey.swift; sourceTree = "<group>"; };
+		34BD9B71203DBB0800CAD22A /* CompanyNameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNameValidator.swift; sourceTree = "<group>"; };
+		34BD9B73203DD97F00CAD22A /* CompanyNameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNameValidatorTests.swift; sourceTree = "<group>"; };
 		34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactsTests.swift; sourceTree = "<group>"; };
 		34CFE2BB20372F9900A22122 /* ContactModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelTests.swift; sourceTree = "<group>"; };
 		34F6BEDD203604E30091ED8D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				340423AE203C688F00FD6C09 /* NameValidator.swift */,
 				340423B5203C906900FD6C09 /* EmailValidator.swift */,
 				340423BB203CAD0000FD6C09 /* PhoneValidator.swift */,
+				34BD9B71203DBB0800CAD22A /* CompanyNameValidator.swift */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				340423B3203C758100FD6C09 /* NameValidatorTests.swift */,
 				340423B9203CA90F00FD6C09 /* EmailValidatorTests.swift */,
 				34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */,
+				34BD9B73203DD97F00CAD22A /* CompanyNameValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -735,6 +741,7 @@
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
+				34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
 				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
@@ -763,6 +770,7 @@
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
+				34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */,
 				34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
