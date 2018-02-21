@@ -25,6 +25,7 @@ final class HomeController: UIViewController {
 		
 		title = "Clientes"
 		rootView.controller = self
+		rootView.homeViewModel = viewModel
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -44,6 +45,7 @@ extension HomeController {
 		super.viewDidLoad()
 		
 		setRetrieveContactsCallback()
+		setContactListChangeCallback()
 		viewModel.fetchClients()
 	}
   
@@ -69,6 +71,7 @@ extension HomeController {
 	
 	private func showList(with contacts: [ClientModel]) {
 		rootView.setDataSource(with: contacts)
+		rootView.reloadAllData()
 	}
 	
 	private func showEmptyState() {
@@ -77,5 +80,13 @@ extension HomeController {
   
 	private func deselectRowIfNeeded() {
 		rootView.deselectRowIfNeeded()
+	}
+	
+	private func setContactListChangeCallback() {
+		viewModel.didUpdateContacts = { [weak self] contacts in
+			self?.rootView.hideEmptyViewIfNeeded()
+			self?.rootView.setDataSource(with: contacts)
+			self?.rootView.reloadSection()
+		}
 	}
 }

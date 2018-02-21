@@ -17,6 +17,7 @@
 		3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */; };
 		342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342745AE20406231000F29FD /* RegistrationViewModelTests.swift */; };
 		342745B3204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342745B2204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift */; };
+		342745BF20408BE2000F29FD /* (null) in Sources */ = {isa = PBXBuildFile; };
 		343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343467DA203F5886003A462F /* RegistrationCellBaseDate.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
 		3434F22B202BA56500701967 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22A202BA56500701967 /* Contact.swift */; };
@@ -36,6 +37,8 @@
 		3434F253202F230300701967 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F252202F230300701967 /* InMemoryContacts.swift */; };
 		34357F83203B597700561066 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F82203B597700561066 /* Observer.swift */; };
 		34357F86203B774100561066 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F85203B774100561066 /* DateConverter.swift */; };
+		343EBC1F2045FE0500EBFFB1 /* SaveContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC1E2045FE0500EBFFB1 /* SaveContact.swift */; };
+		343EBC212045FE0B00EBFFB1 /* ContactSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC202045FE0A00EBFFB1 /* ContactSaver.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
@@ -155,6 +158,8 @@
 		3434F252202F230300701967 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		34357F82203B597700561066 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		34357F85203B774100561066 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		343EBC1E2045FE0500EBFFB1 /* SaveContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveContact.swift; sourceTree = "<group>"; };
+		343EBC202045FE0A00EBFFB1 /* ContactSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactSaver.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -288,7 +293,6 @@
 		3434F224202BA06800701967 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				340423AD203C686E00FD6C09 /* Validator */,
 				3434F225202BA0F100701967 /* Model */,
 				3434F22C202BA75300701967 /* View */,
 			);
@@ -618,6 +622,8 @@
 				3450DB5E203717A3001F0FF5 /* ContactList.swift */,
 				3434F250202E19E300701967 /* RetrieveContacts.swift */,
 				3434F252202F230300701967 /* InMemoryContacts.swift */,
+				343EBC1E2045FE0500EBFFB1 /* SaveContact.swift */,
+				343EBC202045FE0A00EBFFB1 /* ContactSaver.swift */,
 				34BD12B0203712DE00C26A50 /* ContactsFetcher.swift */,
 				34BD12B3203715C500C26A50 /* ContactsSaveKey.swift */,
 			);
@@ -826,8 +832,10 @@
 				344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */,
 				349D8CF4203F510200852243 /* RegistrationCellDateCapture.swift in Sources */,
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
+				343EBC212045FE0B00EBFFB1 /* ContactSaver.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
+				343EBC1F2045FE0500EBFFB1 /* SaveContact.swift in Sources */,
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
@@ -858,6 +866,7 @@
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
 				34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */,
+				342745BF20408BE2000F29FD /* (null) in Sources */,
 				34BD9B78203E06CB00CAD22A /* CNPJValidatorTests.swift in Sources */,
 				3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */,
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,

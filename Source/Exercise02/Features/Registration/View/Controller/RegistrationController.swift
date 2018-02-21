@@ -21,7 +21,7 @@ final class RegistrationController: UIViewController {
 	private let cnpjValidator = CNPJValidator()
 	private let dateValidator = DateValidator()
 	
-	init(fetcher: RetrieveHeadlines) {
+	init(fetcher: RetrieveHeadlines, saver: SaveContact) {
 		rootView = RegistrationControllerView.makeXib()
 		let validators = ContainerValidator(name: nameValidator,
 														email: emailValidator,
@@ -30,11 +30,13 @@ final class RegistrationController: UIViewController {
 														cnpj: cnpjValidator,
 														date: dateValidator
 		)
-		viewModel = RegistrationViewModel(fetcher: fetcher, validators: validators)
+		viewModel = RegistrationViewModel(fetcher: fetcher, saver: saver,
+													 validators: validators)
 		
 		super.init(nibName: nil, bundle: nil)
 		
 		rootView.viewModel = viewModel
+		rootView.registrationController = self
 		self.title = "Novo Cadastro"
 	}
 	
@@ -58,6 +60,7 @@ extension RegistrationController {
 		setChangeFocusCallback()
 		setCallbackForOpenPicker()
 		setCallbackForUpdateButtonState()
+		setCallbackForContactCreated()
 	}
 }
 
@@ -85,6 +88,12 @@ extension RegistrationController {
 	private func setCallbackForUpdateButtonState() {
 		viewModel.didUpdateButtonState = { [weak self] isEnabled in
 			self?.rootView.setButton(to: isEnabled)
+		}
+	}
+	
+	private func setCallbackForContactCreated() {
+		viewModel.didCreateNewContact = { [weak self] in
+			self?.rootView.closeScreen()
 		}
 	}
 }
