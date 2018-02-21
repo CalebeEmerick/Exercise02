@@ -10,7 +10,10 @@ import Foundation
 
 final class RegistrationViewModel {
 	
-	init() {
+	private let headlinesFetcher: RetrieveHeadlines
+	
+	init(fetcher: RetrieveHeadlines) {
+		headlinesFetcher = fetcher
 		registerKeyboardButtonNotification()
 	}
 	
@@ -22,16 +25,8 @@ final class RegistrationViewModel {
 	
 	var didOpenPickerKeyboard: ((IndexPath) -> Void)?
 	
-	func getFieldItems() -> [RegistrationCellProtocol] {
-		return [
-			RegistrationFieldModel(type: .name("Nome Completo")),
-			RegistrationFieldModel(type: .email("E-mail")),
-			RegistrationFieldModel(type: .phone("Telefone para contato")),
-			RegistrationFieldModel(type: .companyName("Nome Fantasia")),
-			RegistrationFieldModel(type: .cnpj("CNPJ")),
-			RegistrationPickerModel(label: "Ativa desde", placeholder: "ex: 10/05/1954"),
-			RegistrationSwitchModel(label: "É MEI?")
-		]
+	func getHeadlines() -> [RegistrationCellProtocol] {
+		return headlinesFetcher.fetch()
 	}
 	
 	private func registerKeyboardButtonNotification() {
@@ -53,7 +48,7 @@ final class RegistrationViewModel {
 	}
 	
 	private func getCurrentModelIndex(model: RegistrationFieldModel) -> Int {
-		let items = getFieldItems()
+		let items = headlinesFetcher.fetch()
 		let index = getIndex(for: model.fieldType, from: items)
 		return index
 	}
@@ -77,7 +72,7 @@ final class RegistrationViewModel {
 	}
 	
 	private func getPickerIndex() -> Int {
-		let items = getFieldItems()
+		let items = headlinesFetcher.fetch()
 		var itemIndex = 0
 		for (index, item) in items.enumerated() where item.type == .picker {
 			

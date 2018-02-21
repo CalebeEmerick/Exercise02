@@ -15,13 +15,13 @@ final class RegistrationController: UIViewController {
 	private let rootView: RegistrationControllerView
 	private let viewModel: RegistrationViewModel
 	
-	init(title: String) {
+	init(fetcher: RetrieveHeadlines) {
 		rootView = RegistrationControllerView.makeXib()
-		viewModel = RegistrationViewModel()
+		viewModel = RegistrationViewModel(fetcher: fetcher)
 		
 		super.init(nibName: nil, bundle: nil)
 		
-		self.title = title
+		self.title = "Novo Cadastro"
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -51,7 +51,7 @@ extension RegistrationController {
 extension RegistrationController {
 	
 	private func getFieldItems() {
-		let infos = viewModel.getFieldItems()
+		let infos = viewModel.getHeadlines()
 		rootView.updateFields(with: infos)
 	}
 	
