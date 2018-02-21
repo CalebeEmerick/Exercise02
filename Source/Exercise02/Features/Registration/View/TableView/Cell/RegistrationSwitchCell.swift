@@ -15,6 +15,12 @@ final class RegistrationSwitchCell: UITableViewCell {
 	@IBOutlet private var meiLabel: UILabel!
 	@IBOutlet private var meiSwitch: UISwitch!
 	
+	@IBAction private func didChangeState(_ state: UISwitch) {
+		switchCapture?.isMeiChanged(to: state.isOn)
+	}
+	
+	weak var switchCapture: RegistrationCellSwitchCapture?
+	
 	var model: RegistrationCellProtocol? {
 		didSet {
 			updateUI()
@@ -28,6 +34,7 @@ extension RegistrationSwitchCell {
 	
 	private func updateUI() {
 		guard let model = model as? RegistrationSwitchModel else { return }
+		switchCapture?.isMeiChanged(to: model.switchState)
 		setProperties(for: model)
 	}
 	

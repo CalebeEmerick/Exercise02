@@ -13,9 +13,9 @@ import XCTest
 final class ContactListModelTests: XCTestCase {
 	
 	private let validContactList: [Contact] = [
-		Contact(name: "João da Silva", email: "joaosilva@gmail.com", phone: "21973459921", company: Company(name: "Coca Cola", cnpj: "22951114000150", activeSince: Date(), isMei: true)),
+		Contact(name: "João da Silva", email: "joaosilva@gmail.com", phone: "21973459921", company: Company(name: "Coca Cola", cnpj: "22951114000150", activeSince: "10/10/2001", isMei: true)),
 		
-		Contact(name: "Maria Azevedo", email: "mariazev@hotmail.com", phone: "21998345602", company: Company(name: "Google", cnpj: "70128653000136", activeSince: Date(), isMei: false))
+		Contact(name: "Maria Azevedo", email: "mariazev@hotmail.com", phone: "21998345602", company: Company(name: "Google", cnpj: "70128653000136", activeSince: "01/01/1999", isMei: false))
 	]
 	
 	private var validListOfContactsJSON: [JSON] {
@@ -27,7 +27,7 @@ final class ContactListModelTests: XCTestCase {
 				"company": [
 					"name": "Coca Cola",
 					"cnpj": "22951114000150",
-					"active_since": Date(),
+					"active_since": "10/10/2001",
 					"is_mei": true
 				]
 			],
@@ -38,7 +38,7 @@ final class ContactListModelTests: XCTestCase {
 				"company": [
 					"name": "Google",
 					"cnpj": "70128653000136",
-					"active_since": Date(),
+					"active_since": "01/01/1999",
 					"is_mei": false
 				]
 			]
@@ -54,7 +54,7 @@ final class ContactListModelTests: XCTestCase {
 				"company": [
 					"name": "Coca Cola",
 					"cnpj": "22951114000150",
-					"activeSince": Date(),
+					"activeSince": "10/10/2001",
 					"isMei": true
 				]
 			],
@@ -65,7 +65,7 @@ final class ContactListModelTests: XCTestCase {
 				"company": [
 					"name": "Google",
 					"cnpj": "70128653000136",
-					"activeSince": Date(),
+					"activeSince": "01/01/1999",
 					"isMei": false
 				]
 			]

@@ -12,10 +12,10 @@ struct Company {
 
 	let name: String
 	let cnpj: String
-	let activeSince: Date
+	let activeSince: String
 	let isMei: Bool
 
-	init(name: String, cnpj: String, activeSince: Date, isMei: Bool) {
+	init(name: String, cnpj: String, activeSince: String, isMei: Bool) {
 		self.name = name
 		self.cnpj = cnpj
 		self.activeSince = activeSince
@@ -33,7 +33,7 @@ extension Company {
 	init?(json: JSON) {
 		guard let name = json[kName] as? String,
 			let cnpj = json[kCnpj] as? String,
-			let activeSince = json[kActiveSince] as? Date,
+			let activeSince = json[kActiveSince] as? String,
 			let isMei = json[kIsMei] as? Bool
 		else {
 			return nil
@@ -52,5 +52,15 @@ extension Company {
 			kActiveSince: activeSince,
 			kIsMei: isMei
 		]
+	}
+}
+
+extension Company: Equatable {
+	
+	static func ==(lhs: Company, rhs: Company) -> Bool {
+		return lhs.name == rhs.name &&
+		lhs.cnpj == rhs.cnpj &&
+		lhs.activeSince == rhs.activeSince &&
+		lhs.isMei == rhs.isMei
 	}
 }

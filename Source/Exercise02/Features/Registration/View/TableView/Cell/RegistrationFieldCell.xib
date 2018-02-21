@@ -27,6 +27,9 @@
                         <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        <connections>
+                            <action selector="didChangeText:" destination="KGk-i7-Jjw" eventType="editingChanged" id="qUU-b1-kJM"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>

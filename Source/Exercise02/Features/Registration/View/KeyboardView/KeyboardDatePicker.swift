@@ -29,7 +29,6 @@ extension KeyboardDatePicker {
 		super.awakeFromNib()
 		
 		setupDatePicker()
-		selectedDate = picker.date
 	}
 }
 
@@ -39,7 +38,6 @@ extension KeyboardDatePicker {
 	
 	private func setupDatePicker() {
 		picker.locale = Locale(identifier: "pt_BR")
-		picker.timeZone = TimeZone(abbreviation: "GMT")
 		picker.datePickerMode = .date
 		picker.maximumDate = Date()
 	}

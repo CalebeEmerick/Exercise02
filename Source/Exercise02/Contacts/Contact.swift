@@ -55,3 +55,13 @@ extension Contact {
 		]
 	}
 }
+
+extension Contact: Equatable {
+	
+	static func ==(lhs: Contact, rhs: Contact) -> Bool {
+		return lhs.name == rhs.name &&
+		lhs.email == rhs.email &&
+		lhs.phone == rhs.phone &&
+		lhs.company == rhs.company
+	}
+}
