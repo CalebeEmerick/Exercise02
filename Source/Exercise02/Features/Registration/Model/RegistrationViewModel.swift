@@ -92,7 +92,9 @@ final class RegistrationViewModel {
 	}
 }
 
-extension RegistrationViewModel : RegistrationCellFieldCapture {
+// MARK: - RegistrationCellFieldCapture -
+
+extension RegistrationViewModel: RegistrationCellFieldCapture {
 	
 	func validate(_ text: String, for type: RegistrationFieldModel) -> CGColor {
 		let color: CGColor
@@ -115,6 +117,17 @@ extension RegistrationViewModel : RegistrationCellFieldCapture {
 			color = RegistrationCellFieldState(isValid: result).color
 		}
 		
+		return color
+	}
+}
+
+// MARK: - RegistrationCellDateCapture -
+
+extension RegistrationViewModel: RegistrationCellDateCapture {
+	
+	func validate(_ text: String) -> CGColor {
+		let result = validators.dateValidator.validate(date: text)
+		let color = RegistrationCellFieldState(isValid: result).color
 		return color
 	}
 }

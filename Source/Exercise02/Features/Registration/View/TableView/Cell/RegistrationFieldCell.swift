@@ -22,6 +22,7 @@ final class RegistrationFieldCell: UITableViewCell {
 	private var line: CALayer!
 	
 	weak var viewModel: RegistrationCellFieldCapture?
+	
 	var model: RegistrationCellProtocol? {
 		didSet {
 			updateUI()

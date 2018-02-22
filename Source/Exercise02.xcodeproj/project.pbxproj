@@ -15,6 +15,7 @@
 		340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */; };
 		3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1C203740C400D15B0A /* ContactListModelTests.swift */; };
 		3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */; };
+		343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343467DA203F5886003A462F /* RegistrationCellBaseDate.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
 		3434F22B202BA56500701967 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22A202BA56500701967 /* Contact.swift */; };
 		3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22D202BA7D500701967 /* RegistrationController.swift */; };
@@ -60,6 +61,7 @@
 		349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */; };
 		349D8CF0203F40E000852243 /* ContainerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CEF203F40E000852243 /* ContainerValidator.swift */; };
 		349D8CF2203F434B00852243 /* RegistrationCellFieldCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */; };
+		349D8CF4203F510200852243 /* RegistrationCellDateCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CF3203F510200852243 /* RegistrationCellDateCapture.swift */; };
 		34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */; };
 		34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */; };
 		34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EA0202B845600AD5E40 /* UserCell.swift */; };
@@ -129,6 +131,7 @@
 		340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexBaseValidator.swift; sourceTree = "<group>"; };
 		3412AE1C203740C400D15B0A /* ContactListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListModelTests.swift; sourceTree = "<group>"; };
 		3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFetcherTests.swift; sourceTree = "<group>"; };
+		343467DA203F5886003A462F /* RegistrationCellBaseDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellBaseDate.swift; sourceTree = "<group>"; };
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		3434F22A202BA56500701967 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		3434F22D202BA7D500701967 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellFieldState.swift; sourceTree = "<group>"; };
 		349D8CEF203F40E000852243 /* ContainerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerValidator.swift; sourceTree = "<group>"; };
 		349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellFieldCapture.swift; sourceTree = "<group>"; };
+		349D8CF3203F510200852243 /* RegistrationCellDateCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellDateCapture.swift; sourceTree = "<group>"; };
 		34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidatorTests.swift; sourceTree = "<group>"; };
 		34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexBaseValidatorTests.swift; sourceTree = "<group>"; };
 		34B98EA0202B845600AD5E40 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -259,12 +263,19 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		343467DC203F588A003A462F /* BaseDateTextField */ = {
+			isa = PBXGroup;
+			children = (
+				343467DA203F5886003A462F /* RegistrationCellBaseDate.swift */,
+			);
+			path = BaseDateTextField;
+			sourceTree = "<group>";
+		};
 		3434F224202BA06800701967 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
 				3434F225202BA0F100701967 /* Model */,
 				3434F22C202BA75300701967 /* View */,
-				349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -275,9 +286,11 @@
 				340423AD203C686E00FD6C09 /* Validator */,
 				34BD9B7F203E13F400CAD22A /* Headline */,
 				344A28D6203B40C100EF96F1 /* Cell */,
-				344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */,
+				349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */,
+				349D8CF3203F510200852243 /* RegistrationCellDateCapture.swift */,
 				349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */,
 				349D8CEF203F40E000852243 /* ContainerValidator.swift */,
+				344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +298,7 @@
 		3434F22C202BA75300701967 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				343467DC203F588A003A462F /* BaseDateTextField */,
 				344A28CC203B271000EF96F1 /* KeyboardView */,
 				344A28C9203B25E200EF96F1 /* AccessoryView */,
 				3434F230202BA7E700701967 /* TableView */,
@@ -790,6 +804,7 @@
 				344A28B1203B0DFD00EF96F1 /* RegistrationPickerCell.swift in Sources */,
 				34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */,
 				344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */,
+				349D8CF4203F510200852243 /* RegistrationCellDateCapture.swift in Sources */,
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
@@ -800,6 +815,7 @@
 				34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
 				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
+				343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
 				344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */,
 				3434F229202BA42700701967 /* Company.swift in Sources */,
