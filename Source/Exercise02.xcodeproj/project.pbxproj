@@ -81,6 +81,8 @@
 		34BD9B7C203E117700CAD22A /* CompanyDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B7B203E117700CAD22A /* CompanyDateFormatterTests.swift */; };
 		34BD9B7E203E133100CAD22A /* RetrieveHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B7D203E133100CAD22A /* RetrieveHeadlines.swift */; };
 		34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */; };
+		34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */; };
+		34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */; };
 		34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */; };
 		34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFE2BB20372F9900A22122 /* ContactModelTests.swift */; };
 		34F6BEDF203604E30091ED8D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; };
@@ -194,6 +196,8 @@
 		34BD9B7B203E117700CAD22A /* CompanyDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDateFormatterTests.swift; sourceTree = "<group>"; };
 		34BD9B7D203E133100CAD22A /* RetrieveHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlines.swift; sourceTree = "<group>"; };
 		34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
+		34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesTests.swift; sourceTree = "<group>"; };
+		34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlinesMock.swift; sourceTree = "<group>"; };
 		34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactsTests.swift; sourceTree = "<group>"; };
 		34CFE2BB20372F9900A22122 /* ContactModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelTests.swift; sourceTree = "<group>"; };
 		34F6BEDD203604E30091ED8D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -478,6 +482,7 @@
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				34BD9B87203E235200CAD22A /* Headlines */,
 				340423B0203C755800FD6C09 /* Validators */,
 				34CFE2BA20372F6700A22122 /* Contacts */,
 				3468C81F202F283700CCD913 /* ClientModelTests.swift */,
@@ -585,6 +590,15 @@
 				34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */,
 			);
 			path = Headline;
+			sourceTree = "<group>";
+		};
+		34BD9B87203E235200CAD22A /* Headlines */ = {
+			isa = PBXGroup;
+			children = (
+				34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */,
+				34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */,
+			);
+			path = Headlines;
 			sourceTree = "<group>";
 		};
 		34CFE2BA20372F6700A22122 /* Contacts */ = {
@@ -792,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34BD9B7C203E117700CAD22A /* CompanyDateFormatterTests.swift in Sources */,
+				34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */,
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
 				34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */,
@@ -802,6 +817,7 @@
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
+				34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */,
 				34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */,
 				34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */,
 			);
