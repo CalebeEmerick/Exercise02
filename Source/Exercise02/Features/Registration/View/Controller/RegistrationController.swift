@@ -14,13 +14,27 @@ final class RegistrationController: UIViewController {
 	
 	private let rootView: RegistrationControllerView
 	private let viewModel: RegistrationViewModel
+	private let nameValidator = NameValidator()
+	private let emailValidator = EmailValidator()
+	private let phoneValidator = PhoneValidator()
+	private let companyNameValidator = CompanyNameValidator()
+	private let cnpjValidator = CNPJValidator()
+	private let dateValidator = DateValidator()
 	
 	init(fetcher: RetrieveHeadlines) {
 		rootView = RegistrationControllerView.makeXib()
-		viewModel = RegistrationViewModel(fetcher: fetcher)
+		let validators = ContainerValidator(name: nameValidator,
+														email: emailValidator,
+														phone: phoneValidator,
+														companyName: companyNameValidator,
+														cnpj: cnpjValidator,
+														date: dateValidator
+		)
+		viewModel = RegistrationViewModel(fetcher: fetcher, validators: validators)
 		
 		super.init(nibName: nil, bundle: nil)
 		
+		rootView.viewModel = viewModel
 		self.title = "Novo Cadastro"
 	}
 	

@@ -6,13 +6,15 @@
 //  Copyright © 2018 Stone Pagamentos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class RegistrationViewModel {
 	
 	private let headlinesFetcher: RetrieveHeadlines
+	private let validators: ContainerValidator
 	
-	init(fetcher: RetrieveHeadlines) {
+	init(fetcher: RetrieveHeadlines, validators: ContainerValidator) {
+		self.validators = validators
 		headlinesFetcher = fetcher
 		registerKeyboardButtonNotification()
 	}
@@ -24,6 +26,8 @@ final class RegistrationViewModel {
 	var didChangeFocusTo: ((IndexPath) -> Void)?
 	
 	var didOpenPickerKeyboard: ((IndexPath) -> Void)?
+	
+	var didTintFieldLine: ((CGColor) -> Void)?
 	
 	func getHeadlines() -> [RegistrationCellProtocol] {
 		return headlinesFetcher.fetch()
@@ -85,5 +89,32 @@ final class RegistrationViewModel {
 	@objc private func didTapKeyboardButton(notification: Notification) {
 		guard let model = notification.object as? RegistrationFieldModel else { return }
 		changeTextFieldFocus(for: model)
+	}
+}
+
+extension RegistrationViewModel : RegistrationCellFieldCapture {
+	
+	func validate(_ text: String, for type: RegistrationFieldModel) -> CGColor {
+		let color: CGColor
+		
+		switch type.fieldType {
+		case .name:
+			let result = validators.nameValidator.validate(text: text)
+			color = RegistrationCellFieldState(isValid: result).color
+		case .email:
+			let result = validators.emailValidator.validate(email: text)
+			color = RegistrationCellFieldState(isValid: result).color
+		case .phone:
+			let result = validators.phoneValidator.validate(phone: text)
+			color = RegistrationCellFieldState(isValid: result).color
+		case .companyName:
+			let result = validators.companyNameValidator.validate(name: text)
+			color = RegistrationCellFieldState(isValid: result).color
+		case .cnpj:
+			let result = validators.cnpjValidator.validate(cnpj: text)
+			color = RegistrationCellFieldState(isValid: result).color
+		}
+		
+		return color
 	}
 }

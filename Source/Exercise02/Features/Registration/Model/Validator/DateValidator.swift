@@ -1,5 +1,5 @@
 //
-//  CompanyDateFormatter.swift
+//  DateValidator.swift
 //  Exercise02
 //
 //  Created by Calebe Emerick on 21/02/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class CompanyDateFormatter: RegexBaseValidator {
+final class DateValidator: RegexBaseValidator {
 	
 	private let formatter: DateFormatter
 	private let pattern: String

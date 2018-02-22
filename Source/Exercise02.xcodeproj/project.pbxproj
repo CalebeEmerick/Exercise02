@@ -57,6 +57,9 @@
 		3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450DB5E203717A3001F0FF5 /* ContactList.swift */; };
 		3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3468C81F202F283700CCD913 /* ClientModelTests.swift */; };
 		34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */; };
+		349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */; };
+		349D8CF0203F40E000852243 /* ContainerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CEF203F40E000852243 /* ContainerValidator.swift */; };
+		349D8CF2203F434B00852243 /* RegistrationCellFieldCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */; };
 		34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */; };
 		34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */; };
 		34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B98EA0202B845600AD5E40 /* UserCell.swift */; };
@@ -77,8 +80,8 @@
 		34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B73203DD97F00CAD22A /* CompanyNameValidatorTests.swift */; };
 		34BD9B76203DDAED00CAD22A /* CNPJValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B75203DDAED00CAD22A /* CNPJValidator.swift */; };
 		34BD9B78203E06CB00CAD22A /* CNPJValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B77203E06CB00CAD22A /* CNPJValidatorTests.swift */; };
-		34BD9B7A203E0B1700CAD22A /* CompanyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B79203E0B1700CAD22A /* CompanyDateFormatter.swift */; };
-		34BD9B7C203E117700CAD22A /* CompanyDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B7B203E117700CAD22A /* CompanyDateFormatterTests.swift */; };
+		34BD9B7A203E0B1700CAD22A /* DateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B79203E0B1700CAD22A /* DateValidator.swift */; };
+		34BD9B7C203E117700CAD22A /* DateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B7B203E117700CAD22A /* DateValidatorTests.swift */; };
 		34BD9B7E203E133100CAD22A /* RetrieveHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B7D203E133100CAD22A /* RetrieveHeadlines.swift */; };
 		34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */; };
 		34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */; };
@@ -172,6 +175,9 @@
 		3468C817202F27A800CCD913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3468C81F202F283700CCD913 /* ClientModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModelTests.swift; sourceTree = "<group>"; };
 		34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMakerTests.swift; sourceTree = "<group>"; };
+		349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellFieldState.swift; sourceTree = "<group>"; };
+		349D8CEF203F40E000852243 /* ContainerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerValidator.swift; sourceTree = "<group>"; };
+		349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellFieldCapture.swift; sourceTree = "<group>"; };
 		34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidatorTests.swift; sourceTree = "<group>"; };
 		34AAB1CA203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexBaseValidatorTests.swift; sourceTree = "<group>"; };
 		34B98EA0202B845600AD5E40 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -192,8 +198,8 @@
 		34BD9B73203DD97F00CAD22A /* CompanyNameValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNameValidatorTests.swift; sourceTree = "<group>"; };
 		34BD9B75203DDAED00CAD22A /* CNPJValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJValidator.swift; sourceTree = "<group>"; };
 		34BD9B77203E06CB00CAD22A /* CNPJValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJValidatorTests.swift; sourceTree = "<group>"; };
-		34BD9B79203E0B1700CAD22A /* CompanyDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDateFormatter.swift; sourceTree = "<group>"; };
-		34BD9B7B203E117700CAD22A /* CompanyDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDateFormatterTests.swift; sourceTree = "<group>"; };
+		34BD9B79203E0B1700CAD22A /* DateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidator.swift; sourceTree = "<group>"; };
+		34BD9B7B203E117700CAD22A /* DateValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValidatorTests.swift; sourceTree = "<group>"; };
 		34BD9B7D203E133100CAD22A /* RetrieveHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlines.swift; sourceTree = "<group>"; };
 		34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
 		34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesTests.swift; sourceTree = "<group>"; };
@@ -234,7 +240,7 @@
 				340423BB203CAD0000FD6C09 /* PhoneValidator.swift */,
 				34BD9B71203DBB0800CAD22A /* CompanyNameValidator.swift */,
 				34BD9B75203DDAED00CAD22A /* CNPJValidator.swift */,
-				34BD9B79203E0B1700CAD22A /* CompanyDateFormatter.swift */,
+				34BD9B79203E0B1700CAD22A /* DateValidator.swift */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -248,7 +254,7 @@
 				34AAB1C8203CC7E6006C0CB7 /* PhoneValidatorTests.swift */,
 				34BD9B73203DD97F00CAD22A /* CompanyNameValidatorTests.swift */,
 				34BD9B77203E06CB00CAD22A /* CNPJValidatorTests.swift */,
-				34BD9B7B203E117700CAD22A /* CompanyDateFormatterTests.swift */,
+				34BD9B7B203E117700CAD22A /* DateValidatorTests.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -256,9 +262,9 @@
 		3434F224202BA06800701967 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				340423AD203C686E00FD6C09 /* Validator */,
 				3434F225202BA0F100701967 /* Model */,
 				3434F22C202BA75300701967 /* View */,
+				349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -266,9 +272,12 @@
 		3434F225202BA0F100701967 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				340423AD203C686E00FD6C09 /* Validator */,
 				34BD9B7F203E13F400CAD22A /* Headline */,
 				344A28D6203B40C100EF96F1 /* Cell */,
 				344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */,
+				349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */,
+				349D8CEF203F40E000852243 /* ContainerValidator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -748,10 +757,12 @@
 				34F6BEE420360BA50091ED8D /* CompanyInitialsMaker.swift in Sources */,
 				3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */,
 				34357F83203B597700561066 /* Observer.swift in Sources */,
+				349D8CF0203F40E000852243 /* ContainerValidator.swift in Sources */,
 				344A28CB203B267800EF96F1 /* RegistrationPickerModel.swift in Sources */,
 				34357F86203B774100561066 /* DateConverter.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
 				344A28C3203B1F3500EF96F1 /* RegistrationFieldType.swift in Sources */,
+				349D8CF2203F434B00852243 /* RegistrationCellFieldCapture.swift in Sources */,
 				340423BC203CAD0000FD6C09 /* PhoneValidator.swift in Sources */,
 				34B98EB6202B8E9F00AD5E40 /* NibCreatable.swift in Sources */,
 				344A28B5203B0EEE00EF96F1 /* RegistrationSwitchCell.swift in Sources */,
@@ -763,6 +774,7 @@
 				340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */,
 				344A28C6203B1FB900EF96F1 /* Color.swift in Sources */,
 				34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */,
+				349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */,
 				34BD9B76203DDAED00CAD22A /* CNPJValidator.swift in Sources */,
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */,
@@ -784,7 +796,7 @@
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
-				34BD9B7A203E0B1700CAD22A /* CompanyDateFormatter.swift in Sources */,
+				34BD9B7A203E0B1700CAD22A /* DateValidator.swift in Sources */,
 				34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
 				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
@@ -805,7 +817,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34BD9B7C203E117700CAD22A /* CompanyDateFormatterTests.swift in Sources */,
+				34BD9B7C203E117700CAD22A /* DateValidatorTests.swift in Sources */,
 				34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */,
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,

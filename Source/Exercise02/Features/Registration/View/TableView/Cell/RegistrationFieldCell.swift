@@ -14,8 +14,14 @@ final class RegistrationFieldCell: UITableViewCell {
 	
 	@IBOutlet private var textField: UITextField!
 	
+	@IBAction private func didChangeText(_ textField: UITextField) {
+		let text = textField.text ?? ""
+		setLineStateForTextChange(text)
+	}
+	
 	private var line: CALayer!
 	
+	weak var viewModel: RegistrationCellFieldCapture?
 	var model: RegistrationCellProtocol? {
 		didSet {
 			updateUI()
@@ -47,6 +53,19 @@ extension RegistrationFieldCell {
 	func setTextFieldFocus() {
 		DispatchQueue.main.async {
 			self.textField.becomeFirstResponder()
+		}
+	}
+	
+	private func setLineStateForTextChange(_ text: String) {
+		guard let model = model as? RegistrationFieldModel else { return }
+		if let color = viewModel?.validate(text, for: model) {
+			changeLine(to: color)
+		}
+	}
+	
+	private func changeLine(to color: CGColor) {
+		DispatchQueue.main.async {
+			self.line.backgroundColor = color
 		}
 	}
 	

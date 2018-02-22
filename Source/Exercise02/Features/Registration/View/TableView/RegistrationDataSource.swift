@@ -11,6 +11,8 @@ import UIKit
 final class RegistrationDataSource: NSObject {
 	
 	var items: [RegistrationCellProtocol] = []
+	
+	weak var viewModel: RegistrationViewModel?
 }
 
 extension RegistrationDataSource: UITableViewDataSource {
@@ -29,6 +31,7 @@ extension RegistrationDataSource: UITableViewDataSource {
 		switch item.type {
 		case .field:
 			let fieldCell: RegistrationFieldCell = tableView.dequeueReusableCell(for: indexPath)
+			fieldCell.viewModel = viewModel
 			fieldCell.model = item
 			cell = fieldCell
 		case .picker:

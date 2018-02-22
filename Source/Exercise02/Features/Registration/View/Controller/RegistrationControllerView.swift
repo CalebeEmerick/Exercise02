@@ -19,8 +19,14 @@ final class RegistrationControllerView: UIView {
 		
 	}
 	
-	private let dataSource = RegistrationDataSource()
+	var viewModel: RegistrationViewModel? {
+		didSet {
+			dataSource.viewModel = viewModel
+		}
+	}
+	
 	private let delegate = RegistrationDelegate()
+	private let dataSource = RegistrationDataSource()
 	private var items: [RegistrationCellProtocol] = []
 }
 

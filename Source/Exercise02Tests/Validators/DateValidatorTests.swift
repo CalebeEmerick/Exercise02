@@ -1,5 +1,5 @@
 //
-//  CompanyDateFormatterTests.swift
+//  DateValidatorTests.swift
 //  Exercise02Tests
 //
 //  Created by Calebe Emerick on 21/02/2018.
@@ -10,14 +10,14 @@
 import Nimble
 import XCTest
 
-final class CompanyDateFormatterTests: XCTestCase {
+final class DateValidatorTests: XCTestCase {
 	
-	private var validator: CompanyDateFormatter!
+	private var validator: DateValidator!
 	
 	override func setUp() {
 		super.setUp()
 		
-		validator = CompanyDateFormatter()
+		validator = DateValidator()
 	}
 	
 	override func tearDown() {
