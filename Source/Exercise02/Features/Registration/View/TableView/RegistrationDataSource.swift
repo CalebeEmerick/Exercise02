@@ -31,17 +31,18 @@ extension RegistrationDataSource: UITableViewDataSource {
 		switch item.type {
 		case .field:
 			let fieldCell: RegistrationFieldCell = tableView.dequeueReusableCell(for: indexPath)
-			fieldCell.viewModel = viewModel
+			fieldCell.fieldCapture = viewModel
+			fieldCell.keyboardButtonCapture = viewModel
 			fieldCell.model = item
 			cell = fieldCell
 		case .picker:
 			let pickerCell: RegistrationPickerCell = tableView.dequeueReusableCell(for: indexPath)
-			pickerCell.viewModel = viewModel
+			pickerCell.dateCapture = viewModel
 			pickerCell.model = item
 			cell = pickerCell
 		case .switch:
 			let switchCell: RegistrationSwitchCell = tableView.dequeueReusableCell(for: indexPath)
-			switchCell.viewModel = viewModel
+			switchCell.switchCapture = viewModel
 			switchCell.model = item
 			cell = switchCell
 		}

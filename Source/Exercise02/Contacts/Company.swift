@@ -54,3 +54,13 @@ extension Company {
 		]
 	}
 }
+
+extension Company: Equatable {
+	
+	static func ==(lhs: Company, rhs: Company) -> Bool {
+		return lhs.name == rhs.name &&
+		lhs.cnpj == rhs.cnpj &&
+		lhs.activeSince == rhs.activeSince &&
+		lhs.isMei == rhs.isMei
+	}
+}

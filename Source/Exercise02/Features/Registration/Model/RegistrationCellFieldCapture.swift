@@ -11,5 +11,4 @@ import UIKit
 protocol RegistrationCellFieldCapture: class {
 	
 	func validate(_ text: String, for type: RegistrationFieldModel) -> CGColor
-	func changeFieldFocus(for model: RegistrationFieldModel)
 }
