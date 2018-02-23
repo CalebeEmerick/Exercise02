@@ -40,13 +40,13 @@ final class InMemoryContacts: RetrieveContacts {
 	
 	private var contacts: [Contact] {
 		return [
-			Contact(name: "João da Silva", email: "joaosilva@gmail.com", phone: "21973459921", company: Company(name: "Coca Cola", cnpj: "22951114000150", activeSince: Date(), isMei: true)),
+			Contact(name: "João da Silva", email: "joaosilva@gmail.com", phone: "21973459921", company: Company(name: "Coca Cola", cnpj: "22951114000150", activeSince: "10/02/2004", isMei: true)),
 			
-			Contact(name: "Maria Azevedo", email: "mariazev@hotmail.com", phone: "21998345602", company: Company(name: "Google", cnpj: "70128653000136", activeSince: Date(), isMei: false)),
+			Contact(name: "Maria Azevedo", email: "mariazev@hotmail.com", phone: "21998345602", company: Company(name: "Google", cnpj: "70128653000136", activeSince: "02/09/1999", isMei: false)),
 			
-			Contact(name: "Rodrigo Santos", email: "rodrigo@santos.com", phone: "21986530092", company: Company(name: "Apple", cnpj: "16081048000101", activeSince: Date(), isMei: false)),
+			Contact(name: "Rodrigo Santos", email: "rodrigo@santos.com", phone: "21986530092", company: Company(name: "Apple", cnpj: "16081048000101", activeSince: "25/12/1925", isMei: false)),
 			
-			Contact(name: "Luciana da Costa", email: "luciana.costa@bol.com.br", phone: "21998467702", company: Company(name: "Empresa Com Quatro Nomes", cnpj: "15928944000109", activeSince: Date(), isMei: false))
+			Contact(name: "Luciana da Costa", email: "luciana.costa@bol.com.br", phone: "21998467702", company: Company(name: "Empresa Com Quatro Nomes", cnpj: "15928944000109", activeSince: "30/01/2000", isMei: false))
 		]
 	}
 }

@@ -41,6 +41,7 @@ extension RegistrationDataSource: UITableViewDataSource {
 			cell = pickerCell
 		case .switch:
 			let switchCell: RegistrationSwitchCell = tableView.dequeueReusableCell(for: indexPath)
+			switchCell.viewModel = viewModel
 			switchCell.model = item
 			cell = switchCell
 		}

@@ -63,6 +63,12 @@ extension RegistrationControllerView {
 		}
 	}
 	
+	func setButton(to isEnabled: Bool) {
+		DispatchQueue.main.async {
+			self.registerButton.isEnabled = isEnabled
+		}
+	}
+	
 	private func setupTableView() {
 		setTopSpace()
 		setBottomSpace()

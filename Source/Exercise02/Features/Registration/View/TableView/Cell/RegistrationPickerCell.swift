@@ -19,6 +19,8 @@ final class RegistrationPickerCell: UITableViewCell {
 	
 	weak var viewModel: RegistrationCellDateCapture?
 	
+	private(set) var currentDate: String = ""
+	
 	var model: RegistrationCellProtocol? {
 		didSet {
 			updateUI()
@@ -69,6 +71,7 @@ extension RegistrationPickerCell {
 		model.keyboardCustomView.buttonAction = { [weak self] in
 			guard let weakSelf = self else { return }
 			let dateString = weakSelf.getDateString(from: model)
+			weakSelf.currentDate = dateString
 			weakSelf.setSelectedDate(dateString)
 			weakSelf.setLineStateForTextChange(dateString)
 			weakSelf.dismissKeyboard()

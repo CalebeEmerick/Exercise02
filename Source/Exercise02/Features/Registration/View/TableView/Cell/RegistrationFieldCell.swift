@@ -16,12 +16,15 @@ final class RegistrationFieldCell: UITableViewCell {
 	
 	@IBAction private func didChangeText(_ textField: UITextField) {
 		let text = textField.text ?? ""
+		currentText = text
 		setLineStateForTextChange(text)
 	}
 	
 	private var line: CALayer!
 	
 	weak var viewModel: RegistrationCellFieldCapture?
+	
+	private(set) var currentText: String = ""
 	
 	var model: RegistrationCellProtocol? {
 		didSet {

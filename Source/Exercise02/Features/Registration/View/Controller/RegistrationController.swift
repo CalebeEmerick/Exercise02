@@ -57,6 +57,7 @@ extension RegistrationController {
 		getFieldItems()
 		setChangeFocusCallback()
 		setCallbackForOpenPicker()
+		setCallbackForUpdateButtonState()
 	}
 }
 
@@ -78,6 +79,12 @@ extension RegistrationController {
 	private func setCallbackForOpenPicker() {
 		viewModel.didOpenPickerKeyboard = { [weak self] indexPath in
 			self?.rootView.openPickerKeyboard(for: indexPath)
+		}
+	}
+	
+	private func setCallbackForUpdateButtonState() {
+		viewModel.didUpdateButtonState = { [weak self] isEnabled in
+			self?.rootView.setButton(to: isEnabled)
 		}
 	}
 }

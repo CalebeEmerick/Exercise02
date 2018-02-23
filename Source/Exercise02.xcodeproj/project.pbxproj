@@ -56,6 +56,7 @@
 		344A28D5203B3F8300EF96F1 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */; };
 		3450DB5D203716B0001F0FF5 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450DB5C203716B0001F0FF5 /* JSON.swift */; };
 		3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450DB5E203717A3001F0FF5 /* ContactList.swift */; };
+		3454CD29203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3454CD28203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift */; };
 		3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3468C81F202F283700CCD913 /* ClientModelTests.swift */; };
 		34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34708908202F72E90007A0FA /* CompanyInitialsMakerTests.swift */; };
 		349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */; };
@@ -174,6 +175,7 @@
 		344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		3450DB5C203716B0001F0FF5 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		3450DB5E203717A3001F0FF5 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		3454CD28203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellSwitchCapture.swift; sourceTree = "<group>"; };
 		3468C813202F27A800CCD913 /* Exercise02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exercise02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3468C817202F27A800CCD913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3468C81F202F283700CCD913 /* ClientModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModelTests.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				344A28D6203B40C100EF96F1 /* Cell */,
 				349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */,
 				349D8CF3203F510200852243 /* RegistrationCellDateCapture.swift */,
+				3454CD28203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift */,
 				349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */,
 				349D8CEF203F40E000852243 /* ContainerValidator.swift */,
 				344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */,
@@ -786,6 +789,7 @@
 				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
 				340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */,
+				3454CD29203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift in Sources */,
 				344A28C6203B1FB900EF96F1 /* Color.swift in Sources */,
 				34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */,
 				349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */,
