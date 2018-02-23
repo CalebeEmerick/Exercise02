@@ -14,14 +14,28 @@ final class RegistrationController: UIViewController {
 	
 	private let rootView: RegistrationControllerView
 	private let viewModel: RegistrationViewModel
+	private let nameValidator = NameValidator()
+	private let emailValidator = EmailValidator()
+	private let phoneValidator = PhoneValidator()
+	private let companyNameValidator = CompanyNameValidator()
+	private let cnpjValidator = CNPJValidator()
+	private let dateValidator = DateValidator()
 	
-	init(title: String) {
+	init(fetcher: RetrieveHeadlines) {
 		rootView = RegistrationControllerView.makeXib()
-		viewModel = RegistrationViewModel()
+		let validators = ContainerValidator(name: nameValidator,
+														email: emailValidator,
+														phone: phoneValidator,
+														companyName: companyNameValidator,
+														cnpj: cnpjValidator,
+														date: dateValidator
+		)
+		viewModel = RegistrationViewModel(fetcher: fetcher, validators: validators)
 		
 		super.init(nibName: nil, bundle: nil)
 		
-		self.title = title
+		rootView.viewModel = viewModel
+		self.title = "Novo Cadastro"
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -43,6 +57,7 @@ extension RegistrationController {
 		getFieldItems()
 		setChangeFocusCallback()
 		setCallbackForOpenPicker()
+		setCallbackForUpdateButtonState()
 	}
 }
 
@@ -51,7 +66,7 @@ extension RegistrationController {
 extension RegistrationController {
 	
 	private func getFieldItems() {
-		let infos = viewModel.getFieldItems()
+		let infos = viewModel.getHeadlines()
 		rootView.updateFields(with: infos)
 	}
 	
@@ -64,6 +79,12 @@ extension RegistrationController {
 	private func setCallbackForOpenPicker() {
 		viewModel.didOpenPickerKeyboard = { [weak self] indexPath in
 			self?.rootView.openPickerKeyboard(for: indexPath)
+		}
+	}
+	
+	private func setCallbackForUpdateButtonState() {
+		viewModel.didUpdateButtonState = { [weak self] isEnabled in
+			self?.rootView.setButton(to: isEnabled)
 		}
 	}
 }

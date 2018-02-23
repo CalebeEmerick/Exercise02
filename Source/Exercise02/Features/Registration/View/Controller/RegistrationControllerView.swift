@@ -19,8 +19,14 @@ final class RegistrationControllerView: UIView {
 		
 	}
 	
-	private let dataSource = RegistrationDataSource()
+	var viewModel: RegistrationViewModel? {
+		didSet {
+			dataSource.viewModel = viewModel
+		}
+	}
+	
 	private let delegate = RegistrationDelegate()
+	private let dataSource = RegistrationDataSource()
 	private var items: [RegistrationCellProtocol] = []
 }
 
@@ -54,6 +60,12 @@ extension RegistrationControllerView {
 	func openPickerKeyboard(for indexPath: IndexPath) {
 		if let cell = tableView.cellForRow(at: indexPath) as? RegistrationPickerCell {
 			cell.openPickerKeyboard()
+		}
+	}
+	
+	func setButton(to isEnabled: Bool) {
+		DispatchQueue.main.async {
+			self.registerButton.isEnabled = isEnabled
 		}
 	}
 	

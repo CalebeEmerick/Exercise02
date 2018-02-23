@@ -13,9 +13,13 @@ import UIKit
 final class RegistrationPickerCell: UITableViewCell {
 	
 	@IBOutlet private var label: UILabel!
-	@IBOutlet private var textField: UITextField!
+	@IBOutlet private var textField: RegistrationCellBaseDate!
 	
 	private var line: CALayer!
+	
+	weak var viewModel: RegistrationCellDateCapture?
+	
+	private(set) var currentDate: String = ""
 	
 	var model: RegistrationCellProtocol? {
 		didSet {
@@ -45,6 +49,18 @@ extension RegistrationPickerCell {
 		}
 	}
 	
+	private func setLineStateForTextChange(_ text: String) {
+		if let color = viewModel?.validate(text) {
+			changeLine(to: color)
+		}
+	}
+	
+	private func changeLine(to color: CGColor) {
+		DispatchQueue.main.async {
+			self.line.backgroundColor = color
+		}
+	}
+	
 	private func updateUI() {
 		guard let model = model as? RegistrationPickerModel else { return }
 		setKeyboardBarAction(model: model)
@@ -53,8 +69,12 @@ extension RegistrationPickerCell {
 	
 	private func setKeyboardBarAction(model: RegistrationPickerModel) {
 		model.keyboardCustomView.buttonAction = { [weak self] in
-			self?.setSelectedDate(model: model)
-			self?.dismissKeyboard()
+			guard let weakSelf = self else { return }
+			let dateString = weakSelf.getDateString(from: model)
+			weakSelf.currentDate = dateString
+			weakSelf.setSelectedDate(dateString)
+			weakSelf.setLineStateForTextChange(dateString)
+			weakSelf.dismissKeyboard()
 		}
 	}
 	
@@ -77,9 +97,9 @@ extension RegistrationPickerCell {
 		return line
 	}
 	
-	private func setSelectedDate(model: RegistrationPickerModel) {
+	private func setSelectedDate(_ date: String) {
 		DispatchQueue.main.async {
-			self.textField.text = model.dateConverter.toString(date: model.keyboardView.selectedDate)
+			self.textField.text = date
 		}
 	}
 	
@@ -87,5 +107,9 @@ extension RegistrationPickerCell {
 		DispatchQueue.main.async {
 			self.textField.endEditing(true)
 		}
+	}
+	
+	private func getDateString(from model: RegistrationPickerModel) -> String {
+		return model.dateConverter.toString(date: model.keyboardView.selectedDate)
 	}
 }

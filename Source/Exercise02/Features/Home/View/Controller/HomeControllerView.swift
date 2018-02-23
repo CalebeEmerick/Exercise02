@@ -79,7 +79,8 @@ extension HomeControllerView {
 	}
 	
 	private func openRegistrationController() {
-		let controller = RegistrationController(title: "Novo Cadastro")
+		let fetcher = InMemoryHeadlines()
+		let controller = RegistrationController(fetcher: fetcher)
 		DispatchQueue.main.async {
 			self.controller?.show(controller, sender: nil)
 		}

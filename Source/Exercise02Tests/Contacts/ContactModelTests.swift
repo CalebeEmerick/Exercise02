@@ -21,7 +21,7 @@ final class ContactModelTests: XCTestCase {
 				Company(
 					name: "Coca Cola",
 					cnpj: "22951114000150",
-					activeSince: Date(),
+					activeSince: "10/10/2001",
 					isMei: true
 				)
 		)
@@ -35,7 +35,7 @@ final class ContactModelTests: XCTestCase {
 			"company": [
 				"name": "Coca Cola",
 				"cnpj": "22951114000150",
-				"active_since": Date(),
+				"active_since": "10/10/2001",
 				"is_mei": true
 			]
 		]
@@ -49,7 +49,7 @@ final class ContactModelTests: XCTestCase {
 			"company": [
 				"name": "Coca Cola",
 				"cnpj": "22951114000150",
-				"activeSince": Date(),
+				"activeSince": "10/10/2001",
 				"isMei": true
 			]
 		]

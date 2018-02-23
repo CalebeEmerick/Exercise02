@@ -14,7 +14,17 @@ final class RegistrationFieldCell: UITableViewCell {
 	
 	@IBOutlet private var textField: UITextField!
 	
+	@IBAction private func didChangeText(_ textField: UITextField) {
+		let text = textField.text ?? ""
+		currentText = text
+		setLineStateForTextChange(text)
+	}
+	
 	private var line: CALayer!
+	
+	weak var viewModel: RegistrationCellFieldCapture?
+	
+	private(set) var currentText: String = ""
 	
 	var model: RegistrationCellProtocol? {
 		didSet {
@@ -50,6 +60,19 @@ extension RegistrationFieldCell {
 		}
 	}
 	
+	private func setLineStateForTextChange(_ text: String) {
+		guard let model = model as? RegistrationFieldModel else { return }
+		if let color = viewModel?.validate(text, for: model) {
+			changeLine(to: color)
+		}
+	}
+	
+	private func changeLine(to color: CGColor) {
+		DispatchQueue.main.async {
+			self.line.backgroundColor = color
+		}
+	}
+	
 	private func updateUI() {
 		guard let model = model as? RegistrationFieldModel else { return }
 		setKeyboardBarAction(model: model)
@@ -58,7 +81,7 @@ extension RegistrationFieldCell {
 	
 	private func setKeyboardBarAction(model: RegistrationFieldModel) {
 		model.keyboardCustomView?.buttonAction = { [weak self] in
-			self?.postKeyboardButtonObserver()
+			self?.noticeKeyboardButtonIsPressed()
 		}
 	}
 	
@@ -82,9 +105,9 @@ extension RegistrationFieldCell {
 		return line
 	}
 	
-	private func postKeyboardButtonObserver() {
+	private func noticeKeyboardButtonIsPressed() {
 		if let model = model as? RegistrationFieldModel {
-			NotificationCenter.default.post(name: Observer.Registration.kPressedKeyboardButton, object: model)
+			viewModel?.changeFieldFocus(for: model)
 		}
 	}
 }
@@ -95,7 +118,7 @@ extension RegistrationFieldCell : UITextFieldDelegate {
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		
-		postKeyboardButtonObserver()
+		noticeKeyboardButtonIsPressed()
 		
 		return true
 	}
