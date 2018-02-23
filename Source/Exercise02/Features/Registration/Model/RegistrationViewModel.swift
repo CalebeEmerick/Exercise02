@@ -11,6 +11,7 @@ import UIKit
 final class RegistrationViewModel {
 	
 	private let headlinesFetcher: RetrieveHeadlines
+	private let contactSaver: SaveContact
 	private let validators: ContainerValidator
 	
 	private(set) var state: RegistrationState = .invalid {
@@ -21,10 +22,13 @@ final class RegistrationViewModel {
 	
 	let registrationValidator = RegistrationValidator()
 	
-	init(fetcher: RetrieveHeadlines, validators: ContainerValidator) {
+	init(fetcher: RetrieveHeadlines, saver: SaveContact, validators: ContainerValidator) {
 		self.validators = validators
 		headlinesFetcher = fetcher
+		contactSaver = saver
 	}
+	
+	var didCreateNewContact: (() -> Void)?
 	
 	var didUpdateButtonState: ((Bool) -> Void)?
 	
@@ -34,6 +38,13 @@ final class RegistrationViewModel {
 	
 	func getHeadlines() -> [RegistrationCellProtocol] {
 		return headlinesFetcher.fetch()
+	}
+	
+	func registerContact() {
+		let contact = registrationValidator.contact
+		let contacts = contactSaver.save(contact)
+		updateHomeScreen(with: contacts)
+		didCreateNewContact?()
 	}
 	
 	private func callUpdateButtonWhenStateChange(_ oldState: RegistrationState) {
@@ -46,6 +57,11 @@ final class RegistrationViewModel {
 		let isAllFieldsValid = registrationValidator.isAllFieldsValid
 		let state = RegistrationState(isValid: isAllFieldsValid)
 		self.state = state
+	}
+	
+	private func updateHomeScreen(with contacts: [Contact]) {
+		NotificationCenter.default
+			.post(name: Observer.Registration.kContactCreated, object: contacts)
 	}
 }
 
@@ -148,12 +164,6 @@ extension RegistrationViewModel {
 		var isMei: Bool = false
 		
 		var isAllFieldsValid: Bool {
-			print("name: \(name.isValid)")
-			print("email: \(email.isValid)")
-			print("phone: \(phone.isValid)")
-			print("companyName: \(companyName.isValid)")
-			print("cnpj: \(cnpj.isValid)")
-			print("date: \(date.isValid)")
 			return name.isValid &&
 				email.isValid &&
 				phone.isValid &&
