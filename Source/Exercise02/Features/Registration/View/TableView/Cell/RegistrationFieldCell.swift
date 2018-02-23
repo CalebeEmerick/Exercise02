@@ -81,7 +81,7 @@ extension RegistrationFieldCell {
 	
 	private func setKeyboardBarAction(model: RegistrationFieldModel) {
 		model.keyboardCustomView?.buttonAction = { [weak self] in
-			self?.postKeyboardButtonObserver()
+			self?.noticeKeyboardButtonIsPressed()
 		}
 	}
 	
@@ -105,9 +105,9 @@ extension RegistrationFieldCell {
 		return line
 	}
 	
-	private func postKeyboardButtonObserver() {
+	private func noticeKeyboardButtonIsPressed() {
 		if let model = model as? RegistrationFieldModel {
-			NotificationCenter.default.post(name: Observer.Registration.kPressedKeyboardButton, object: model)
+			viewModel?.changeFieldFocus(for: model)
 		}
 	}
 }
@@ -118,7 +118,7 @@ extension RegistrationFieldCell : UITextFieldDelegate {
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		
-		postKeyboardButtonObserver()
+		noticeKeyboardButtonIsPressed()
 		
 		return true
 	}

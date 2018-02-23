@@ -24,11 +24,6 @@ final class RegistrationViewModel {
 	init(fetcher: RetrieveHeadlines, validators: ContainerValidator) {
 		self.validators = validators
 		headlinesFetcher = fetcher
-		registerKeyboardButtonNotification()
-	}
-	
-	deinit {
-		NotificationCenter.default.removeObserver(self)
 	}
 	
 	var didUpdateButtonState: ((Bool) -> Void)?
@@ -58,12 +53,7 @@ final class RegistrationViewModel {
 
 extension RegistrationViewModel {
 	
-	private func registerKeyboardButtonNotification() {
-		let notification = NotificationCenter.default
-		notification.addObserver(self, selector: #selector(didTapKeyboardButton), name: Observer.Registration.kPressedKeyboardButton, object: nil)
-	}
-	
-	private func changeTextFieldFocus(for model: RegistrationFieldModel) {
+	func changeFieldFocus(for model: RegistrationFieldModel) {
 		switch model.fieldType {
 		case .name, .email, .phone, .companyName:
 			let index = getCurrentModelIndex(model: model)
@@ -109,11 +99,6 @@ extension RegistrationViewModel {
 			break
 		}
 		return itemIndex
-	}
-	
-	@objc private func didTapKeyboardButton(notification: Notification) {
-		guard let model = notification.object as? RegistrationFieldModel else { return }
-		changeTextFieldFocus(for: model)
 	}
 }
 
