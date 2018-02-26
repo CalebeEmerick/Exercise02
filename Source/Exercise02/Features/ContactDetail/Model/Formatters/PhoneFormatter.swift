@@ -8,50 +8,30 @@
 
 import Foundation
 
-final class PhoneFormatter {
-	
-	private let pattern: String
-	private let result: String
+final class PhoneFormatter: BaseFormatter {
 	
 	init() {
-		pattern = "(\\d{2})(\\d{5})(\\d{4})"
-		result = "($1) $2 $3"
+		super.init(pattern: "(\\d{2,3})(\\d{5})(\\d{4})", result: "($1) $2 $3")
 	}
 	
-	init(pattern: String, result: String) {
-		self.pattern = pattern
-		self.result = result
+	override init(pattern: String, result: String) {
+		super.init(pattern: pattern, result: result)
 	}
 	
 	func format(_ phone: String) -> String {
-		
+
 		guard !phone.isEmpty else {
 			return ""
 		}
 		
-		let phoneNumbers = getOnlyStringNumbers(from: phone)
+		let phoneNumber = getOnlyStringNumbers(from: phone)
 		
-		let formattedNumber = formatPhoneNumber(phoneNumbers)
+		guard phoneNumber.count == 11 || phoneNumber.count == 12 else {
+			return ""
+		}
 		
+		let formattedNumber = getFormatted(phoneNumber)
+
 		return formattedNumber
-	}
-	
-	private func getOnlyStringNumbers(from text: String) -> String {
-		let phone = text.flatMap {
-			Int(String($0))
-			}.map {
-				String($0)
-			}.joined()
-		
-		return phone
-	}
-	
-	private func formatPhoneNumber(_ phone: String) -> String {
-		return phone.replacingOccurrences(
-			of: pattern,
-			with: result,
-			options: .regularExpression,
-			range: nil
-		)
 	}
 }

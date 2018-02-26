@@ -26,6 +26,24 @@ final class PhoneFormatterTests: XCTestCase {
 		super.tearDown()
 	}
 	
+	func test_shouldReturn_EmptyString_When_EmptyPhoneIsUsed() {
+		
+		let phone = ""
+		
+		let formattedPhone = formatter.format(phone)
+		
+		expect(formattedPhone).to(equal(""))
+	}
+	
+	func test_shouldReturn_EmptyString_When_InvalidPhoneIsUsed() {
+		
+		let phone = "sadf422366"
+		
+		let formattedPhone = formatter.format(phone)
+		
+		expect(formattedPhone).to(equal(""))
+	}
+	
 	func test_shouldExpect_CorrectPhoneFormatted_When_OnlyNumbersAreUsed() {
 		
 		let phone = "21971697123"
@@ -39,9 +57,9 @@ final class PhoneFormatterTests: XCTestCase {
 	
 	func test_shouldExpect_CorrectPhoneFormatted_When_MaskedPhoneIsUsed() {
 		
-		let phone = "(21)971697123"
+		let phone = "(021)971697123"
 		
-		let expectedFormattedPhone = "(21) 97169 7123"
+		let expectedFormattedPhone = "(021) 97169 7123"
 		
 		let formattedPhone = formatter.format(phone)
 		
