@@ -96,6 +96,9 @@
 		34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */; };
 		34C308E72044AF9600FFDECC /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308E62044AF9600FFDECC /* PhoneFormatter.swift */; };
 		34C308EA2044B51000FFDECC /* PhoneFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */; };
+		34C308EC2044B71800FFDECC /* CNPJFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308EB2044B71800FFDECC /* CNPJFormatter.swift */; };
+		34C308EE2044B80C00FFDECC /* BaseFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308ED2044B80C00FFDECC /* BaseFormatter.swift */; };
+		34C308F02044BA1800FFDECC /* CNPJFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */; };
 		34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */; };
 		34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFE2BB20372F9900A22122 /* ContactModelTests.swift */; };
 		34E6D6AD20448BDB00634406 /* ContactDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */; };
@@ -232,6 +235,9 @@
 		34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlinesMock.swift; sourceTree = "<group>"; };
 		34C308E62044AF9600FFDECC /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
 		34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatterTests.swift; sourceTree = "<group>"; };
+		34C308EB2044B71800FFDECC /* CNPJFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJFormatter.swift; sourceTree = "<group>"; };
+		34C308ED2044B80C00FFDECC /* BaseFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormatter.swift; sourceTree = "<group>"; };
+		34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJFormatterTests.swift; sourceTree = "<group>"; };
 		34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactsTests.swift; sourceTree = "<group>"; };
 		34CFE2BB20372F9900A22122 /* ContactModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelTests.swift; sourceTree = "<group>"; };
 		34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailDataSource.swift; sourceTree = "<group>"; };
@@ -713,7 +719,9 @@
 		34C308E52044AF8400FFDECC /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
+				34C308ED2044B80C00FFDECC /* BaseFormatter.swift */,
 				34C308E62044AF9600FFDECC /* PhoneFormatter.swift */,
+				34C308EB2044B71800FFDECC /* CNPJFormatter.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -722,6 +730,7 @@
 			isa = PBXGroup;
 			children = (
 				34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */,
+				34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -942,6 +951,8 @@
 				34E6D6B9204494CA00634406 /* ContactDetailCellModel.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
 				34E6D6AF20448C1300634406 /* ContactDetailDelegate.swift in Sources */,
+				34C308EE2044B80C00FFDECC /* BaseFormatter.swift in Sources */,
+				34C308EC2044B71800FFDECC /* CNPJFormatter.swift in Sources */,
 				34BD9B7A203E0B1700CAD22A /* DateValidator.swift in Sources */,
 				34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
@@ -981,6 +992,7 @@
 				342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
+				34C308F02044BA1800FFDECC /* CNPJFormatterTests.swift in Sources */,
 				34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */,
 				34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */,
 				34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */,
