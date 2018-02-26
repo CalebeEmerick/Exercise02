@@ -148,12 +148,6 @@ extension RegistrationViewModel {
 		var isMei: Bool = false
 		
 		var isAllFieldsValid: Bool {
-			print("name: \(name.isValid)")
-			print("email: \(email.isValid)")
-			print("phone: \(phone.isValid)")
-			print("companyName: \(companyName.isValid)")
-			print("cnpj: \(cnpj.isValid)")
-			print("date: \(date.isValid)")
 			return name.isValid &&
 				email.isValid &&
 				phone.isValid &&
