@@ -31,9 +31,9 @@
 		3434F23E202C7B9900701967 /* HomeEmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F23D202C7B9900701967 /* HomeEmptyState.xib */; };
 		3434F241202C7CFB00701967 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F240202C7CFB00701967 /* ClientModel.swift */; };
 		3434F244202CD21400701967 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F243202CD21400701967 /* HomeViewModel.swift */; };
-		3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F246202DCB0300701967 /* ClientDetailController.swift */; };
-		3434F249202DCFAC00701967 /* ClientDetailControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F248202DCFAC00701967 /* ClientDetailControllerView.xib */; };
-		3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24C202DCFDF00701967 /* ClientDetailControllerView.swift */; };
+		3434F247202DCB0300701967 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F246202DCB0300701967 /* ContactDetailController.swift */; };
+		3434F249202DCFAC00701967 /* ContactDetailControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F248202DCFAC00701967 /* ContactDetailControllerView.xib */; };
+		3434F24D202DCFDF00701967 /* ContactDetailControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24C202DCFDF00701967 /* ContactDetailControllerView.swift */; };
 		3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24E202DD94000701967 /* HomeEmptyState.swift */; };
 		3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F250202E19E300701967 /* RetrieveContacts.swift */; };
 		3434F253202F230300701967 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F252202F230300701967 /* InMemoryContacts.swift */; };
@@ -94,8 +94,18 @@
 		34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */; };
 		34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */; };
 		34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */; };
+		34C308E72044AF9600FFDECC /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308E62044AF9600FFDECC /* PhoneFormatter.swift */; };
+		34C308EA2044B51000FFDECC /* PhoneFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */; };
 		34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */; };
 		34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFE2BB20372F9900A22122 /* ContactModelTests.swift */; };
+		34E6D6AD20448BDB00634406 /* ContactDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */; };
+		34E6D6AF20448C1300634406 /* ContactDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6AE20448C1300634406 /* ContactDetailDelegate.swift */; };
+		34E6D6B220448C7100634406 /* ContactDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6B120448C7000634406 /* ContactDetailViewModel.swift */; };
+		34E6D6B52044926400634406 /* ContactDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6B42044926400634406 /* ContactDetailCell.swift */; };
+		34E6D6B72044927B00634406 /* ContactDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6D6B62044927B00634406 /* ContactDetailCell.xib */; };
+		34E6D6B9204494CA00634406 /* ContactDetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6B8204494CA00634406 /* ContactDetailCellModel.swift */; };
+		34E6D6BB2044AB6E00634406 /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6BA2044AB6E00634406 /* ContactDetail.swift */; };
+		34E6D6BD2044AC9000634406 /* ContactDetailFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6BC2044AC9000634406 /* ContactDetailFieldType.swift */; };
 		34F6BEDF203604E30091ED8D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; };
 		34F6BEE0203604E30091ED8D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDE203604E30091ED8D /* Quick.framework */; };
 		34F6BEE1203604EC0091ED8D /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -153,9 +163,9 @@
 		3434F23D202C7B9900701967 /* HomeEmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmptyState.xib; sourceTree = "<group>"; };
 		3434F240202C7CFB00701967 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
 		3434F243202CD21400701967 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		3434F246202DCB0300701967 /* ClientDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailController.swift; sourceTree = "<group>"; };
-		3434F248202DCFAC00701967 /* ClientDetailControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientDetailControllerView.xib; sourceTree = "<group>"; };
-		3434F24C202DCFDF00701967 /* ClientDetailControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailControllerView.swift; sourceTree = "<group>"; };
+		3434F246202DCB0300701967 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
+		3434F248202DCFAC00701967 /* ContactDetailControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailControllerView.xib; sourceTree = "<group>"; };
+		3434F24C202DCFDF00701967 /* ContactDetailControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailControllerView.swift; sourceTree = "<group>"; };
 		3434F24E202DD94000701967 /* HomeEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyState.swift; sourceTree = "<group>"; };
 		3434F250202E19E300701967 /* RetrieveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveContacts.swift; sourceTree = "<group>"; };
 		3434F252202F230300701967 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
@@ -220,8 +230,18 @@
 		34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
 		34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesTests.swift; sourceTree = "<group>"; };
 		34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlinesMock.swift; sourceTree = "<group>"; };
+		34C308E62044AF9600FFDECC /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
+		34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatterTests.swift; sourceTree = "<group>"; };
 		34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactsTests.swift; sourceTree = "<group>"; };
 		34CFE2BB20372F9900A22122 /* ContactModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelTests.swift; sourceTree = "<group>"; };
+		34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailDataSource.swift; sourceTree = "<group>"; };
+		34E6D6AE20448C1300634406 /* ContactDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailDelegate.swift; sourceTree = "<group>"; };
+		34E6D6B120448C7000634406 /* ContactDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewModel.swift; sourceTree = "<group>"; };
+		34E6D6B42044926400634406 /* ContactDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailCell.swift; sourceTree = "<group>"; };
+		34E6D6B62044927B00634406 /* ContactDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailCell.xib; sourceTree = "<group>"; };
+		34E6D6B8204494CA00634406 /* ContactDetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailCellModel.swift; sourceTree = "<group>"; };
+		34E6D6BA2044AB6E00634406 /* ContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
+		34E6D6BC2044AC9000634406 /* ContactDetailFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFieldType.swift; sourceTree = "<group>"; };
 		34F6BEDD203604E30091ED8D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		34F6BEDE203604E30091ED8D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		34F6BEE320360BA50091ED8D /* CompanyInitialsMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMaker.swift; sourceTree = "<group>"; };
@@ -353,7 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				34B98E9D202B566500AD5E40 /* Home */,
-				3434F245202DCAEA00701967 /* ClientDetail */,
+				3434F245202DCAEA00701967 /* ContactDetail */,
 				3434F224202BA06800701967 /* Registration */,
 			);
 			path = Features;
@@ -395,14 +415,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		3434F245202DCAEA00701967 /* ClientDetail */ = {
+		3434F245202DCAEA00701967 /* ContactDetail */ = {
 			isa = PBXGroup;
 			children = (
-				3434F246202DCB0300701967 /* ClientDetailController.swift */,
-				3434F248202DCFAC00701967 /* ClientDetailControllerView.xib */,
-				3434F24C202DCFDF00701967 /* ClientDetailControllerView.swift */,
+				3465DFC22044609400747210 /* Model */,
+				3465DFC12044607600747210 /* View */,
+				34E6D6B020448C5800634406 /* ViewModel */,
 			);
-			path = ClientDetail;
+			path = ContactDetail;
 			sourceTree = "<group>";
 		};
 		34357F81203B595F00561066 /* Observers */ = {
@@ -524,9 +544,50 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		3465DFC12044607600747210 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3465DFC32044729600747210 /* TableView */,
+				3465DFC42044729D00747210 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3465DFC22044609400747210 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34C308E52044AF8400FFDECC /* Formatters */,
+				34E6D6BC2044AC9000634406 /* ContactDetailFieldType.swift */,
+				34E6D6BA2044AB6E00634406 /* ContactDetail.swift */,
+				34E6D6B8204494CA00634406 /* ContactDetailCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3465DFC32044729600747210 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				34E6D6B32044924400634406 /* Cell */,
+				34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */,
+				34E6D6AE20448C1300634406 /* ContactDetailDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3465DFC42044729D00747210 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3434F246202DCB0300701967 /* ContactDetailController.swift */,
+				3434F248202DCFAC00701967 /* ContactDetailControllerView.xib */,
+				3434F24C202DCFDF00701967 /* ContactDetailControllerView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				34C308E82044B4FD00FFDECC /* Formatters */,
 				342745AD20406215000F29FD /* RegistrationViewModel */,
 				34BD9B87203E235200CAD22A /* Headlines */,
 				340423B0203C755800FD6C09 /* Validators */,
@@ -649,6 +710,22 @@
 			path = Headlines;
 			sourceTree = "<group>";
 		};
+		34C308E52044AF8400FFDECC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				34C308E62044AF9600FFDECC /* PhoneFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		34C308E82044B4FD00FFDECC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		34CFE2BA20372F6700A22122 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,6 +736,23 @@
 				342745BE20408BE2000F29FD /* ContactSaverTests.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		34E6D6B020448C5800634406 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				34E6D6B120448C7000634406 /* ContactDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34E6D6B32044924400634406 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				34E6D6B62044927B00634406 /* ContactDetailCell.xib */,
+				34E6D6B42044926400634406 /* ContactDetailCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -752,10 +846,11 @@
 				344A28AE203B0D6200EF96F1 /* RegistrationFieldCell.xib in Resources */,
 				3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */,
 				3434F23E202C7B9900701967 /* HomeEmptyState.xib in Resources */,
-				3434F249202DCFAC00701967 /* ClientDetailControllerView.xib in Resources */,
+				3434F249202DCFAC00701967 /* ContactDetailControllerView.xib in Resources */,
 				34B98EA8202B8C9200AD5E40 /* HomeControllerView.xib in Resources */,
 				344A28CE203B273500EF96F1 /* KeyboardDatePicker.xib in Resources */,
 				3434F233202BA82D00701967 /* RegistrationControllerView.xib in Resources */,
+				34E6D6B72044927B00634406 /* ContactDetailCell.xib in Resources */,
 				344A28B6203B0EEE00EF96F1 /* RegistrationSwitchCell.xib in Resources */,
 				3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */,
 			);
@@ -795,12 +890,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F6BEE420360BA50091ED8D /* CompanyInitialsMaker.swift in Sources */,
+				34E6D6AD20448BDB00634406 /* ContactDetailDataSource.swift in Sources */,
 				3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */,
 				34357F83203B597700561066 /* Observer.swift in Sources */,
 				349D8CF0203F40E000852243 /* ContainerValidator.swift in Sources */,
 				344A28CB203B267800EF96F1 /* RegistrationPickerModel.swift in Sources */,
 				34357F86203B774100561066 /* DateConverter.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
+				34E6D6BD2044AC9000634406 /* ContactDetailFieldType.swift in Sources */,
 				344A28C3203B1F3500EF96F1 /* RegistrationFieldType.swift in Sources */,
 				349D8CF2203F434B00852243 /* RegistrationCellFieldCapture.swift in Sources */,
 				342745B7204087AA000F29FD /* ContactSaver.swift in Sources */,
@@ -810,7 +907,8 @@
 				3434F244202CD21400701967 /* HomeViewModel.swift in Sources */,
 				344A28BD203B1BC100EF96F1 /* RegistrationCellType.swift in Sources */,
 				344A28C1203B1C7E00EF96F1 /* RegistrationFieldModel.swift in Sources */,
-				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
+				3434F24D202DCFDF00701967 /* ContactDetailControllerView.swift in Sources */,
+				34C308E72044AF9600FFDECC /* PhoneFormatter.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
 				340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */,
 				3454CD29203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift in Sources */,
@@ -824,6 +922,7 @@
 				342745B3204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift in Sources */,
 				34BD9B7E203E133100CAD22A /* RetrieveHeadlines.swift in Sources */,
 				342745B9204087D1000F29FD /* SaveContact.swift in Sources */,
+				34E6D6BB2044AB6E00634406 /* ContactDetail.swift in Sources */,
 				3434F22B202BA56500701967 /* Contact.swift in Sources */,
 				3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */,
 				3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */,
@@ -840,16 +939,20 @@
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
+				34E6D6B9204494CA00634406 /* ContactDetailCellModel.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
+				34E6D6AF20448C1300634406 /* ContactDetailDelegate.swift in Sources */,
 				34BD9B7A203E0B1700CAD22A /* DateValidator.swift in Sources */,
 				34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
-				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
+				3434F247202DCB0300701967 /* ContactDetailController.swift in Sources */,
 				343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
 				344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */,
 				3434F229202BA42700701967 /* Company.swift in Sources */,
 				340423B6203C906900FD6C09 /* EmailValidator.swift in Sources */,
+				34E6D6B220448C7100634406 /* ContactDetailViewModel.swift in Sources */,
+				34E6D6B52044926400634406 /* ContactDetailCell.swift in Sources */,
 				3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */,
 				3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */,
 				34B98EAF202B8D4F00AD5E40 /* HomeDelegate.swift in Sources */,
@@ -864,6 +967,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34BD9B7C203E117700CAD22A /* DateValidatorTests.swift in Sources */,
+				34C308EA2044B51000FFDECC /* PhoneFormatterTests.swift in Sources */,
 				34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */,
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
