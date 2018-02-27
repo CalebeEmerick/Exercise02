@@ -41,6 +41,10 @@
 		34357F86203B774100561066 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F85203B774100561066 /* DateConverter.swift */; };
 		343EBBFE2045A79800EBFFB1 /* MEIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */; };
 		343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */; };
+		343EBC032045C64F00EBFFB1 /* PhoneCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC022045C64F00EBFFB1 /* PhoneCaller.swift */; };
+		343EBC052045C66500EBFFB1 /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC042045C66500EBFFB1 /* Caller.swift */; };
+		343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */; };
+		343EBC0A2045C8F200EBFFB1 /* PhoneCallerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
@@ -178,6 +182,10 @@
 		34357F85203B774100561066 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEIFormatter.swift; sourceTree = "<group>"; };
 		343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEIFormatterTests.swift; sourceTree = "<group>"; };
+		343EBC022045C64F00EBFFB1 /* PhoneCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCaller.swift; sourceTree = "<group>"; };
+		343EBC042045C66500EBFFB1 /* Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
+		343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallerTests.swift; sourceTree = "<group>"; };
+		343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallerMock.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -451,6 +459,24 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		343EBC012045C63300EBFFB1 /* PhoneCaller */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC042045C66500EBFFB1 /* Caller.swift */,
+				343EBC022045C64F00EBFFB1 /* PhoneCaller.swift */,
+			);
+			path = PhoneCaller;
+			sourceTree = "<group>";
+		};
+		343EBC062045C8A200EBFFB1 /* PhoneCaller */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */,
+				343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */,
+			);
+			path = PhoneCaller;
+			sourceTree = "<group>";
+		};
 		3447AAAD202B3028009F9C1B = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +501,7 @@
 			children = (
 				3434F23A202BAAFC00701967 /* Features */,
 				34BD12B22037157600C26A50 /* Contacts */,
+				343EBC012045C63300EBFFB1 /* PhoneCaller */,
 				34357F81203B595F00561066 /* Observers */,
 				3450DB5B203716A0001F0FF5 /* JSON */,
 				3434F23B202BAB1200701967 /* Libraries */,
@@ -597,6 +624,7 @@
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				343EBC062045C8A200EBFFB1 /* PhoneCaller */,
 				34C308E82044B4FD00FFDECC /* Formatters */,
 				342745AD20406215000F29FD /* RegistrationViewModel */,
 				34BD9B87203E235200CAD22A /* Headlines */,
@@ -939,6 +967,7 @@
 				342745B9204087D1000F29FD /* SaveContact.swift in Sources */,
 				34E6D6BB2044AB6E00634406 /* ContactDetail.swift in Sources */,
 				3434F22B202BA56500701967 /* Contact.swift in Sources */,
+				343EBC032045C64F00EBFFB1 /* PhoneCaller.swift in Sources */,
 				3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */,
 				3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */,
 				3434F239202BAA5F00701967 /* RegistrationDelegate.swift in Sources */,
@@ -976,6 +1005,7 @@
 				34B98EAF202B8D4F00AD5E40 /* HomeDelegate.swift in Sources */,
 				34BD12B4203715C500C26A50 /* ContactsSaveKey.swift in Sources */,
 				344A28AD203B0D6200EF96F1 /* RegistrationFieldCell.swift in Sources */,
+				343EBC052045C66500EBFFB1 /* Caller.swift in Sources */,
 				344A28D5203B3F8300EF96F1 /* RegistrationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,6 +1019,7 @@
 				34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */,
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
+				343EBC0A2045C8F200EBFFB1 /* PhoneCallerMock.swift in Sources */,
 				34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */,
 				342745BF20408BE2000F29FD /* ContactSaverTests.swift in Sources */,
 				34BD9B78203E06CB00CAD22A /* CNPJValidatorTests.swift in Sources */,
@@ -996,6 +1027,7 @@
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
+				343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */,
 				343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */,
 				342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
