@@ -22,10 +22,14 @@ final class ContactDetailCell: UITableViewCell {
 	private func updateUI() {
 		guard let model = model else { return }
 		setProperties(for: model)
+		selectionStyle = .blue
 	}
 	
 	private func setProperties(for model: ContactDetailCellModel) {
 		DispatchQueue.main.async {
+			self.selectionStyle = model.selectionStyle
+			self.fieldValue.font = model.fieldFont
+			self.fieldValue.textColor = model.fieldColor
 			self.fieldLabel.text = model.label
 			self.fieldValue.text = model.field
 		}

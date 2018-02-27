@@ -10,14 +10,14 @@ import UIKit
 
 protocol IntegrationProtocol {
 	
-	func getUrl(from string: String) -> URL?
+	func getUrl(for type: String, from string: String) -> URL?
 	func isUrlValid(_ url: URL) -> Bool
 }
 
 extension IntegrationProtocol {
 	
-	func getUrl(from string: String) -> URL? {
-		return URL(string: "telprompt://\(string)")
+	func getUrl(for type: String, from string: String) -> URL? {
+		return URL(string: "\(type)\(string)")
 	}
 	
 	func isUrlValid(_ url: URL) -> Bool {

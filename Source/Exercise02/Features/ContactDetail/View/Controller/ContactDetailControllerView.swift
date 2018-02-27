@@ -20,6 +20,12 @@ final class ContactDetailControllerView: UIView {
 	
 	private let dataSource = ContactDetailDataSource()
 	private let delegate = ContactDetailDelegate()
+	
+	weak var viewModel: ContactDetailViewModel? {
+		didSet {
+			delegate.viewModel = viewModel
+		}
+	}
 }
 
 // MARK: - Life Cycle -
@@ -44,6 +50,12 @@ extension ContactDetailControllerView {
 	func reloadList() {
 		DispatchQueue.main.async {
 			self.tableView.reloadData()
+		}
+	}
+	
+	func deselectRow(for indexPath: IndexPath) {
+		DispatchQueue.main.async {
+			self.tableView.deselectRow(at: indexPath, animated: true)
 		}
 	}
 	

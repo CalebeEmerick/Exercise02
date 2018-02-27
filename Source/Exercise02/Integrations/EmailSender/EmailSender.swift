@@ -10,13 +10,15 @@ import UIKit
 
 final class EmailSender: EmailSend, IntegrationProtocol {
 	
+	private let type = "mailto://"
+	
 	func send(to email: String) {
 		
 		guard !email.isEmpty else {
 			return
 		}
 		
-		guard let emailUrl = getUrl(from: email) else {
+		guard let emailUrl = getUrl(for: type, from: email) else {
 			return
 		}
 		

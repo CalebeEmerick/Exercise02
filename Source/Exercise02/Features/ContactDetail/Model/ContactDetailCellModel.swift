@@ -6,14 +6,22 @@
 //  Copyright © 2018 Stone Pagamentos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class ContactDetailCellModel {
 	
-	let label: String
+	let fieldType: ContactDetailFieldType
+	let selectionStyle: UITableViewCellSelectionStyle
+	let fieldFont: UIFont
+	let fieldColor: UIColor
 	let field: String
+	let label: String
 	
 	init(type: ContactDetailFieldType) {
+		fieldType = type
+		selectionStyle = type.selectionStyle
+		fieldFont = type.fieldFont
+		fieldColor = type.fieldColor
 		label = type.label
 		field = type.field
 	}

@@ -10,6 +10,8 @@ import UIKit
 
 final class PhoneCaller: Caller, IntegrationProtocol {
 	
+	private let type = "telprompt://"
+	
 	func call(to phone: String) {
 		
 		guard !phone.isEmpty else {
@@ -18,7 +20,7 @@ final class PhoneCaller: Caller, IntegrationProtocol {
 		
 		let phoneNumber = getOnlyPhoneNumber(from: phone)
 		
-		guard let phoneUrl = getUrl(from: phoneNumber) else {
+		guard let phoneUrl = getUrl(for: type, from: phoneNumber) else {
 			return
 		}
 		

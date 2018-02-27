@@ -499,8 +499,8 @@
 		343EBC102045CC5300EBFFB1 /* Integrations */ = {
 			isa = PBXGroup;
 			children = (
-				343EBC0B2045CB3600EBFFB1 /* EmailSender */,
 				343EBC012045C63300EBFFB1 /* PhoneCaller */,
+				343EBC0B2045CB3600EBFFB1 /* EmailSender */,
 				343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */,
 			);
 			path = Integrations;
@@ -537,8 +537,8 @@
 		3447AAB8202B3028009F9C1B /* Exercise02 */ = {
 			isa = PBXGroup;
 			children = (
-				343EBC102045CC5300EBFFB1 /* Integrations */,
 				3434F23A202BAAFC00701967 /* Features */,
+				343EBC102045CC5300EBFFB1 /* Integrations */,
 				34BD12B22037157600C26A50 /* Contacts */,
 				34357F81203B595F00561066 /* Observers */,
 				3450DB5B203716A0001F0FF5 /* JSON */,

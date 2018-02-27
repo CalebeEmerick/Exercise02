@@ -6,7 +6,7 @@
 //  Copyright © 2018 Stone Pagamentos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum ContactDetailFieldType {
 	
@@ -53,6 +53,33 @@ enum ContactDetailFieldType {
 			return date
 		case let .isMei(isMei):
 			return isMei
+		}
+	}
+	
+	var selectionStyle: UITableViewCellSelectionStyle {
+		switch self {
+		case .phone, .email:
+			return .default
+		default:
+			return .none
+		}
+	}
+	
+	var fieldFont: UIFont {
+		switch self {
+		case .phone, .email:
+			return .systemFont(ofSize: 15, weight: .semibold)
+		default:
+			return .systemFont(ofSize: 15, weight: .medium)
+		}
+	}
+	
+	var fieldColor: UIColor {
+		switch self {
+		case .phone, .email:
+			return Color(hexString: "#2475b0").color
+		default:
+			return .darkGray
 		}
 	}
 }

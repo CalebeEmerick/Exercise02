@@ -12,6 +12,8 @@ import UIKit
 
 final class ContactDetailController: UIViewController {
 	
+	private let emailSender: EmailSend
+	private let phoneCaller: Caller
 	private let contactDetail: ContactDetail
 	private let phoneFormatter: PhoneFormatter
 	private let cnpjFormatter: CNPJFormatter
@@ -24,16 +26,21 @@ final class ContactDetailController: UIViewController {
 		phoneFormatter = PhoneFormatter()
 		cnpjFormatter = CNPJFormatter()
 		meiFormatter = MEIFormatter()
+		phoneCaller = PhoneCaller()
+		emailSender = EmailSender()
 		
 		rootView = ContactDetailControllerView.makeXib()
 		
 		viewModel = ContactDetailViewModel(phoneFormatter: phoneFormatter,
 													  cnpjFormatter: cnpjFormatter,
-													  meiFormatter: meiFormatter)
+													  meiFormatter: meiFormatter,
+													  phoneCaller: phoneCaller,
+													  emailSender: emailSender)
 		
 		super.init(nibName: nil, bundle: nil)
 
-		self.title = detail.title
+		title = detail.title
+		rootView.viewModel = viewModel
 	}
   
 	required init?(coder aDecoder: NSCoder) {
@@ -52,6 +59,8 @@ extension ContactDetailController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		setDeselectCellCallback()
+		
 		let details = viewModel.getContactDetail(contactDetail.contact)
 		loadContact(with: details)
 	}
@@ -64,5 +73,11 @@ extension ContactDetailController {
 	private func loadContact(with details: [ContactDetailCellModel]) {
 		rootView.updateList(with: details)
 		rootView.reloadList()
+	}
+	
+	private func setDeselectCellCallback() {
+		viewModel.didDeselectCell = { [weak self] indexPath in
+			self?.rootView.deselectRow(for: indexPath)
+		}
 	}
 }

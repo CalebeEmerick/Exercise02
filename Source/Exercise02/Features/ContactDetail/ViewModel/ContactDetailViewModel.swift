@@ -10,16 +10,23 @@ import Foundation
 
 final class ContactDetailViewModel {
 	
+	private let emailSender: EmailSend
+	private let phoneCaller: Caller
 	private let phoneFormatter: PhoneFormatter
 	private let cnpjFormatter: CNPJFormatter
 	private let meiFormatter: MEIFormatter
 	
 	init(phoneFormatter: PhoneFormatter, cnpjFormatter: CNPJFormatter,
-		  meiFormatter: MEIFormatter) {
+		  meiFormatter: MEIFormatter, phoneCaller: Caller,
+		  emailSender: EmailSend) {
+		self.phoneCaller = phoneCaller
 		self.phoneFormatter = phoneFormatter
 		self.cnpjFormatter = cnpjFormatter
 		self.meiFormatter = meiFormatter
+		self.emailSender = emailSender
 	}
+	
+	var didDeselectCell: ((IndexPath) -> Void)?
 	
 	func getContactDetail(_ contact: Contact) -> [ContactDetailCellModel] {
 		let name = ContactDetailCellModel(type: .companyName(contact.company.name))
@@ -34,6 +41,28 @@ final class ContactDetailViewModel {
 		let isMei = ContactDetailCellModel(type: .isMei(isMeiFormatted))
 		
 		return [name, owner, email, phone, cnpj, date, isMei]
+	}
+	
+	func executeActionForCellTap(with model: ContactDetailCellModel,
+										  for indexPath: IndexPath) {
+		
+		switch model.fieldType {
+		case let .phone(phone):
+			makeCall(for: phone)
+		case let .email(email):
+			sendMessage(to: email)
+		default:
+			break
+		}
+		didDeselectCell?(indexPath)
+	}
+	
+	private func makeCall(for phone: String) {
+		phoneCaller.call(to: phone)
+	}
+	
+	private func sendMessage(to email: String) {
+		emailSender.send(to: email)
 	}
 	
 	private func getFormattedPhone(_ phone: String) -> String {
