@@ -39,6 +39,8 @@
 		3434F253202F230300701967 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F252202F230300701967 /* InMemoryContacts.swift */; };
 		34357F83203B597700561066 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F82203B597700561066 /* Observer.swift */; };
 		34357F86203B774100561066 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F85203B774100561066 /* DateConverter.swift */; };
+		343EBBFE2045A79800EBFFB1 /* MEIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */; };
+		343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
@@ -174,6 +176,8 @@
 		3434F252202F230300701967 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		34357F82203B597700561066 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		34357F85203B774100561066 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEIFormatter.swift; sourceTree = "<group>"; };
+		343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEIFormatterTests.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -722,6 +726,7 @@
 				34C308ED2044B80C00FFDECC /* BaseFormatter.swift */,
 				34C308E62044AF9600FFDECC /* PhoneFormatter.swift */,
 				34C308EB2044B71800FFDECC /* CNPJFormatter.swift */,
+				343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -731,6 +736,7 @@
 			children = (
 				34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */,
 				34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */,
+				343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -958,6 +964,7 @@
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
 				3434F247202DCB0300701967 /* ContactDetailController.swift in Sources */,
 				343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */,
+				343EBBFE2045A79800EBFFB1 /* MEIFormatter.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
 				344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */,
 				3434F229202BA42700701967 /* Company.swift in Sources */,
@@ -989,6 +996,7 @@
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
+				343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */,
 				342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,

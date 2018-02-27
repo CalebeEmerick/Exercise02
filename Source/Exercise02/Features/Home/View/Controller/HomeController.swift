@@ -46,6 +46,7 @@ extension HomeController {
 		
 		setRetrieveContactsCallback()
 		setContactListChangeCallback()
+		setOpenContactDetailCallback()
 		viewModel.fetchClients()
 	}
   
@@ -87,6 +88,12 @@ extension HomeController {
 			self?.rootView.hideEmptyViewIfNeeded()
 			self?.rootView.setDataSource(with: contacts)
 			self?.rootView.reloadSection()
+		}
+	}
+	
+	private func setOpenContactDetailCallback() {
+		viewModel.openContactDetail = { [weak self] contact in
+			self?.rootView.openContactDetail(with: contact)
 		}
 	}
 }

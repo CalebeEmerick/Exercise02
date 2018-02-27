@@ -10,7 +10,7 @@ import UIKit
 
 final class HomeDelegate: NSObject {
 	
-	var didSelectRow: ((ClientModel) -> Void)?
+	var didSelectRow: ((IndexPath) -> Void)?
 }
 
 extension HomeDelegate: UITableViewDelegate {
@@ -32,11 +32,6 @@ extension HomeDelegate: UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
-		guard let cell = tableView.cellForRow(at: indexPath) as? UserCell,
-			let model = cell.model else {
-			return
-		}
-		
-		didSelectRow?(model)
+		didSelectRow?(indexPath)
 	}
 }
