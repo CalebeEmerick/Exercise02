@@ -45,6 +45,11 @@
 		343EBC052045C66500EBFFB1 /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC042045C66500EBFFB1 /* Caller.swift */; };
 		343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */; };
 		343EBC0A2045C8F200EBFFB1 /* PhoneCallerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */; };
+		343EBC0D2045CB4B00EBFFB1 /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC0C2045CB4B00EBFFB1 /* EmailSender.swift */; };
+		343EBC0F2045CB6400EBFFB1 /* EmailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC0E2045CB6400EBFFB1 /* EmailSend.swift */; };
+		343EBC122045CC7700EBFFB1 /* IntegrationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */; };
+		343EBC152045CD9900EBFFB1 /* EmailSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */; };
+		343EBC172045CDD900EBFFB1 /* EmailSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
@@ -186,6 +191,11 @@
 		343EBC042045C66500EBFFB1 /* Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
 		343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallerTests.swift; sourceTree = "<group>"; };
 		343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallerMock.swift; sourceTree = "<group>"; };
+		343EBC0C2045CB4B00EBFFB1 /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
+		343EBC0E2045CB6400EBFFB1 /* EmailSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSend.swift; sourceTree = "<group>"; };
+		343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationProtocol.swift; sourceTree = "<group>"; };
+		343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSenderTests.swift; sourceTree = "<group>"; };
+		343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSenderMock.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -477,6 +487,34 @@
 			path = PhoneCaller;
 			sourceTree = "<group>";
 		};
+		343EBC0B2045CB3600EBFFB1 /* EmailSender */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC0E2045CB6400EBFFB1 /* EmailSend.swift */,
+				343EBC0C2045CB4B00EBFFB1 /* EmailSender.swift */,
+			);
+			path = EmailSender;
+			sourceTree = "<group>";
+		};
+		343EBC102045CC5300EBFFB1 /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC0B2045CB3600EBFFB1 /* EmailSender */,
+				343EBC012045C63300EBFFB1 /* PhoneCaller */,
+				343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		343EBC132045CD8A00EBFFB1 /* EmailSender */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */,
+				343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */,
+			);
+			path = EmailSender;
+			sourceTree = "<group>";
+		};
 		3447AAAD202B3028009F9C1B = {
 			isa = PBXGroup;
 			children = (
@@ -499,9 +537,9 @@
 		3447AAB8202B3028009F9C1B /* Exercise02 */ = {
 			isa = PBXGroup;
 			children = (
+				343EBC102045CC5300EBFFB1 /* Integrations */,
 				3434F23A202BAAFC00701967 /* Features */,
 				34BD12B22037157600C26A50 /* Contacts */,
-				343EBC012045C63300EBFFB1 /* PhoneCaller */,
 				34357F81203B595F00561066 /* Observers */,
 				3450DB5B203716A0001F0FF5 /* JSON */,
 				3434F23B202BAB1200701967 /* Libraries */,
@@ -624,6 +662,7 @@
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				343EBC132045CD8A00EBFFB1 /* EmailSender */,
 				343EBC062045C8A200EBFFB1 /* PhoneCaller */,
 				34C308E82044B4FD00FFDECC /* Formatters */,
 				342745AD20406215000F29FD /* RegistrationViewModel */,
@@ -972,6 +1011,7 @@
 				3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */,
 				3434F239202BAA5F00701967 /* RegistrationDelegate.swift in Sources */,
 				344A28BF203B1BFD00EF96F1 /* RegistrationCellProtocol.swift in Sources */,
+				343EBC0F2045CB6400EBFFB1 /* EmailSend.swift in Sources */,
 				34B98EA5202B8B9400AD5E40 /* HomeController.swift in Sources */,
 				3450DB5D203716B0001F0FF5 /* JSON.swift in Sources */,
 				344A28B1203B0DFD00EF96F1 /* RegistrationPickerCell.swift in Sources */,
@@ -981,10 +1021,12 @@
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
+				343EBC122045CC7700EBFFB1 /* IntegrationProtocol.swift in Sources */,
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
 				34E6D6B9204494CA00634406 /* ContactDetailCellModel.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
+				343EBC0D2045CB4B00EBFFB1 /* EmailSender.swift in Sources */,
 				34E6D6AF20448C1300634406 /* ContactDetailDelegate.swift in Sources */,
 				34C308EE2044B80C00FFDECC /* BaseFormatter.swift in Sources */,
 				34C308EC2044B71800FFDECC /* CNPJFormatter.swift in Sources */,
@@ -1027,11 +1069,13 @@
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
+				343EBC152045CD9900EBFFB1 /* EmailSenderTests.swift in Sources */,
 				343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */,
 				343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */,
 				342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
+				343EBC172045CDD900EBFFB1 /* EmailSenderMock.swift in Sources */,
 				34C308F02044BA1800FFDECC /* CNPJFormatterTests.swift in Sources */,
 				34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */,
 				34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */,
