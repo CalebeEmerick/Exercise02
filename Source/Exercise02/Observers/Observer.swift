@@ -10,9 +10,9 @@ import Foundation
 
 enum Observer {
 	
-	enum Registration {
+	enum Home {
 		
-		static let kContactCreated = name("ContactCreated")
+		static let kUpdateContactList = name("UpdateContactList")
 	}
 }
 

@@ -51,7 +51,7 @@ final class HomeViewModel {
 	private func setUpdateListObserver() {
 		NotificationCenter.default
 			.addObserver(self, selector: #selector(updateList),
-							 name: Observer.Registration.kContactCreated, object: nil)
+							 name: Observer.Home.kUpdateContactList, object: nil)
 	}
 	
 	private func show(clients: [ClientModel]) {

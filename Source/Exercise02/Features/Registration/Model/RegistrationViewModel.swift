@@ -61,7 +61,7 @@ final class RegistrationViewModel {
 	
 	private func updateHomeScreen(with contacts: [Contact]) {
 		NotificationCenter.default
-			.post(name: Observer.Registration.kContactCreated, object: contacts)
+			.post(name: Observer.Home.kUpdateContactList, object: contacts)
 	}
 }
 

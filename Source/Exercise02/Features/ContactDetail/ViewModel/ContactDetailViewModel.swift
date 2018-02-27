@@ -15,18 +15,22 @@ final class ContactDetailViewModel {
 	private let phoneFormatter: PhoneFormatter
 	private let cnpjFormatter: CNPJFormatter
 	private let meiFormatter: MEIFormatter
+	private let contactRemover: ContactRemovable
 	
 	init(phoneFormatter: PhoneFormatter, cnpjFormatter: CNPJFormatter,
 		  meiFormatter: MEIFormatter, phoneCaller: Caller,
-		  emailSender: EmailSend) {
+		  emailSender: EmailSend, contactRemover: ContactRemovable) {
 		self.phoneCaller = phoneCaller
 		self.phoneFormatter = phoneFormatter
 		self.cnpjFormatter = cnpjFormatter
 		self.meiFormatter = meiFormatter
 		self.emailSender = emailSender
+		self.contactRemover = contactRemover
 	}
 	
 	var didDeselectCell: ((IndexPath) -> Void)?
+	
+	var didCloseScreen: (() -> Void)?
 	
 	func getContactDetail(_ contact: Contact) -> [ContactDetailCellModel] {
 		let name = ContactDetailCellModel(type: .companyName(contact.company.name))
@@ -57,6 +61,12 @@ final class ContactDetailViewModel {
 		didDeselectCell?(indexPath)
 	}
 	
+	func deleteContact(_ contact: Contact) {
+		let contacts = contactRemover.delete(contact)
+		updateHomeScreen(with: contacts)
+		didCloseScreen?()
+	}
+	
 	private func makeCall(for phone: String) {
 		phoneCaller.call(to: phone)
 	}
@@ -75,5 +85,10 @@ final class ContactDetailViewModel {
 	
 	private func getMeiFormatted(_ isMei: Bool) -> String {
 		return meiFormatter.format(isMei)
+	}
+	
+	private func updateHomeScreen(with contacts: [Contact]) {
+		NotificationCenter.default
+			.post(name: Observer.Home.kUpdateContactList, object: contacts)
 	}
 }

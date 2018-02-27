@@ -29,13 +29,13 @@ final class ContactRemover: ContactRemovable {
 		self.key = key
 	}
 	
-	
-	func delete(_ contact: Contact) {
+	@discardableResult
+	func delete(_ contact: Contact) -> [Contact] {
 		
 		var contacts = fetcher.fetchContacts()
 		
 		guard contacts.contains(contact) else {
-			return
+			return contacts
 		}
 		
 		let index = getIndex(from: contact, in: contacts)
@@ -43,6 +43,8 @@ final class ContactRemover: ContactRemovable {
 		contacts.remove(at: index)
 		
 		saver.replace(to: contacts)
+		
+		return contacts
 	}
 	
 	private func getIndex(from contact: Contact, in contacts: [Contact]) -> Int {
