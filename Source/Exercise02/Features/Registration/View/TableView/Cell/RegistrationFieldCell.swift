@@ -22,7 +22,8 @@ final class RegistrationFieldCell: UITableViewCell {
 	
 	private var line: CALayer!
 	
-	weak var viewModel: RegistrationCellFieldCapture?
+	weak var fieldCapture: RegistrationCellFieldCapture?
+	weak var keyboardButtonCapture: RegistrationCellKeyboardButtonCapture?
 	
 	private(set) var currentText: String = ""
 	
@@ -62,7 +63,7 @@ extension RegistrationFieldCell {
 	
 	private func setLineStateForTextChange(_ text: String) {
 		guard let model = model as? RegistrationFieldModel else { return }
-		if let color = viewModel?.validate(text, for: model) {
+		if let color = fieldCapture?.validate(text, for: model) {
 			changeLine(to: color)
 		}
 	}
@@ -107,7 +108,7 @@ extension RegistrationFieldCell {
 	
 	private func noticeKeyboardButtonIsPressed() {
 		if let model = model as? RegistrationFieldModel {
-			viewModel?.changeFieldFocus(for: model)
+			keyboardButtonCapture?.changeFieldFocus(for: model)
 		}
 	}
 }

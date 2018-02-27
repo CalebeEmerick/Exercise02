@@ -17,7 +17,7 @@ final class RegistrationPickerCell: UITableViewCell {
 	
 	private var line: CALayer!
 	
-	weak var viewModel: RegistrationCellDateCapture?
+	weak var dateCapture: RegistrationCellDateCapture?
 	
 	private(set) var currentDate: String = ""
 	
@@ -50,7 +50,7 @@ extension RegistrationPickerCell {
 	}
 	
 	private func setLineStateForTextChange(_ text: String) {
-		if let color = viewModel?.validate(text) {
+		if let color = dateCapture?.validate(text) {
 			changeLine(to: color)
 		}
 	}

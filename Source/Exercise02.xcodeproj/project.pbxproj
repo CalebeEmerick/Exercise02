@@ -15,6 +15,8 @@
 		340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */; };
 		3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1C203740C400D15B0A /* ContactListModelTests.swift */; };
 		3412AE1F20374CDD00D15B0A /* ContactsFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */; };
+		342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342745AE20406231000F29FD /* RegistrationViewModelTests.swift */; };
+		342745B3204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342745B2204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift */; };
 		343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343467DA203F5886003A462F /* RegistrationCellBaseDate.swift */; };
 		3434F229202BA42700701967 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F228202BA42700701967 /* Company.swift */; };
 		3434F22B202BA56500701967 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F22A202BA56500701967 /* Contact.swift */; };
@@ -132,6 +134,8 @@
 		340423BD203CAD7B00FD6C09 /* RegexBaseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexBaseValidator.swift; sourceTree = "<group>"; };
 		3412AE1C203740C400D15B0A /* ContactListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListModelTests.swift; sourceTree = "<group>"; };
 		3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFetcherTests.swift; sourceTree = "<group>"; };
+		342745AE20406231000F29FD /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
+		342745B2204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellKeyboardButtonCapture.swift; sourceTree = "<group>"; };
 		343467DA203F5886003A462F /* RegistrationCellBaseDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCellBaseDate.swift; sourceTree = "<group>"; };
 		3434F228202BA42700701967 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		3434F22A202BA56500701967 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -265,6 +269,14 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		342745AD20406215000F29FD /* RegistrationViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				342745AE20406231000F29FD /* RegistrationViewModelTests.swift */,
+			);
+			path = RegistrationViewModel;
+			sourceTree = "<group>";
+		};
 		343467DC203F588A003A462F /* BaseDateTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +303,7 @@
 				349D8CF1203F434B00852243 /* RegistrationCellFieldCapture.swift */,
 				349D8CF3203F510200852243 /* RegistrationCellDateCapture.swift */,
 				3454CD28203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift */,
+				342745B2204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift */,
 				349D8CED203F3CE300852243 /* RegistrationCellFieldState.swift */,
 				349D8CEF203F40E000852243 /* ContainerValidator.swift */,
 				344A28D4203B3F8300EF96F1 /* RegistrationViewModel.swift */,
@@ -508,6 +521,7 @@
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				342745AD20406215000F29FD /* RegistrationViewModel */,
 				34BD9B87203E235200CAD22A /* Headlines */,
 				340423B0203C755800FD6C09 /* Validators */,
 				34CFE2BA20372F6700A22122 /* Contacts */,
@@ -797,6 +811,7 @@
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */,
 				34B98EA2202B845600AD5E40 /* UserCell.swift in Sources */,
+				342745B3204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift in Sources */,
 				34BD9B7E203E133100CAD22A /* RetrieveHeadlines.swift in Sources */,
 				3434F22B202BA56500701967 /* Contact.swift in Sources */,
 				3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */,
@@ -847,6 +862,7 @@
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
+				342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
 				34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */,

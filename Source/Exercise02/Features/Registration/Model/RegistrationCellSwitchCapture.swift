@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RegistrationCellSwitchCapture {
+protocol RegistrationCellSwitchCapture: class {
 	
 	func isMeiChanged(to status: Bool)
 }

@@ -13,13 +13,13 @@ final class RegistrationViewModel {
 	private let headlinesFetcher: RetrieveHeadlines
 	private let validators: ContainerValidator
 	
-	private var state: RegistrationState = .invalid {
+	private(set) var state: RegistrationState = .invalid {
 		didSet {
 			callUpdateButtonWhenStateChange(oldValue)
 		}
 	}
 	
-	private let registrationValidator = RegistrationValidator()
+	let registrationValidator = RegistrationValidator()
 	
 	init(fetcher: RetrieveHeadlines, validators: ContainerValidator) {
 		self.validators = validators
@@ -49,9 +49,9 @@ final class RegistrationViewModel {
 	}
 }
 
-// MARK: - Changes Field Focus When Press Keyboard Button -
+// MARK: - RegistrationCellKeyboardButtonCapture -
 
-extension RegistrationViewModel {
+extension RegistrationViewModel: RegistrationCellKeyboardButtonCapture {
 	
 	func changeFieldFocus(for model: RegistrationFieldModel) {
 		switch model.fieldType {
