@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ContactsFetcher : RetrieveContacts {
+final class ContactsFetcher: RetrieveContacts {
 	
 	private let userDefaults: UserDefaults
 	private let kContactKey: String

@@ -12,7 +12,7 @@ enum Observer {
 	
 	enum Registration {
 		
-		static let kPressedKeyboardButton = name("PressedKeyboardButton")
+		static let kContactCreated = name("ContactCreated")
 	}
 }
 

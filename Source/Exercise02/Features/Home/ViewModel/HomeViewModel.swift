@@ -14,6 +14,7 @@ final class HomeViewModel {
 	
 	init(fetcher: RetrieveContacts) {
 		contactsFetcher = fetcher
+		setUpdateListObserver()
 	}
 	
 	enum FetchState {
@@ -22,7 +23,10 @@ final class HomeViewModel {
 	}
 	
 	var didFetchContacts: (([ClientModel]) -> Void)?
+	
 	var didFetchEmptyContacts: (() -> Void)?
+	
+	var didUpdateContacts: (([ClientModel]) -> Void)?
 	
 	func fetchClients() {
 		let contacts = contactsFetcher.fetchContacts()
@@ -34,6 +38,12 @@ final class HomeViewModel {
 		return contacts.map { ClientModel(contact: $0) }
 	}
 	
+	private func setUpdateListObserver() {
+		NotificationCenter.default
+			.addObserver(self, selector: #selector(updateList),
+							 name: Observer.Registration.kContactCreated, object: nil)
+	}
+	
 	private func show(clients: [ClientModel]) {
 		if clients.isEmpty {
 			didFetchEmptyContacts?()
@@ -41,5 +51,11 @@ final class HomeViewModel {
 		else {
 			didFetchContacts?(clients)
 		}
+	}
+	
+	@objc private func updateList(from notification: Notification) {
+		guard let contacts = notification.object as? [Contact] else { return }
+		let clientModels = map(contacts: contacts)
+		didUpdateContacts?(clientModels)
 	}
 }

@@ -21,8 +21,9 @@ final class HomeControllerView: UIView {
 	private let delegate = HomeDelegate()
 	private var emptyState: HomeEmptyState?
 	
-	var homeViewModel: HomeViewModel?
 	weak var controller: HomeController?
+	
+	weak var homeViewModel: HomeViewModel?
 }
 
 // MARK: - Life Cycle -
@@ -41,6 +42,37 @@ extension HomeControllerView {
 
 extension HomeControllerView {
 	
+	func setDataSource(with contacts: [ClientModel]) {
+		dataSource.items = contacts
+	}
+	
+	func deselectRowIfNeeded() {
+		guard let selectedRow = tableView.indexPathForSelectedRow else { return }
+		tableView.deselectRow(at: selectedRow, animated: true)
+	}
+	
+	func reloadAllData() {
+		DispatchQueue.main.async {
+			self.tableView.reloadData()
+		}
+	}
+	
+	func reloadSection() {
+		let section = IndexSet(0...0)
+		DispatchQueue.main.async {
+			self.tableView.reloadSections(section, with: .automatic)
+		}
+	}
+	
+	func hideEmptyViewIfNeeded() {
+		guard let emptyView = emptyState else { return }
+		UIView.animate(withDuration: 0.3, animations: {
+			emptyView.alpha = 0
+		}) { _ in
+			emptyView.removeFromSuperview()
+		}
+	}
+	
 	func showEmptyState() {
 		let view = HomeEmptyState.makeXib()
 		emptyState = view
@@ -52,18 +84,6 @@ extension HomeControllerView {
 			view.centerXAnchor.constraint(equalTo: self.centerXAnchor)
 				.isActive = true
 		}
-	}
-	
-	func setDataSource(with contacts: [ClientModel]) {
-		dataSource.items = contacts
-		DispatchQueue.main.async {
-			self.tableView.reloadData()
-		}
-	}
-  
-	func deselectRowIfNeeded() {
-		guard let selectedRow = tableView.indexPathForSelectedRow else { return }
-		tableView.deselectRow(at: selectedRow, animated: true)
 	}
 	
 	private func setupTableView() {
@@ -80,7 +100,8 @@ extension HomeControllerView {
 	
 	private func openRegistrationController() {
 		let fetcher = InMemoryHeadlines()
-		let controller = RegistrationController(fetcher: fetcher)
+		let saver = ContactSaver()
+		let controller = RegistrationController(fetcher: fetcher, saver: saver)
 		DispatchQueue.main.async {
 			self.controller?.show(controller, sender: nil)
 		}

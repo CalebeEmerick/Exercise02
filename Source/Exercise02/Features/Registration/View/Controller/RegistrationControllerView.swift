@@ -16,14 +16,16 @@ final class RegistrationControllerView: UIView {
 	@IBOutlet private var tableView: UITableView!
 	
 	@IBAction private func registerAction() {
-		
+		viewModel?.registerContact()
 	}
 	
-	var viewModel: RegistrationViewModel? {
+	weak var viewModel: RegistrationViewModel? {
 		didSet {
 			dataSource.viewModel = viewModel
 		}
 	}
+	
+	weak var registrationController: RegistrationController?
 	
 	private let delegate = RegistrationDelegate()
 	private let dataSource = RegistrationDataSource()
@@ -66,6 +68,13 @@ extension RegistrationControllerView {
 	func setButton(to isEnabled: Bool) {
 		DispatchQueue.main.async {
 			self.registerButton.isEnabled = isEnabled
+		}
+	}
+	
+	func closeScreen() {
+		DispatchQueue.main.async {
+			self.registrationController?.navigationController?
+				.popViewController(animated: true)
 		}
 	}
 	
