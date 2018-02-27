@@ -13,10 +13,7 @@ import XCTest
 final class RegistrationViewModelTests: XCTestCase {
 	
 	private var fetcher: InMemoryHeadlines!
-<<<<<<< HEAD
 	private var saver: ContactSaver!
-=======
->>>>>>> 0290179... Testes do ViewModel da tela de cadastro de contato (#7)
 	private var validators: ContainerValidator!
 	private var viewModel: RegistrationViewModel!
 	
@@ -55,10 +52,7 @@ final class RegistrationViewModelTests: XCTestCase {
 		super.setUp()
 		
 		fetcher = InMemoryHeadlines()
-<<<<<<< HEAD
 		saver = ContactSaver()
-=======
->>>>>>> 0290179... Testes do ViewModel da tela de cadastro de contato (#7)
 		
 		let nameValidator = NameValidator()
 		let emailValidator = EmailValidator()
@@ -75,11 +69,7 @@ final class RegistrationViewModelTests: XCTestCase {
 												  date: dateValidator
 		)
 		
-<<<<<<< HEAD
 		viewModel = RegistrationViewModel(fetcher: fetcher, saver: saver, validators: validators)
-=======
-		viewModel = RegistrationViewModel(fetcher: fetcher, validators: validators)
->>>>>>> 0290179... Testes do ViewModel da tela de cadastro de contato (#7)
 	}
 	
 	override func tearDown() {
