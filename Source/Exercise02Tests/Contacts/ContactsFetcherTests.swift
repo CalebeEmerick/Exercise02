@@ -27,14 +27,14 @@ final class ContactsFetcherTests: XCTestCase {
 		super.setUp()
 		
 		userDefaults = UserDefaults(suiteName: domain)
-		cleanUserDefaults()
 		fetcher = ContactsFetcher(userDefaults: userDefaults, key: key)
 	}
 	
 	override func tearDown() {
-		cleanUserDefaults()
-		userDefaults = nil
+		userDefaults.removeObject(forKey: key)
+		userDefaults.removeSuite(named: domain)
 		fetcher = nil
+		userDefaults = nil
 		
 		super.tearDown()
 	}
@@ -56,10 +56,5 @@ final class ContactsFetcherTests: XCTestCase {
 		let contacts = fetcher.fetchContacts()
 		
 		expect(contacts.count) == numberOfContacts
-	}
-	
-	private func cleanUserDefaults() {
-		userDefaults.removeObject(forKey: key)
-		userDefaults.removeSuite(named: domain)
 	}
 }

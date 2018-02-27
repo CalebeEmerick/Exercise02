@@ -11,4 +11,5 @@ import Foundation
 protocol SaveContact {
 	
 	func save(_ contact: Contact) -> [Contact]
+	func replace(to contacts: [Contact])
 }

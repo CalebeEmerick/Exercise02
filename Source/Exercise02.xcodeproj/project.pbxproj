@@ -50,6 +50,9 @@
 		343EBC122045CC7700EBFFB1 /* IntegrationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */; };
 		343EBC152045CD9900EBFFB1 /* EmailSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */; };
 		343EBC172045CDD900EBFFB1 /* EmailSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */; };
+		343EBC192045D49800EBFFB1 /* ContactRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC182045D49800EBFFB1 /* ContactRemover.swift */; };
+		343EBC1B2045D4BA00EBFFB1 /* ContactRemovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC1A2045D4BA00EBFFB1 /* ContactRemovable.swift */; };
+		343EBC1D2045DB6F00EBFFB1 /* ContactRemoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC1C2045DB6F00EBFFB1 /* ContactRemoverTests.swift */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
 		3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC0202B3028009F9C1B /* Assets.xcassets */; };
 		3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447AAC2202B3028009F9C1B /* LaunchScreen.storyboard */; };
@@ -196,6 +199,9 @@
 		343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationProtocol.swift; sourceTree = "<group>"; };
 		343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSenderTests.swift; sourceTree = "<group>"; };
 		343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSenderMock.swift; sourceTree = "<group>"; };
+		343EBC182045D49800EBFFB1 /* ContactRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemover.swift; sourceTree = "<group>"; };
+		343EBC1A2045D4BA00EBFFB1 /* ContactRemovable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemovable.swift; sourceTree = "<group>"; };
+		343EBC1C2045DB6F00EBFFB1 /* ContactRemoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemoverTests.swift; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447AAB9202B3028009F9C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447AAC0202B3028009F9C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -759,11 +765,13 @@
 				3434F22A202BA56500701967 /* Contact.swift */,
 				3434F228202BA42700701967 /* Company.swift */,
 				3450DB5E203717A3001F0FF5 /* ContactList.swift */,
-				3434F250202E19E300701967 /* RetrieveContacts.swift */,
-				342745B8204087D1000F29FD /* SaveContact.swift */,
 				3434F252202F230300701967 /* InMemoryContacts.swift */,
-				342745B6204087AA000F29FD /* ContactSaver.swift */,
+				3434F250202E19E300701967 /* RetrieveContacts.swift */,
 				34BD12B0203712DE00C26A50 /* ContactsFetcher.swift */,
+				342745B8204087D1000F29FD /* SaveContact.swift */,
+				342745B6204087AA000F29FD /* ContactSaver.swift */,
+				343EBC1A2045D4BA00EBFFB1 /* ContactRemovable.swift */,
+				343EBC182045D49800EBFFB1 /* ContactRemover.swift */,
 				34BD12B3203715C500C26A50 /* ContactsSaveKey.swift */,
 			);
 			path = Contacts;
@@ -816,6 +824,7 @@
 				34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */,
 				3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */,
 				342745BE20408BE2000F29FD /* ContactSaverTests.swift */,
+				343EBC1C2045DB6F00EBFFB1 /* ContactRemoverTests.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -997,6 +1006,7 @@
 				344A28C6203B1FB900EF96F1 /* Color.swift in Sources */,
 				34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */,
 				349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */,
+				343EBC1B2045D4BA00EBFFB1 /* ContactRemovable.swift in Sources */,
 				34BD9B76203DDAED00CAD22A /* CNPJValidator.swift in Sources */,
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */,
@@ -1016,6 +1026,7 @@
 				3450DB5D203716B0001F0FF5 /* JSON.swift in Sources */,
 				344A28B1203B0DFD00EF96F1 /* RegistrationPickerCell.swift in Sources */,
 				34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */,
+				343EBC192045D49800EBFFB1 /* ContactRemover.swift in Sources */,
 				344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */,
 				349D8CF4203F510200852243 /* RegistrationCellDateCapture.swift in Sources */,
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
@@ -1069,6 +1080,7 @@
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
+				343EBC1D2045DB6F00EBFFB1 /* ContactRemoverTests.swift in Sources */,
 				343EBC152045CD9900EBFFB1 /* EmailSenderTests.swift in Sources */,
 				343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */,
 				343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */,

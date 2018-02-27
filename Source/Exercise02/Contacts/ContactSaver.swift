@@ -20,7 +20,7 @@ final class ContactSaver: SaveContact {
 		key = kContactList
 	}
 	
-	init(fetcher: ContactsFetcher, userDefaults: UserDefaults, key: String) {
+	init(fetcher: RetrieveContacts, userDefaults: UserDefaults, key: String) {
 		self.fetcher = fetcher
 		self.userDefaults = userDefaults
 		self.key = key
@@ -33,10 +33,17 @@ final class ContactSaver: SaveContact {
 		
 		contacts.append(contact)
 		
-		let contactList = ContactList(contacts: contacts)
-		
-		userDefaults.set(contactList.json, forKey: key)
+		saveContacts(contacts)
 		
 		return contacts
+	}
+	
+	func replace(to contacts: [Contact]) {
+		saveContacts(contacts)
+	}
+	
+	private func saveContacts(_ contacts: [Contact]) {
+		let contactList = ContactList(contacts: contacts)
+		userDefaults.set(contactList.json, forKey: key)
 	}
 }
