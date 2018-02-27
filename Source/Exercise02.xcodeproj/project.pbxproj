@@ -1030,6 +1030,7 @@
 				344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */,
 				349D8CF4203F510200852243 /* RegistrationCellDateCapture.swift in Sources */,
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
+				343EBC212045FE0B00EBFFB1 /* ContactSaver.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
 				343EBC122045CC7700EBFFB1 /* IntegrationProtocol.swift in Sources */,
