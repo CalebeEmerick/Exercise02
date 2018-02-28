@@ -53,8 +53,7 @@ playground.xcworkspace
 # Carthage/Checkouts
 
 Source/Carthage/
-Source/Carthage/Build
-Source/Carthage/Checkout
+Carthage/
 
 # Fastlane
 #
