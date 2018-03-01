@@ -10,6 +10,8 @@ import Foundation
 
 protocol SaveContact {
 	
+	@discardableResult
 	func save(_ contact: Contact) -> [Contact]
+	
 	func replace(to contacts: [Contact])
 }

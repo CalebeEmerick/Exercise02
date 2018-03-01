@@ -10,5 +10,6 @@ import Foundation
 
 protocol ContactRemovable {
 	
+	@discardableResult
 	func delete(_ contact: Contact) -> [Contact]
 }
