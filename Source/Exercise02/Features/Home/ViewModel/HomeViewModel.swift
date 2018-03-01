@@ -28,10 +28,20 @@ final class HomeViewModel {
 	
 	var didUpdateContacts: (([ClientModel]) -> Void)?
 	
+	var openContactDetail: ((Contact) -> Void)?
+	
 	func fetchClients() {
 		let contacts = contactsFetcher.fetchContacts()
 		let clients = map(contacts: contacts)
 		show(clients: clients)
+	}
+	
+	func openDetail(for indexPath: IndexPath) {
+		let contacts = contactsFetcher.fetchContacts()
+		if contacts.count > indexPath.row {
+			let contact = contacts[indexPath.row]
+			openContactDetail?(contact)
+		}
 	}
 	
 	private func map(contacts: [Contact]) -> [ClientModel] {
@@ -41,7 +51,7 @@ final class HomeViewModel {
 	private func setUpdateListObserver() {
 		NotificationCenter.default
 			.addObserver(self, selector: #selector(updateList),
-							 name: Observer.Registration.kContactCreated, object: nil)
+							 name: Observer.Home.kUpdateContactList, object: nil)
 	}
 	
 	private func show(clients: [ClientModel]) {

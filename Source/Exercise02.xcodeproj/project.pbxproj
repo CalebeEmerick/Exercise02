@@ -31,14 +31,28 @@
 		3434F23E202C7B9900701967 /* HomeEmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F23D202C7B9900701967 /* HomeEmptyState.xib */; };
 		3434F241202C7CFB00701967 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F240202C7CFB00701967 /* ClientModel.swift */; };
 		3434F244202CD21400701967 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F243202CD21400701967 /* HomeViewModel.swift */; };
-		3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F246202DCB0300701967 /* ClientDetailController.swift */; };
-		3434F249202DCFAC00701967 /* ClientDetailControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F248202DCFAC00701967 /* ClientDetailControllerView.xib */; };
-		3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24C202DCFDF00701967 /* ClientDetailControllerView.swift */; };
+		3434F247202DCB0300701967 /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F246202DCB0300701967 /* ContactDetailController.swift */; };
+		3434F249202DCFAC00701967 /* ContactDetailControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3434F248202DCFAC00701967 /* ContactDetailControllerView.xib */; };
+		3434F24D202DCFDF00701967 /* ContactDetailControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24C202DCFDF00701967 /* ContactDetailControllerView.swift */; };
 		3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F24E202DD94000701967 /* HomeEmptyState.swift */; };
 		3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F250202E19E300701967 /* RetrieveContacts.swift */; };
 		3434F253202F230300701967 /* InMemoryContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3434F252202F230300701967 /* InMemoryContacts.swift */; };
 		34357F83203B597700561066 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F82203B597700561066 /* Observer.swift */; };
 		34357F86203B774100561066 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34357F85203B774100561066 /* DateConverter.swift */; };
+		343EBBFE2045A79800EBFFB1 /* MEIFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */; };
+		343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */; };
+		343EBC032045C64F00EBFFB1 /* PhoneCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC022045C64F00EBFFB1 /* PhoneCaller.swift */; };
+		343EBC052045C66500EBFFB1 /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC042045C66500EBFFB1 /* Caller.swift */; };
+		343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */; };
+		343EBC0A2045C8F200EBFFB1 /* PhoneCallerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */; };
+		343EBC0D2045CB4B00EBFFB1 /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC0C2045CB4B00EBFFB1 /* EmailSender.swift */; };
+		343EBC0F2045CB6400EBFFB1 /* EmailSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC0E2045CB6400EBFFB1 /* EmailSend.swift */; };
+		343EBC122045CC7700EBFFB1 /* IntegrationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */; };
+		343EBC152045CD9900EBFFB1 /* EmailSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */; };
+		343EBC172045CDD900EBFFB1 /* EmailSenderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */; };
+		343EBC192045D49800EBFFB1 /* ContactRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC182045D49800EBFFB1 /* ContactRemover.swift */; };
+		343EBC1B2045D4BA00EBFFB1 /* ContactRemovable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC1A2045D4BA00EBFFB1 /* ContactRemovable.swift */; };
+		343EBC1D2045DB6F00EBFFB1 /* ContactRemoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343EBC1C2045DB6F00EBFFB1 /* ContactRemoverTests.swift */; };
 		343EBC4A2046E7F800EBFFB1 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343EBC482046E7F800EBFFB1 /* Crashlytics.framework */; };
 		343EBC4B2046E7F800EBFFB1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343EBC492046E7F800EBFFB1 /* Fabric.framework */; };
 		3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447AAB9202B3028009F9C1B /* AppDelegate.swift */; };
@@ -96,8 +110,21 @@
 		34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */; };
 		34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */; };
 		34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */; };
+		34C308E72044AF9600FFDECC /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308E62044AF9600FFDECC /* PhoneFormatter.swift */; };
+		34C308EA2044B51000FFDECC /* PhoneFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */; };
+		34C308EC2044B71800FFDECC /* CNPJFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308EB2044B71800FFDECC /* CNPJFormatter.swift */; };
+		34C308EE2044B80C00FFDECC /* BaseFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308ED2044B80C00FFDECC /* BaseFormatter.swift */; };
+		34C308F02044BA1800FFDECC /* CNPJFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */; };
 		34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */; };
 		34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CFE2BB20372F9900A22122 /* ContactModelTests.swift */; };
+		34E6D6AD20448BDB00634406 /* ContactDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */; };
+		34E6D6AF20448C1300634406 /* ContactDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6AE20448C1300634406 /* ContactDetailDelegate.swift */; };
+		34E6D6B220448C7100634406 /* ContactDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6B120448C7000634406 /* ContactDetailViewModel.swift */; };
+		34E6D6B52044926400634406 /* ContactDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6B42044926400634406 /* ContactDetailCell.swift */; };
+		34E6D6B72044927B00634406 /* ContactDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E6D6B62044927B00634406 /* ContactDetailCell.xib */; };
+		34E6D6B9204494CA00634406 /* ContactDetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6B8204494CA00634406 /* ContactDetailCellModel.swift */; };
+		34E6D6BB2044AB6E00634406 /* ContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6BA2044AB6E00634406 /* ContactDetail.swift */; };
+		34E6D6BD2044AC9000634406 /* ContactDetailFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6D6BC2044AC9000634406 /* ContactDetailFieldType.swift */; };
 		34F6BEDF203604E30091ED8D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; };
 		34F6BEE0203604E30091ED8D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F6BEDE203604E30091ED8D /* Quick.framework */; };
 		34F6BEE1203604EC0091ED8D /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 34F6BEDD203604E30091ED8D /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -155,14 +182,28 @@
 		3434F23D202C7B9900701967 /* HomeEmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeEmptyState.xib; sourceTree = "<group>"; };
 		3434F240202C7CFB00701967 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
 		3434F243202CD21400701967 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		3434F246202DCB0300701967 /* ClientDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailController.swift; sourceTree = "<group>"; };
-		3434F248202DCFAC00701967 /* ClientDetailControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientDetailControllerView.xib; sourceTree = "<group>"; };
-		3434F24C202DCFDF00701967 /* ClientDetailControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetailControllerView.swift; sourceTree = "<group>"; };
+		3434F246202DCB0300701967 /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
+		3434F248202DCFAC00701967 /* ContactDetailControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailControllerView.xib; sourceTree = "<group>"; };
+		3434F24C202DCFDF00701967 /* ContactDetailControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailControllerView.swift; sourceTree = "<group>"; };
 		3434F24E202DD94000701967 /* HomeEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEmptyState.swift; sourceTree = "<group>"; };
 		3434F250202E19E300701967 /* RetrieveContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveContacts.swift; sourceTree = "<group>"; };
 		3434F252202F230300701967 /* InMemoryContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContacts.swift; sourceTree = "<group>"; };
 		34357F82203B597700561066 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		34357F85203B774100561066 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEIFormatter.swift; sourceTree = "<group>"; };
+		343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEIFormatterTests.swift; sourceTree = "<group>"; };
+		343EBC022045C64F00EBFFB1 /* PhoneCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCaller.swift; sourceTree = "<group>"; };
+		343EBC042045C66500EBFFB1 /* Caller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
+		343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallerTests.swift; sourceTree = "<group>"; };
+		343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallerMock.swift; sourceTree = "<group>"; };
+		343EBC0C2045CB4B00EBFFB1 /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
+		343EBC0E2045CB6400EBFFB1 /* EmailSend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSend.swift; sourceTree = "<group>"; };
+		343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationProtocol.swift; sourceTree = "<group>"; };
+		343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSenderTests.swift; sourceTree = "<group>"; };
+		343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSenderMock.swift; sourceTree = "<group>"; };
+		343EBC182045D49800EBFFB1 /* ContactRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemover.swift; sourceTree = "<group>"; };
+		343EBC1A2045D4BA00EBFFB1 /* ContactRemovable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemovable.swift; sourceTree = "<group>"; };
+		343EBC1C2045DB6F00EBFFB1 /* ContactRemoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemoverTests.swift; sourceTree = "<group>"; };
 		343EBC482046E7F800EBFFB1 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Carthage/Build/iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		343EBC492046E7F800EBFFB1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Carthage/Build/iOS/Fabric.framework; sourceTree = "<group>"; };
 		3447AAB6202B3028009F9C1B /* Exercise02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise02.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,8 +265,21 @@
 		34BD9B82203E142500CAD22A /* InMemoryHeadlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryHeadlines.swift; sourceTree = "<group>"; };
 		34BD9B88203E268F00CAD22A /* HeadlinesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesTests.swift; sourceTree = "<group>"; };
 		34BD9B8A203E26BC00CAD22A /* RetrieveHeadlinesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveHeadlinesMock.swift; sourceTree = "<group>"; };
+		34C308E62044AF9600FFDECC /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
+		34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatterTests.swift; sourceTree = "<group>"; };
+		34C308EB2044B71800FFDECC /* CNPJFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJFormatter.swift; sourceTree = "<group>"; };
+		34C308ED2044B80C00FFDECC /* BaseFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormatter.swift; sourceTree = "<group>"; };
+		34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNPJFormatterTests.swift; sourceTree = "<group>"; };
 		34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryContactsTests.swift; sourceTree = "<group>"; };
 		34CFE2BB20372F9900A22122 /* ContactModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelTests.swift; sourceTree = "<group>"; };
+		34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailDataSource.swift; sourceTree = "<group>"; };
+		34E6D6AE20448C1300634406 /* ContactDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailDelegate.swift; sourceTree = "<group>"; };
+		34E6D6B120448C7000634406 /* ContactDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewModel.swift; sourceTree = "<group>"; };
+		34E6D6B42044926400634406 /* ContactDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailCell.swift; sourceTree = "<group>"; };
+		34E6D6B62044927B00634406 /* ContactDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailCell.xib; sourceTree = "<group>"; };
+		34E6D6B8204494CA00634406 /* ContactDetailCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailCellModel.swift; sourceTree = "<group>"; };
+		34E6D6BA2044AB6E00634406 /* ContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetail.swift; sourceTree = "<group>"; };
+		34E6D6BC2044AC9000634406 /* ContactDetailFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFieldType.swift; sourceTree = "<group>"; };
 		34F6BEDD203604E30091ED8D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		34F6BEDE203604E30091ED8D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		34F6BEE320360BA50091ED8D /* CompanyInitialsMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInitialsMaker.swift; sourceTree = "<group>"; };
@@ -359,7 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				34B98E9D202B566500AD5E40 /* Home */,
-				3434F245202DCAEA00701967 /* ClientDetail */,
+				3434F245202DCAEA00701967 /* ContactDetail */,
 				3434F224202BA06800701967 /* Registration */,
 			);
 			path = Features;
@@ -401,14 +455,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		3434F245202DCAEA00701967 /* ClientDetail */ = {
+		3434F245202DCAEA00701967 /* ContactDetail */ = {
 			isa = PBXGroup;
 			children = (
-				3434F246202DCB0300701967 /* ClientDetailController.swift */,
-				3434F248202DCFAC00701967 /* ClientDetailControllerView.xib */,
-				3434F24C202DCFDF00701967 /* ClientDetailControllerView.swift */,
+				3465DFC22044609400747210 /* Model */,
+				3465DFC12044607600747210 /* View */,
+				34E6D6B020448C5800634406 /* ViewModel */,
 			);
-			path = ClientDetail;
+			path = ContactDetail;
 			sourceTree = "<group>";
 		};
 		34357F81203B595F00561066 /* Observers */ = {
@@ -425,6 +479,52 @@
 				34357F85203B774100561066 /* DateConverter.swift */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		343EBC012045C63300EBFFB1 /* PhoneCaller */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC042045C66500EBFFB1 /* Caller.swift */,
+				343EBC022045C64F00EBFFB1 /* PhoneCaller.swift */,
+			);
+			path = PhoneCaller;
+			sourceTree = "<group>";
+		};
+		343EBC062045C8A200EBFFB1 /* PhoneCaller */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC092045C8F200EBFFB1 /* PhoneCallerMock.swift */,
+				343EBC072045C8B100EBFFB1 /* PhoneCallerTests.swift */,
+			);
+			path = PhoneCaller;
+			sourceTree = "<group>";
+		};
+		343EBC0B2045CB3600EBFFB1 /* EmailSender */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC0E2045CB6400EBFFB1 /* EmailSend.swift */,
+				343EBC0C2045CB4B00EBFFB1 /* EmailSender.swift */,
+			);
+			path = EmailSender;
+			sourceTree = "<group>";
+		};
+		343EBC102045CC5300EBFFB1 /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC012045C63300EBFFB1 /* PhoneCaller */,
+				343EBC0B2045CB3600EBFFB1 /* EmailSender */,
+				343EBC112045CC7700EBFFB1 /* IntegrationProtocol.swift */,
+			);
+			path = Integrations;
+			sourceTree = "<group>";
+		};
+		343EBC132045CD8A00EBFFB1 /* EmailSender */ = {
+			isa = PBXGroup;
+			children = (
+				343EBC162045CDD900EBFFB1 /* EmailSenderMock.swift */,
+				343EBC142045CD9900EBFFB1 /* EmailSenderTests.swift */,
+			);
+			path = EmailSender;
 			sourceTree = "<group>";
 		};
 		3447AAAD202B3028009F9C1B = {
@@ -450,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				3434F23A202BAAFC00701967 /* Features */,
+				343EBC102045CC5300EBFFB1 /* Integrations */,
 				34BD12B22037157600C26A50 /* Contacts */,
 				34357F81203B595F00561066 /* Observers */,
 				3450DB5B203716A0001F0FF5 /* JSON */,
@@ -530,9 +631,52 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		3465DFC12044607600747210 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3465DFC32044729600747210 /* TableView */,
+				3465DFC42044729D00747210 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3465DFC22044609400747210 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34C308E52044AF8400FFDECC /* Formatters */,
+				34E6D6BC2044AC9000634406 /* ContactDetailFieldType.swift */,
+				34E6D6BA2044AB6E00634406 /* ContactDetail.swift */,
+				34E6D6B8204494CA00634406 /* ContactDetailCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3465DFC32044729600747210 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				34E6D6B32044924400634406 /* Cell */,
+				34E6D6AC20448BDB00634406 /* ContactDetailDataSource.swift */,
+				34E6D6AE20448C1300634406 /* ContactDetailDelegate.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		3465DFC42044729D00747210 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3434F246202DCB0300701967 /* ContactDetailController.swift */,
+				3434F248202DCFAC00701967 /* ContactDetailControllerView.xib */,
+				3434F24C202DCFDF00701967 /* ContactDetailControllerView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3468C814202F27A800CCD913 /* Exercise02Tests */ = {
 			isa = PBXGroup;
 			children = (
+				343EBC132045CD8A00EBFFB1 /* EmailSender */,
+				343EBC062045C8A200EBFFB1 /* PhoneCaller */,
+				34C308E82044B4FD00FFDECC /* Formatters */,
 				342745AD20406215000F29FD /* RegistrationViewModel */,
 				34BD9B87203E235200CAD22A /* Headlines */,
 				340423B0203C755800FD6C09 /* Validators */,
@@ -629,11 +773,13 @@
 				3434F22A202BA56500701967 /* Contact.swift */,
 				3434F228202BA42700701967 /* Company.swift */,
 				3450DB5E203717A3001F0FF5 /* ContactList.swift */,
-				3434F250202E19E300701967 /* RetrieveContacts.swift */,
-				342745B8204087D1000F29FD /* SaveContact.swift */,
 				3434F252202F230300701967 /* InMemoryContacts.swift */,
-				342745B6204087AA000F29FD /* ContactSaver.swift */,
+				3434F250202E19E300701967 /* RetrieveContacts.swift */,
 				34BD12B0203712DE00C26A50 /* ContactsFetcher.swift */,
+				342745B8204087D1000F29FD /* SaveContact.swift */,
+				342745B6204087AA000F29FD /* ContactSaver.swift */,
+				343EBC1A2045D4BA00EBFFB1 /* ContactRemovable.swift */,
+				343EBC182045D49800EBFFB1 /* ContactRemover.swift */,
 				34BD12B3203715C500C26A50 /* ContactsSaveKey.swift */,
 			);
 			path = Contacts;
@@ -657,6 +803,27 @@
 			path = Headlines;
 			sourceTree = "<group>";
 		};
+		34C308E52044AF8400FFDECC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				34C308ED2044B80C00FFDECC /* BaseFormatter.swift */,
+				34C308E62044AF9600FFDECC /* PhoneFormatter.swift */,
+				34C308EB2044B71800FFDECC /* CNPJFormatter.swift */,
+				343EBBFD2045A79800EBFFB1 /* MEIFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		34C308E82044B4FD00FFDECC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				34C308E92044B51000FFDECC /* PhoneFormatterTests.swift */,
+				34C308EF2044BA1800FFDECC /* CNPJFormatterTests.swift */,
+				343EBBFF2045AA0900EBFFB1 /* MEIFormatterTests.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		34CFE2BA20372F6700A22122 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,8 +832,26 @@
 				34C3633120375176009ECCE5 /* InMemoryContactsTests.swift */,
 				3412AE1E20374CDD00D15B0A /* ContactsFetcherTests.swift */,
 				342745BE20408BE2000F29FD /* ContactSaverTests.swift */,
+				343EBC1C2045DB6F00EBFFB1 /* ContactRemoverTests.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		34E6D6B020448C5800634406 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				34E6D6B120448C7000634406 /* ContactDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		34E6D6B32044924400634406 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				34E6D6B62044927B00634406 /* ContactDetailCell.xib */,
+				34E6D6B42044926400634406 /* ContactDetailCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -723,6 +908,14 @@
 					3447AAB5202B3028009F9C1B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					3468C812202F27A800CCD913 = {
 						CreatedOnToolsVersion = 9.2;
@@ -761,10 +954,11 @@
 				344A28AE203B0D6200EF96F1 /* RegistrationFieldCell.xib in Resources */,
 				3447AAC4202B3028009F9C1B /* LaunchScreen.storyboard in Resources */,
 				3434F23E202C7B9900701967 /* HomeEmptyState.xib in Resources */,
-				3434F249202DCFAC00701967 /* ClientDetailControllerView.xib in Resources */,
+				3434F249202DCFAC00701967 /* ContactDetailControllerView.xib in Resources */,
 				34B98EA8202B8C9200AD5E40 /* HomeControllerView.xib in Resources */,
 				344A28CE203B273500EF96F1 /* KeyboardDatePicker.xib in Resources */,
 				3434F233202BA82D00701967 /* RegistrationControllerView.xib in Resources */,
+				34E6D6B72044927B00634406 /* ContactDetailCell.xib in Resources */,
 				344A28B6203B0EEE00EF96F1 /* RegistrationSwitchCell.xib in Resources */,
 				3447AAC1202B3028009F9C1B /* Assets.xcassets in Resources */,
 			);
@@ -820,12 +1014,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F6BEE420360BA50091ED8D /* CompanyInitialsMaker.swift in Sources */,
+				34E6D6AD20448BDB00634406 /* ContactDetailDataSource.swift in Sources */,
 				3434F24F202DD94000701967 /* HomeEmptyState.swift in Sources */,
 				34357F83203B597700561066 /* Observer.swift in Sources */,
 				349D8CF0203F40E000852243 /* ContainerValidator.swift in Sources */,
 				344A28CB203B267800EF96F1 /* RegistrationPickerModel.swift in Sources */,
 				34357F86203B774100561066 /* DateConverter.swift in Sources */,
 				34B98EAD202B8D2700AD5E40 /* HomeDataSource.swift in Sources */,
+				34E6D6BD2044AC9000634406 /* ContactDetailFieldType.swift in Sources */,
 				344A28C3203B1F3500EF96F1 /* RegistrationFieldType.swift in Sources */,
 				349D8CF2203F434B00852243 /* RegistrationCellFieldCapture.swift in Sources */,
 				342745B7204087AA000F29FD /* ContactSaver.swift in Sources */,
@@ -835,13 +1031,15 @@
 				3434F244202CD21400701967 /* HomeViewModel.swift in Sources */,
 				344A28BD203B1BC100EF96F1 /* RegistrationCellType.swift in Sources */,
 				344A28C1203B1C7E00EF96F1 /* RegistrationFieldModel.swift in Sources */,
-				3434F24D202DCFDF00701967 /* ClientDetailControllerView.swift in Sources */,
+				3434F24D202DCFDF00701967 /* ContactDetailControllerView.swift in Sources */,
+				34C308E72044AF9600FFDECC /* PhoneFormatter.swift in Sources */,
 				34B98EB5202B8E9F00AD5E40 /* TableViewReusable.swift in Sources */,
 				340423BE203CAD7B00FD6C09 /* RegexBaseValidator.swift in Sources */,
 				3454CD29203F64F100E2EE07 /* RegistrationCellSwitchCapture.swift in Sources */,
 				344A28C6203B1FB900EF96F1 /* Color.swift in Sources */,
 				34BD9B83203E142500CAD22A /* InMemoryHeadlines.swift in Sources */,
 				349D8CEE203F3CE300852243 /* RegistrationCellFieldState.swift in Sources */,
+				343EBC1B2045D4BA00EBFFB1 /* ContactRemovable.swift in Sources */,
 				34BD9B76203DDAED00CAD22A /* CNPJValidator.swift in Sources */,
 				34B98EB7202B8E9F00AD5E40 /* Reusable.swift in Sources */,
 				34BD12B1203712DE00C26A50 /* ContactsFetcher.swift in Sources */,
@@ -849,37 +1047,51 @@
 				342745B3204068A5000F29FD /* RegistrationCellKeyboardButtonCapture.swift in Sources */,
 				34BD9B7E203E133100CAD22A /* RetrieveHeadlines.swift in Sources */,
 				342745B9204087D1000F29FD /* SaveContact.swift in Sources */,
+				34E6D6BB2044AB6E00634406 /* ContactDetail.swift in Sources */,
 				3434F22B202BA56500701967 /* Contact.swift in Sources */,
+				343EBC032045C64F00EBFFB1 /* PhoneCaller.swift in Sources */,
 				3434F237202BAA4700701967 /* RegistrationDataSource.swift in Sources */,
 				3447AABA202B3028009F9C1B /* AppDelegate.swift in Sources */,
 				3434F239202BAA5F00701967 /* RegistrationDelegate.swift in Sources */,
 				344A28BF203B1BFD00EF96F1 /* RegistrationCellProtocol.swift in Sources */,
+				343EBC0F2045CB6400EBFFB1 /* EmailSend.swift in Sources */,
 				34B98EA5202B8B9400AD5E40 /* HomeController.swift in Sources */,
 				3450DB5D203716B0001F0FF5 /* JSON.swift in Sources */,
 				344A28B1203B0DFD00EF96F1 /* RegistrationPickerCell.swift in Sources */,
 				34B98EBC202B90F500AD5E40 /* ViewCreatable.swift in Sources */,
+				343EBC192045D49800EBFFB1 /* ContactRemover.swift in Sources */,
 				344A28D0203B275F00EF96F1 /* KeyboardDatePicker.swift in Sources */,
 				349D8CF4203F510200852243 /* RegistrationCellDateCapture.swift in Sources */,
 				3434F235202BA88400701967 /* RegistrationControllerView.swift in Sources */,
 				34B98EB8202B8E9F00AD5E40 /* CollectionViewReusable.swift in Sources */,
 				3434F253202F230300701967 /* InMemoryContacts.swift in Sources */,
+				343EBC122045CC7700EBFFB1 /* IntegrationProtocol.swift in Sources */,
 				3434F241202C7CFB00701967 /* ClientModel.swift in Sources */,
 				344A28C8203B213400EF96F1 /* KeyboardAccessoryView.swift in Sources */,
+				34E6D6B9204494CA00634406 /* ContactDetailCellModel.swift in Sources */,
 				340423AF203C688F00FD6C09 /* NameValidator.swift in Sources */,
+				343EBC0D2045CB4B00EBFFB1 /* EmailSender.swift in Sources */,
+				34E6D6AF20448C1300634406 /* ContactDetailDelegate.swift in Sources */,
+				34C308EE2044B80C00FFDECC /* BaseFormatter.swift in Sources */,
+				34C308EC2044B71800FFDECC /* CNPJFormatter.swift in Sources */,
 				34BD9B7A203E0B1700CAD22A /* DateValidator.swift in Sources */,
 				34BD9B72203DBB0800CAD22A /* CompanyNameValidator.swift in Sources */,
 				34B98EAA202B8CD500AD5E40 /* HomeControllerView.swift in Sources */,
-				3434F247202DCB0300701967 /* ClientDetailController.swift in Sources */,
+				3434F247202DCB0300701967 /* ContactDetailController.swift in Sources */,
 				343467DB203F5886003A462F /* RegistrationCellBaseDate.swift in Sources */,
+				343EBBFE2045A79800EBFFB1 /* MEIFormatter.swift in Sources */,
 				3434F251202E19E300701967 /* RetrieveContacts.swift in Sources */,
 				344A28D3203B3D2A00EF96F1 /* RegistrationSwitchModel.swift in Sources */,
 				3434F229202BA42700701967 /* Company.swift in Sources */,
 				340423B6203C906900FD6C09 /* EmailValidator.swift in Sources */,
+				34E6D6B220448C7100634406 /* ContactDetailViewModel.swift in Sources */,
+				34E6D6B52044926400634406 /* ContactDetailCell.swift in Sources */,
 				3434F22E202BA7D500701967 /* RegistrationController.swift in Sources */,
 				3450DB5F203717A3001F0FF5 /* ContactList.swift in Sources */,
 				34B98EAF202B8D4F00AD5E40 /* HomeDelegate.swift in Sources */,
 				34BD12B4203715C500C26A50 /* ContactsSaveKey.swift in Sources */,
 				344A28AD203B0D6200EF96F1 /* RegistrationFieldCell.swift in Sources */,
+				343EBC052045C66500EBFFB1 /* Caller.swift in Sources */,
 				344A28D5203B3F8300EF96F1 /* RegistrationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -889,9 +1101,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				34BD9B7C203E117700CAD22A /* DateValidatorTests.swift in Sources */,
+				34C308EA2044B51000FFDECC /* PhoneFormatterTests.swift in Sources */,
 				34BD9B8B203E26BC00CAD22A /* RetrieveHeadlinesMock.swift in Sources */,
 				34C3633220375176009ECCE5 /* InMemoryContactsTests.swift in Sources */,
 				340423B4203C758100FD6C09 /* NameValidatorTests.swift in Sources */,
+				343EBC0A2045C8F200EBFFB1 /* PhoneCallerMock.swift in Sources */,
 				34AAB1C9203CC7E6006C0CB7 /* PhoneValidatorTests.swift in Sources */,
 				342745BF20408BE2000F29FD /* ContactSaverTests.swift in Sources */,
 				34BD9B78203E06CB00CAD22A /* CNPJValidatorTests.swift in Sources */,
@@ -899,9 +1113,15 @@
 				3468C820202F283700CCD913 /* ClientModelTests.swift in Sources */,
 				34708909202F72E90007A0FA /* CompanyInitialsMakerTests.swift in Sources */,
 				340423BA203CA90F00FD6C09 /* EmailValidatorTests.swift in Sources */,
+				343EBC1D2045DB6F00EBFFB1 /* ContactRemoverTests.swift in Sources */,
+				343EBC152045CD9900EBFFB1 /* EmailSenderTests.swift in Sources */,
+				343EBC082045C8B100EBFFB1 /* PhoneCallerTests.swift in Sources */,
+				343EBC002045AA0900EBFFB1 /* MEIFormatterTests.swift in Sources */,
 				342745AF20406231000F29FD /* RegistrationViewModelTests.swift in Sources */,
 				3412AE1D203740C400D15B0A /* ContactListModelTests.swift in Sources */,
 				34CFE2BC20372F9900A22122 /* ContactModelTests.swift in Sources */,
+				343EBC172045CDD900EBFFB1 /* EmailSenderMock.swift in Sources */,
+				34C308F02044BA1800FFDECC /* CNPJFormatterTests.swift in Sources */,
 				34BD9B89203E268F00CAD22A /* HeadlinesTests.swift in Sources */,
 				34BD9B74203DD97F00CAD22A /* CompanyNameValidatorTests.swift in Sources */,
 				34AAB1CB203CC8B9006C0CB7 /* RegexBaseValidatorTests.swift in Sources */,
@@ -978,7 +1198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1029,7 +1249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1041,7 +1261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
@@ -1051,11 +1271,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Exercise02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.CompanyContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "95220ba6-40eb-4016-bae6-c4c7ff7992f1";
-				PROVISIONING_PROFILE_SPECIFIER = "Ad Hoc Company Con";
+				PROVISIONING_PROFILE = "f615a600-be6f-4876-821e-e3caaacf043a";
+				PROVISIONING_PROFILE_SPECIFIER = "Company Con";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1074,6 +1295,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Exercise02/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.CompanyContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";

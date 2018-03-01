@@ -86,6 +86,14 @@ extension HomeControllerView {
 		}
 	}
 	
+	func openContactDetail(with contact: Contact) {
+		let contactDetail = ContactDetail(title: "Detalhes do Cliente", contact: contact)
+		let controller = ContactDetailController(detail: contactDetail)
+		DispatchQueue.main.async {
+			self.controller?.show(controller, sender: nil)
+		}
+	}
+	
 	private func setupTableView() {
 		tableView.dataSource = dataSource
 		tableView.delegate = delegate
@@ -93,8 +101,8 @@ extension HomeControllerView {
 	}
 	
 	private func setupDelegate() {
-		delegate.didSelectRow = { [weak self] _ in
-			self?.openClientDetailScreen()
+		delegate.didSelectRow = { [weak self] indexPath in
+			self?.homeViewModel?.openDetail(for: indexPath)
 		}
 	}
 	
@@ -102,13 +110,6 @@ extension HomeControllerView {
 		let fetcher = InMemoryHeadlines()
 		let saver = ContactSaver()
 		let controller = RegistrationController(fetcher: fetcher, saver: saver)
-		DispatchQueue.main.async {
-			self.controller?.show(controller, sender: nil)
-		}
-	}
-	
-	private func openClientDetailScreen() {
-		let controller = ClientDetailController(title: "Detalhes do Cliente")
 		DispatchQueue.main.async {
 			self.controller?.show(controller, sender: nil)
 		}

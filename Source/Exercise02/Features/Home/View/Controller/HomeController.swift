@@ -44,8 +44,10 @@ extension HomeController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		setCustomNavigationBackButton()
 		setRetrieveContactsCallback()
 		setContactListChangeCallback()
+		setOpenContactDetailCallback()
 		viewModel.fetchClients()
 	}
   
@@ -88,5 +90,19 @@ extension HomeController {
 			self?.rootView.setDataSource(with: contacts)
 			self?.rootView.reloadSection()
 		}
+	}
+	
+	private func setOpenContactDetailCallback() {
+		viewModel.openContactDetail = { [weak self] contact in
+			self?.rootView.openContactDetail(with: contact)
+		}
+	}
+	
+	private func setCustomNavigationBackButton() {
+		let back = UIImage(named: "button-back")
+		navigationController?.navigationBar.tintColor = Color(hexString: "#2475b0").color
+		navigationController?.navigationBar.backIndicatorImage = back
+		navigationController?.navigationBar.backIndicatorTransitionMaskImage = back
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 	}
 }

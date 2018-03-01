@@ -42,7 +42,7 @@ final class PhoneValidatorTests: XCTestCase {
 	
 	func test_shouldNotAccept_MoreCharacter_ThanAllowed() {
 		
-		let moreCharacters = validator.validate(phone: "219716971233")
+		let moreCharacters = validator.validate(phone: "2197169712333")
 		
 		expect(moreCharacters).to(beFalse())
 	}
@@ -54,30 +54,58 @@ final class PhoneValidatorTests: XCTestCase {
 		expect(invalidCharacters).to(beFalse())
 	}
 	
-	func test_shouldAccept_DDDAndPhoneNumber() {
+	func test_shouldAccept_DDDWithTwoNumbers_AndPhoneNumber() {
 		
 		let validPhone = validator.validate(phone: "21971697123")
 		
 		expect(validPhone).to(beTrue())
 	}
 	
-	func test_shouldAccept_SpacedDDDAndPhoneNumber() {
+	func test_shouldAccept_DDDWithThreeNumbers_AndPhoneNumber() {
+		
+		let validPhone = validator.validate(phone: "021971697123")
+		
+		expect(validPhone).to(beTrue())
+	}
+	
+	func test_shouldAccept_SpacedDDDWithTwoNumbers_AndPhoneNumber() {
 		
 		let validPhone = validator.validate(phone: "21 971697123")
 		
 		expect(validPhone).to(beTrue())
 	}
 	
-	func test_shouldAccept_DDDBetweenParentheses() {
+	func test_shouldAccept_SpacedDDDWithThreeNumbers_AndPhoneNumber() {
+		
+		let validPhone = validator.validate(phone: "021 971697123")
+		
+		expect(validPhone).to(beTrue())
+	}
+	
+	func test_shouldAccept_DDDWithTwoNumbers_BetweenParentheses() {
 		
 		let validPhone = validator.validate(phone: "(21)971697123")
 		
 		expect(validPhone).to(beTrue())
 	}
 	
-	func test_shouldAccept_DDDBetweenParenthesesAndSpace() {
+	func test_shouldAccept_DDDWithThreeNumbers_BetweenParentheses() {
+		
+		let validPhone = validator.validate(phone: "(021)971697123")
+		
+		expect(validPhone).to(beTrue())
+	}
+	
+	func test_shouldAccept_DDDWithTwoNumbers_BetweenParenthesesAndSpace() {
 		
 		let validPhone = validator.validate(phone: "(21) 971697123")
+		
+		expect(validPhone).to(beTrue())
+	}
+	
+	func test_shouldAccept_DDDWithThreeNumbers_BetweenParenthesesAndSpace() {
+		
+		let validPhone = validator.validate(phone: "(021) 971697123")
 		
 		expect(validPhone).to(beTrue())
 	}

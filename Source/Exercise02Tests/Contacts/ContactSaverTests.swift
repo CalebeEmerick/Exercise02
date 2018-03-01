@@ -30,6 +30,22 @@ final class ContactSaverTests: XCTestCase {
 		)
 	}
 	
+	private var otherContact: Contact {
+		return Contact(name: "João Paulo",
+							email: "j.paulo@cocacola.com.br",
+							phone: "011994687327",
+							company: Company(name: "Coca Cola",
+												  cnpj: "18.550.366/0001-08",
+												  activeSince: "06/09/1936",
+												  isMei: false
+			)
+		)
+	}
+	
+	private var contacts: [Contact] {
+		return [contact, otherContact]
+	}
+	
 	override func setUp() {
 		super.setUp()
 		
@@ -41,9 +57,9 @@ final class ContactSaverTests: XCTestCase {
 	override func tearDown() {
 		userDefaults.removeObject(forKey: key)
 		userDefaults.removeSuite(named: domain)
-		userDefaults = nil
 		saver = nil
 		fetcher = nil
+		userDefaults = nil
 		
 		super.tearDown()
 	}
@@ -57,12 +73,32 @@ final class ContactSaverTests: XCTestCase {
 		expect(contacts.count).to(equal(1))
 	}
 	
-	func test_should_() {
+	func test_shouldHave_SavedContact_InContacts() {
 		
 		let contacts = saver.save(contact)
 		
 		let hasContactInContacts = contacts.contains(contact)
 		
 		expect(hasContactInContacts).to(beTrue())
+	}
+	
+	func test_shouldHave_SameNumberOfContactsSaved() {
+		
+		saver.save(contact)
+		
+		saver.replace(to: self.contacts)
+		
+		let contacts = fetcher.fetchContacts()
+		
+		expect(contacts.count).to(equal(self.contacts.count))
+	}
+	
+	func test_shouldHave_SameContactsOfSavedContacts() {
+		
+		saver.replace(to: self.contacts)
+		
+		let contacts = fetcher.fetchContacts()
+		
+		expect(contacts).to(equal(self.contacts))
 	}
 }

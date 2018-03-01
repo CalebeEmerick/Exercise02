@@ -26,7 +26,7 @@ final class RegistrationControllerView: UIView {
 	}
 	
 	weak var registrationController: RegistrationController?
-	
+  
 	private let delegate = RegistrationDelegate()
 	private let dataSource = RegistrationDataSource()
 	private var items: [RegistrationCellProtocol] = []

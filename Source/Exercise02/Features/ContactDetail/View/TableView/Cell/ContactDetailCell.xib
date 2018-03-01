@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MPQ-TA-7ef" customClass="ContactDetailCell" customModule="Exercise02" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MPQ-TA-7ef" id="bnW-6k-Eh9">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Fantasia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGA-7D-Ijb">
+                        <rect key="frame" x="15" y="15" width="290" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Empresa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5k-h7-Rml">
+                        <rect key="frame" x="15" y="37" width="290" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TGA-7D-Ijb" firstAttribute="leading" secondItem="bnW-6k-Eh9" secondAttribute="leading" constant="15" id="3jk-0M-wMJ"/>
+                    <constraint firstAttribute="trailing" secondItem="TGA-7D-Ijb" secondAttribute="trailing" constant="15" id="7gg-po-8zU"/>
+                    <constraint firstItem="W5k-h7-Rml" firstAttribute="trailing" secondItem="TGA-7D-Ijb" secondAttribute="trailing" id="Qc3-cp-b4C"/>
+                    <constraint firstItem="TGA-7D-Ijb" firstAttribute="top" secondItem="bnW-6k-Eh9" secondAttribute="top" constant="15" id="k3d-8p-XM1"/>
+                    <constraint firstItem="W5k-h7-Rml" firstAttribute="leading" secondItem="TGA-7D-Ijb" secondAttribute="leading" id="oRL-kO-bHm"/>
+                    <constraint firstItem="W5k-h7-Rml" firstAttribute="top" secondItem="TGA-7D-Ijb" secondAttribute="bottom" constant="6" id="ovS-eD-Ji9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fieldLabel" destination="TGA-7D-Ijb" id="n66-Yi-aGJ"/>
+                <outlet property="fieldValue" destination="W5k-h7-Rml" id="QTu-nM-hil"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="3.5"/>
+        </tableViewCell>
+    </objects>
+</document>
