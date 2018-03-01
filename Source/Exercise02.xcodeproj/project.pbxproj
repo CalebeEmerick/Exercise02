@@ -908,6 +908,14 @@
 					3447AAB5202B3028009F9C1B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					3468C812202F27A800CCD913 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1251,7 +1259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8Q54VRJ624;
@@ -1264,8 +1272,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.buy4.CompanyContact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "95220ba6-40eb-4016-bae6-c4c7ff7992f1";
-				PROVISIONING_PROFILE_SPECIFIER = "Ad Hoc Company Con";
+				PROVISIONING_PROFILE = "f615a600-be6f-4876-821e-e3caaacf043a";
+				PROVISIONING_PROFILE_SPECIFIER = "Company Con";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
